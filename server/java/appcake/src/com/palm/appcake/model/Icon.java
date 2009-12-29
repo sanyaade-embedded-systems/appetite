@@ -1,39 +1,22 @@
 package com.palm.appcake.model;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+
 /**
- * 
+ * <ac:asset_url ac:type="app">http://cdn.downloads.palm.com/public/6/icon/icon_252D5E.png</ac:asset_url>
  */
-
+@XStreamAlias("asset_url")
 public class Icon {
-	private String id;
-	private String url;
-	private String name;
+	@XStreamAsAttribute
+	private String type;
+	private String content;
 	
-	public Icon(String id, String url, String name) {
-		this.id = id;
-		this.url = url;
-		this.name = name;
-	}
-	
-	public void setId(String id) {
-		this.id = id;
-	}
-	public String getId() {
-		return id;
+	public Icon(String type, String content) {
+		this.type = type;
+		this.content = content;
 	}
 	
-	public void setUrl(String url) {
-		this.url = url;
-	}
-	public String getUrl() {
-		return url;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getName() {
-		return name;
-	}
+	public Icon() {}
 }
 

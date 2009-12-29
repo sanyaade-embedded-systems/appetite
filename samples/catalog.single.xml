@@ -10,38 +10,39 @@
         <ac:distributionChannel>Device</ac:distributionChannel>
         <ac:countryCode>US</ac:countryCode>
         <item>
-                <title><![CDATA[Mine Search]]></title>
-                <link>http://developer.palm.com/appredirect/?packageid=com.engineequalscar.games.mines</link>
-                <description><![CDATA[Mine searcher is our take on this classic game. The object of the game is to select tiles to clear the field and to avoid mines. As the tiles are selected the number of mines that are adjacent to that tile is revealed to help the player determine the mines' locations. The game allows you to change board size and the number of mines in the field for varying difficulty and endless fun. Records are kept so you can keep track of your best times.
+            <title><![CDATA[Mine Search]]></title>
+            <link>http://developer.palm.com/appredirect/?packageid=com.engineequalscar.games.mines</link>
+            <description><![CDATA[Mine searcher is our take on this classic game. The object of the game is to select tiles to clear the field and to avoid mines. As the tiles are selected the number of mines that are adjacent to that tile is revealed to help the player determine the mines' locations. The game allows you to change board size and the number of mines in the field for varying difficulty and endless fun. Records are kept so you can keep track of your best times.
 
 -- If you had the beta version you must uninstall that prior to downloading.]]></description>
-                <pubDate>2009-12-21 21:00:58</pubDate>
-                <guid>6.6</guid>
-                <ac:packageid>com.engineequalscar.games.mines</ac:packageid>
-                <ac:version>0.9.5</ac:version>
-                <ac:installed_size>1038810</ac:installed_size>
-                <ac:rating>2.9</ac:rating>
-                <ac:total_downloads>1322</ac:total_downloads>
-                <ac:total_comments>17</ac:total_comments>
-                <ac:min_os>webOS 1.0.0</ac:min_os>
-                <ac:devices>Palm Pre, Palm Pixi</ac:devices>
-                <ac:language>en</ac:language><ac:country>US</ac:country>
-                <ac:icons>
-                    <ac:asset_url ac:type="app">http://cdn.downloads.palm.com/public/6/icon/icon_252D5E.png</ac:asset_url>
-                    <ac:asset_url ac:type="scaled">http://cdn.downloads.palm.com/public/6/icon/S/icon_252D5E.png</ac:asset_url>
-                    <ac:asset_url ac:type="large">http://cdn.downloads.palm.com/public/6/icon/L/icon_big.png</ac:asset_url>
-                </ac:icons>
-                <ac:localizations>
-                    <ac:localization ac:country="US" ac:language="en">
-                        <ac:title><![CDATA[Mine Search]]></ac:title>
-                        <ac:summary><![CDATA[Mine searcher is our take on this classic game. The object of the game is to select tiles to clear the field and to avoid mines. As the tiles are selected the number of mines that are adjacent to that tile is revealed to help the player determine the mines' locations. The game allows you to change board size and the number of mines in the field for varying difficulty and endless fun. Records are kept so you can keep track of your best times.
+            <pubDate>2009-12-21 21:00:58</pubDate>
+            <guid>6.6</guid>
+            <ac:packageid>com.engineequalscar.games.mines</ac:packageid>
+            <ac:version>0.9.5</ac:version>
+            <ac:installed_size>1038810</ac:installed_size>
+            <ac:rating>2.9</ac:rating>
+            <ac:total_downloads>1322</ac:total_downloads>
+            <ac:total_comments>17</ac:total_comments>
+            <ac:min_os>webOS 1.0.0</ac:min_os>
+            <ac:devices>Palm Pre, Palm Pixi</ac:devices>
+            <ac:language>en</ac:language><ac:country>US</ac:country>
+            <ac:icons>
+                <ac:asset_url ac:type="app">http://cdn.downloads.palm.com/public/6/icon/icon_252D5E.png</ac:asset_url>
+                <ac:asset_url ac:type="scaled">http://cdn.downloads.palm.com/public/6/icon/S/icon_252D5E.png</ac:asset_url>
+                <ac:asset_url ac:type="large">http://cdn.downloads.palm.com/public/6/icon/L/icon_big.png</ac:asset_url>
+            </ac:icons>
+            <ac:localizations>
+                <ac:localization ac:country="US" ac:language="en">
+                    <ac:title><![CDATA[Mine Search]]></ac:title>
+                    <ac:summary><![CDATA[Mine searcher is our take on this classic game. The object of the game is to select tiles to clear the field and to avoid mines. As the tiles are selected the number of mines that are adjacent to that tile is revealed to help the player determine the mines' locations. The game allows you to change board size and the number of mines in the field for varying difficulty and endless fun. Records are kept so you can keep track of your best times.
 
 -- If you had the beta version you must uninstall that prior to downloading.]]></ac:summary>
-                        <ac:price ac:currency="USD">0.99000000953674</ac:price>
-                        <ac:developer>Engine Equals Car</ac:developer>
-                        <ac:developer_url>http://www.engineequalscar.com</ac:developer_url>
-                        <ac:support_url>http://www.engineequalscar.com</ac:support_url>
-                        <ac:categories><ac:category><![CDATA[Games!Arcade]]></ac:category>
+                    <ac:price ac:currency="USD">0.99000000953674</ac:price>
+                    <ac:developer>Engine Equals Car</ac:developer>
+                    <ac:developer_url>http://www.engineequalscar.com</ac:developer_url>
+                    <ac:support_url>http://www.engineequalscar.com</ac:support_url>
+                    <ac:categories>
+                        <ac:category><![CDATA[Games!Arcade]]></ac:category>
                         <ac:category><![CDATA[Games!Classics]]></ac:category>
                         <ac:category><![CDATA[Games!Strategy]]></ac:category>
                     </ac:categories>
