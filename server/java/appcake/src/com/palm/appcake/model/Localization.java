@@ -1,16 +1,16 @@
 package com.palm.appcake.model;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.ArrayList;
 
+import javax.jdo.annotations.PersistenceCapable;
+
+import com.palm.appcake.model.converter.PriceConverter;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
-
-
-//@XStreamAlias("asset_url")
-//public class Icon {
-//	@XStreamAsAttribute
 
 /*
  *                 <ac:localization ac:country="US" ac:language="en">
@@ -44,6 +44,7 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
                     </ac:images>
                 </ac:localization>
  */
+@PersistenceCapable(embeddedOnly="true")
 @XStreamAlias("localization")
 public class Localization {
 	@XStreamAsAttribute
@@ -52,21 +53,20 @@ public class Localization {
 	private String language;
 	private String title;
 	private String summary;
+	@XStreamConverter(PriceConverter.class)
 	private Price price;
 	private String developer;
 	private String developer_url;
-	private String support_url;
-	
-	//@XStreamImplicit(itemFieldName="categories")
-	private List<Category> categories = new ArrayList<Category>();
-	//@XStreamImplicit(itemFieldName="images")
-	private List<Image> images = new ArrayList<Image>();
+	@XStreamAlias("support_url")
+	private String supportUrl;
+	private Categories categories;
+	private Images images;
 
 	public Localization() {}
 	
 	public Localization(String country, String language, String title,
 			String summary, Price price, String developer, String developerUrl,
-			String supportUrl) {
+			String supportUrl, Categories categories) {
 		super();
 		this.country = country;
 		this.language = language;
@@ -75,15 +75,8 @@ public class Localization {
 		this.price = price;
 		this.developer = developer;
 		this.developer_url = developerUrl;
-		this.support_url = supportUrl;
-	}
-	
-	public void addCategory(Category category) {
-		this.categories.add(category);
-	}
-		
-	public void addImage(Image image) {
-		this.images.add(image);
+		this.supportUrl = supportUrl;
+		this.categories = categories;
 	}
 
 }

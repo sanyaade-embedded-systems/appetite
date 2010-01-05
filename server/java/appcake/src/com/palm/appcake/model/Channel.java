@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.palm.appcake.model.converter.ChannelDateConverter;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 /*
@@ -24,8 +26,10 @@ public class Channel {
 	private String link;
 	private String description;
 	private String language;
-	private String pubDate;
-	private String lastBuildDate;
+	@XStreamConverter(ChannelDateConverter.class)
+	private Date pubDate;
+	@XStreamConverter(ChannelDateConverter.class)
+	private Date lastBuildDate;
 	// ac:
 	private String distributionChannel;
 	private String countryCode;
@@ -35,7 +39,7 @@ public class Channel {
 	
 	public Channel() {}
 	
-	public Channel(String title, String link, String description, String language, String pubDate, String lastBuildDate, String distributionChannel, String countryCode) {
+	public Channel(String title, String link, String description, String language, Date pubDate, Date lastBuildDate, String distributionChannel, String countryCode) {
 		this.title = title;
 		this.link = link;
 		this.description = description;
@@ -82,19 +86,19 @@ public class Channel {
 		this.language = language;
 	}
 
-	public String getPubDate() {
+	public Date getPubDate() {
 		return pubDate;
 	}
 
-	public void setPubDate(String pubDate) {
+	public void setPubDate(Date pubDate) {
 		this.pubDate = pubDate;
 	}
 
-	public String getLastBuildDate() {
+	public Date getLastBuildDate() {
 		return lastBuildDate;
 	}
 
-	public void setLastBuildDate(String lastBuildDate) {
+	public void setLastBuildDate(Date lastBuildDate) {
 		this.lastBuildDate = lastBuildDate;
 	}
 

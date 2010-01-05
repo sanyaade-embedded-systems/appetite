@@ -4,8 +4,19 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.jdo.annotations.Element;
+import javax.jdo.annotations.Embedded;
+import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.IdentityType;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
+
+import com.google.appengine.api.datastore.Key;
+import com.google.appengine.api.datastore.Text;
+import com.palm.appcake.model.converter.ItemDateConverter;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 
 /*
  *         <item>
@@ -63,27 +74,54 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
         </item>
  */
 @XStreamAlias("item")
+@PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class Item {
-	private String title;
-	private String link;
-	private String description;
-	private String pubDate;
-	private String guid;
-	private String packageid;
-	private String version;
-	private String installed_size;
-	private String rating;
-	private String total_downloads;
-	private String total_comments;
-	private String min_os;
-	private String devices;
-	private String language;
-	private String country;
+	@Persistent private String title;
+	@Persistent private String link;
+	@Persistent private String description;
 
-	//@XStreamImplicit(itemFieldName="icons")
-	private List<Icon> icons = new ArrayList<Icon>();
-	//@XStreamImplicit(itemFieldName="localizations")
-	private List<Localization> localizations = new ArrayList<Localization>();
+	@Persistent
+	@XStreamConverter(ItemDateConverter.class)
+	private Date pubDate;
+
+//	@PrimaryKey
+	@Persistent
+	private String guid;
+
+	@Persistent private String packageid;
+	@Persistent private String version;
+	
+	@Persistent 
+	@XStreamAlias("installed_size")
+	private String installed_size;
+	
+	@Persistent private String rating;
+	
+	@Persistent 
+	@XStreamAlias("total_downloads")
+	private String total_downloads;
+	
+	@Persistent 
+	@XStreamAlias("total_comments")
+	private String total_comments;
+	
+	@Persistent 
+	@XStreamAlias("min_os")
+	private String minOs;
+	
+	@Persistent private String devices;
+	@Persistent private String language;
+	@Persistent private String country;
+	
+    @PrimaryKey
+    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+    private Key key;
+
+    @Persistent
+    private List<Icon> icons = new ArrayList<Icon>();
+    
+    @Persistent
+    private List<Localization> localizations = new ArrayList<Localization>();
 	
 	public Item() {}
 
@@ -111,11 +149,11 @@ public class Item {
 		this.description = description;
 	}
 
-	public String getPubDate() {
+	public Date getPubDate() {
 		return pubDate;
 	}
 
-	public void setPubDate(String pubDate) {
+	public void setPubDate(Date pubDate) {
 		this.pubDate = pubDate;
 	}
 
@@ -175,12 +213,12 @@ public class Item {
 		total_comments = totalComments;
 	}
 
-	public String getMin_os() {
-		return min_os;
+	public String getMinOs() {
+		return minOs;
 	}
 
-	public void setMin_os(String minOs) {
-		min_os = minOs;
+	public void setMinOs(String minOs) {
+		this.minOs = minOs;
 	}
 
 	public String getDevices() {
@@ -222,6 +260,4 @@ public class Item {
 	public void setLocalizations(List<Localization> localizations) {
 		this.localizations = localizations;
 	}
-	
-	
 }
