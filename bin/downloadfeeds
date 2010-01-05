@@ -3,6 +3,6 @@
 # downloadfeeds - suck down the feeds to the samples directory
 # ---------------------------------------------------------------------------
 
-#wget -O ../samples/catalog.device.xml http://developer.palm.com/rss/D/appcatalog.rss.xml
+wget -O ../samples/catalog.device.xml http://developer.palm.com/rss/D/appcatalog.rss.xml
 wget -O ../samples/catalog.beta.xml http://developer.palm.com/rss/B/appcatalog.rss.xml
 wget -O ../samples/catalog.web.xml http://developer.palm.com/rss/W/appcatalog.rss.xml
