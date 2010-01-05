@@ -41,10 +41,6 @@ function Appetite(data) {
 }
 
 Appetite.prototype = {
-    data: function() {
-        return this._data;
-    },
-    
     withDefaults: function(opts) {
         opts = opts || {};
         if (opts.byCategory) {
@@ -96,6 +92,8 @@ Appetite.prototype = {
         return (grossA < grossB) ? 1 : -1;
     },
     
+    // -- API
+
     // /icons?count=[1+]&uniqueIcons=[true|false]
     icons: function(count, uniqueIcons) {
         count = count || 100;
@@ -161,21 +159,21 @@ Appetite.prototype = {
             return (a.pubDate < b.pubDate) ? 1 : -1;
         }
 
-        return this.data().channel.items.sort(byNewestDate).slice(opts.start, opts.size);
+        return this._data.channel.items.sort(byNewestDate).slice(opts.start, opts.size);
     },
     
     // -- SEARCH
     search_all: function(query, opts) {
         opts = this.withDefaults(opts);
         
-        var items = this.data().channel.items;
+        var items = this._data.channel.items;
         var results = [];
         query = query.toLowerCase();
         
         for (var i in items) {
             if (items.hasOwnProperty(i)) {
                 var item = items[i];
-                if (item.title.toLowerCase().indexOf(query) > -1) {
+                if ( (item.title.toLowerCase().indexOf(query) > -1) || (item.description.toLowerCase().indexOf(query) > -1) ) {
                     results.push(item);
                 }
             }
