@@ -1,0 +1,4 @@
+#!/bin/sh
+
+java -classpath ../lib/jaxen.jar:../lib/jdom.jar:../build com.palm.JSONConverter $*
+

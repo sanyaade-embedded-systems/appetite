@@ -1,0 +1,4 @@
+#!/bin/sh
+
+javac -classpath ../lib/jaxen.jar:../lib/jdom.jar -d ../build ../src/com/palm/*.java
+

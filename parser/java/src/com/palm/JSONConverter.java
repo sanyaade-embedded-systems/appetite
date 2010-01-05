@@ -18,11 +18,16 @@ import java.util.List;
  */
 public class JSONConverter {
     public static void main(String[] args) throws Exception {
-        JSONConverter.convert();
+	String filename = "new.catalog.xml";
+	if (args.length > 0 && args[0] != null) {
+		filename = args[0];
+	}
+
+        JSONConverter.convert(filename);
     }
 
-    public static void convert() throws JDOMException, IOException {
-        File file = new File("new.catalog.xml");
+    public static void convert(String filename) throws JDOMException, IOException {
+        File file = new File(filename);
 
         Document catalog = new SAXBuilder().build(file);
 
