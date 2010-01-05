@@ -168,8 +168,9 @@ public class JSONConverter {
     }
 
     private static String escape(String raw) {
-        String good = "\"" + raw.replaceAll("\"", "\\\\\"") + "\"";
-        return good;
+        raw = raw.replaceAll("\"", "\\\\\"");
+        raw = raw.replaceAll("\n", "\\\\000a");
+        return "\"" + raw + "\"";
     }
 
     /**
