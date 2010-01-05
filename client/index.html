@@ -29,6 +29,9 @@
 
         function loadApps(type, search) {
             // sync the channels object with the channels checkboxes
+            channels.catalog = $("chk_catalog").checked;
+            channels.web = $("chk_web").checked;
+            channels.beta = $("chk_beta").checked;
 
             // request the right data from the server
             var functionName = (search && search != "") ?
@@ -41,7 +44,7 @@
 
             console.log(appFunction);
 
-            var apps = appFunction();
+            var apps = appFunction.apply(appetite);
 
             console.log(apps);
 
