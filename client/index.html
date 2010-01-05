@@ -5,6 +5,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Appetite  |  Stuff your apps.</title>
     <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript">
+        var selectedTab;
+        var selectedTabElement;
+
+        function selectTab(h2, type) {
+            h2.parentNode.parentNode.className = "tab selected";
+            selectedTabElement.parentNode.parentNode.className = "tab";
+
+            selectedTabElement = h2;
+            selectedTab = type;
+        }
+    </script>
 </head>
 <body>
 <div class="wrapper">
@@ -23,37 +35,37 @@
     <div class="navbar">
         <div class="tab">
             <div class="tab_head">
-                <h2>Top Rated</h2>
+                <h2 onclick="selectTab(this, 'top_rated')">Top Rated</h2>
             </div>
         </div>
         <div class="tab">
             <div class="tab_head">
-                <h2>Top Paid</h2>
+                <h2 onclick="selectTab(this, 'top_paid')">Top Paid</h2>
             </div>
         </div>
         <div class="tab">
             <div class="tab_head">
-                <h2>Top Free</h2>
+                <h2 onclick="selectTab(this, 'top_free')">Top Free</h2>
             </div>
         </div>
         <div class="tab">
             <div class="tab_head">
-                <h2>Top Grossing</h2>
+                <h2 onclick="selectTab(this, 'top_grossing')">Top Grossing</h2>
             </div>
         </div>
         <div class="tab">
             <div class="tab_head">
-                <h2>Top Overall</h2>
+                <h2 onclick="selectTab(this, 'top_overall')">Top Overall</h2>
             </div>
         </div>
         <div class="tab selected">
             <div class="tab_head">
-                <h2>Newest</h2>
+                <h2 onclick="selectTab(this, 'newest')">Newest</h2>
             </div>
         </div>
         <div class="tab">
             <div class="tab_head">
-                <h2>All</h2>
+                <h2 onclick="selectTab(this, 'all')">All</h2>
             </div>
         </div>
     </div>
