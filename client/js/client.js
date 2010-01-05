@@ -26,7 +26,7 @@ function Appetite(data) {
 
                 // dip into the first localization
                 if (item.localizations[0]) {
-                    var amount = item.localizations[0].price.amount;
+                    var amount = item.localizations[0].price;
                     if (amount == 0) {
                         self._free.push(item);
                     } else {
