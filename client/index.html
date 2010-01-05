@@ -49,6 +49,36 @@
             console.log(apps);
 
             // display the data
+            displayApps(apps);
+        }
+
+        function displayApps(apps) {
+            var appContainer = $("app_container");
+
+            // yeah, i'm doing it as a string; you got a problem with that?
+            var appHTML = "";
+            for (var i = 0; i < apps.length; i++) {
+                var app = '<div class="model">' +
+                            '<div class="module_crnr"><img src="images/crnr_cat.png" width="35" height="35" /></div>' +
+                            '<img class="screen" src="images/screen_fandango.png" width="106" height="158" />' +
+                            '<div class="module_hd"><img class="icon" src="images/icn_fandango.png" width="32" height="32" /> FREE' +
+                                '<div class="clearing">&nbsp;</div>' +
+                            '</div>' +
+                            '<h1>Fandango</h1>' +
+                            'Fandango<br />' +
+                            'Entertainment, Movies<br />' +
+                            '<div class="module_rating"><img src="images/stars_4-0.png" width="77" height="12" /><br />' +
+                                '431 comments</div>' +
+                            'v0.65.0  |  6.23MB<br />' +
+                            '1,644,685 downloads' +
+                            '<div class="module_foot"><img src="images/btn_moreinfo.png" alt="More Info" width="74" height="20" /><img src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
+                          '</div>\n';
+                appHTML += app;
+            }
+
+            console.log(appHTML);
+
+            appContainer.innerHTML = appHTML;
         }
     </script>
 </head>
@@ -118,6 +148,8 @@
             <td>Beta</td>
         </tr>
     </table>
+</div>
+<div id="app_container">
 </div>
 <div class="clearing">&nbsp;</div>
 </div>
