@@ -1,182 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Appetite  |  Stuff your apps.</title>
     <link href="styles.css" rel="stylesheet" type="text/css"/>
-
-    <script src="js/prototype.js" type="text/javascript"></script>
-    <script src="js/data.all.js" type="text/javascript"></script>
-    <script src="js/client.js" type="text/javascript"></script>
-
-    <script type="text/javascript">
-        var selectedTab;
-        var selectedTabElement;
-
-        var channels = { catalog: true, web: true, beta: true };
-        var appetite = new Appetite(data);
-
-        function selectTab(h2) {
-            h2.parentNode.parentNode.className = "tab selected";
-            if (selectedTabElement) selectedTabElement.parentNode.parentNode.className = "tab";
-
-            selectedTabElement = h2;
-            selectedTab = h2.id;
-
-            loadApps(selectedTab);
-        }
-
-        function loadApps(type, search) {
-            // sync the channels object with the channels checkboxes
-            channels.catalog = $("chk_catalog").checked;
-            channels.web = $("chk_web").checked;
-            channels.beta = $("chk_beta").checked;
-
-            // request the right data from the server
-            var functionName = (search && search != "") ?
-                               "search_" + selectedTab :
-                               "explore_" + selectedTab;
-
-            var appFunction = appetite[functionName];
-
-            var apps = appFunction.apply(appetite);
-
-            // display the data
-            displayApps(apps);
-        }
-
-        function displayApps(apps) {
-            var appContainer = $("app_container");
-
-            // yeah, i'm doing it as a string; you got a problem with that?
-            var appsHTML = "";
-            for (var i = 0; i < apps.length; i++) {
-                var app = apps[i];
-
-                //console.log(app);
-
-                var appHTML =
-                      '<div class="module">' +
-                        '<div class="app-card">' +
-                          '<div class="card front">' +
-                            '<div class="module_crnr"><img src="images/crnr_cat.png" width="35" height="35" /></div>' +
-                            '<img class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
-                            '<div class="module_hd"><img class="icon" src="' + app.icons[1].url + '" width="32" height="32" /> ' + getAppPrice(app) +
-                                '<div class="clearing">&nbsp;</div>' +
-                            '</div>' +
-                            '<h1>' + app.title + '</h1>' +
-                            $lo(app).developer + '<br />' +
-                            getAppCategory(app) + '<br />' +
-                            '<div class="module_rating"><img src="images/' + getStarImage(app) + '.png" width="77" height="12" /><br />' +
-                                app.total_comments + ' comments</div>' +
-                            'v' + app.version + '  |  ' + getAppSize(app) + '<br />' +
-                            getAppDownloads(app) + ' downloads' +
-                            '<div class="module_foot"><img onclick="flipOver(this)" src="images/btn_moreinfo.png" alt="More Info" width="74" height="20" /><img src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
-                          '</div>\n' +
-                          '<div class="card back back2"><img class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
-                            '<div class="description">' +
-                              '<h1>' + app.title + '</h1>' +
-                              app.description +
-                            '</div>' +
-                            '<div class="module_foot"><img onclick="flipBack(this)" src="images/btn_back.png" alt="More Info" width="74" height="20" /><img src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
-                          '</div>\n' +
-                        '</div>\n' +
-                      '</div>';
-                appsHTML += appHTML;
-            }
-
-            appContainer.innerHTML = appsHTML;
-        }
-
-        function flipOver(element) {
-            element.parentNode.parentNode.parentNode.className += " rotate";
-        }
-
-        function flipBack(element) {
-            var parent = element.parentNode.parentNode.parentNode;
-            if (parent.className.indexOf("rotate") != -1) {
-                parent.className = parent.className.replace(" rotate", "");
-            }
-        }
-
-        function $lo(app) {
-            return app.localizations[0];
-        }
-
-        function getAppCategory(app) {
-            var category = ($lo(app).categories) ? $lo(app).categories[0] : "(no category)";
-            category = category.replace("!", ", ");
-            return category;
-        }
-
-        function getAppDownloads(app) {
-            return commaFormat(app.total_downloads);
-        }
-
-        function getAppSize(app) {
-            var bytes = app.installed_size;
-            var ext = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-            var unitCount = 0;
-            for(; bytes > 1024; unitCount++) { bytes = bytes / 1024 };
-            // if you are in bytes or kb, then round to full integer, else round to 2 decimal places
-            bytes = (unitCount > 1) ? twoDecimalPlaces(bytes) : Math.ceil(bytes);
-                
-            return twoDecimalPlaces(bytes) + ext[unitCount];
-        }
-
-        function getStarImage(app) {
-            var rating = app.rating;
-            if (rating < 0.3) {
-                return "stars_0-5"; // we need a 0-0
-            } else if (rating < 0.7) {
-                return "stars_0-5";
-            } else if (rating < 1.3) {
-                return "stars_1-0";
-            } else if (rating < 1.7) {
-                return "stars_1-5";
-            } else if (rating < 2.3) {
-                return "stars_2-0";
-            } else if (rating < 2.7) {
-                return "stars_2-5";
-            } else if (rating < 3.3) {
-                return "stars_3-0";
-            } else if (rating < 3.7) {
-                return "stars_3-5";
-            } else if (rating < 4.3) {
-                return "stars_4-0";
-            } else if (rating < 4.7) {
-                return "stars_4-5";
-            } else {
-                return "stars_5-0";
-            }
-        }
-
-        function twoDecimalPlaces(number) {
-            return Math.round(number * 100) / 100;
-        }
-
-        function commaFormat(amount) {
-            var re = /(-?\d+)(\d{3})/
-            while (re.test(amount)) {
-                amount = amount.replace(re, "$1,$2");
-            }
-            return amount;
-        }
-
-        function getAppPrice(app) {
-            var price = $lo(app).price;
-            if (price == 0) return "FREE";
-
-            // yes, putting a dollar sign here is evil. does writing TODO in the comment make it better?
-            price = "$" + price;
-
-            // prices just look awkward if they don't have two places to the right of the decimal
-            if (("" + price).charAt(price.length - 2) == ".") price += 0;
-
-            return price;
-        }
-    </script>
 </head>
 <body onload="selectTab($('top_rated'))">
 <div class="wrapper">
@@ -251,5 +78,176 @@
 </div>
 <div class="pg_foot">Copyright and all that jazz.</div>
 </div>
+<script src="js/prototype.js" type="text/javascript"></script>
+<script src="js/data.all.js" type="text/javascript"></script>
+<script src="js/client.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var selectedTab;
+    var selectedTabElement;
+
+    var channels = { catalog: true, web: true, beta: true };
+    var appetite = new Appetite(data);
+
+    function selectTab(h2) {
+        h2.parentNode.parentNode.className = "tab selected";
+        if (selectedTabElement) selectedTabElement.parentNode.parentNode.className = "tab";
+
+        selectedTabElement = h2;
+        selectedTab = h2.id;
+
+        loadApps(selectedTab);
+    }
+
+    function loadApps(type, search) {
+        // sync the channels object with the channels checkboxes
+        channels.catalog = $("chk_catalog").checked;
+        channels.web = $("chk_web").checked;
+        channels.beta = $("chk_beta").checked;
+
+        // request the right data from the server
+        var functionName = (search && search != "") ?
+                           "search_" + selectedTab :
+                           "explore_" + selectedTab;
+
+        var appFunction = appetite[functionName];
+
+        var apps = appFunction.apply(appetite);
+
+        // display the data
+        displayApps(apps);
+    }
+
+    function displayApps(apps) {
+        var appContainer = $("app_container");
+
+        // yeah, i'm doing it as a string; you got a problem with that?
+        var appsHTML = "";
+        for (var i = 0; i < apps.length; i++) {
+            var app = apps[i];
+
+            //console.log(app);
+
+            var appHTML =
+                  '<div class="module">' +
+                    '<div class="app-card">' +
+                      '<div class="card front">' +
+                        '<div class="module_crnr"><img src="images/crnr_cat.png" width="35" height="35" /></div>' +
+                        '<img class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                        '<div class="module_hd"><img class="icon" src="' + app.icons[1].url + '" width="32" height="32" /> ' + getAppPrice(app) +
+                            '<div class="clearing">&nbsp;</div>' +
+                        '</div>' +
+                        '<h1>' + app.title + '</h1>' +
+                        $lo(app).developer + '<br />' +
+                        getAppCategory(app) + '<br />' +
+                        '<div class="module_rating"><img src="images/' + getStarImage(app) + '.png" width="77" height="12" /><br />' +
+                            app.total_comments + ' comments</div>' +
+                        'v' + app.version + '  |  ' + getAppSize(app) + '<br />' +
+                        getAppDownloads(app) + ' downloads' +
+                        '<div class="module_foot"><img onclick="flipOver(this)" src="images/btn_moreinfo.png" alt="More Info" width="74" height="20" /><img src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
+                      '</div>\n' +
+                      '<div class="card back back2"><img class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                        '<div class="description">' +
+                          '<h1>' + app.title + '</h1>' +
+                          app.description +
+                        '</div>' +
+                        '<div class="module_foot"><img onclick="flipBack(this)" src="images/btn_back.png" alt="More Info" width="74" height="20" /><img src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
+                      '</div>\n' +
+                    '</div>\n' +
+                  '</div>';
+            appsHTML += appHTML;
+        }
+
+        appContainer.innerHTML = appsHTML;
+    }
+
+    function flipOver(element) {
+        element.parentNode.parentNode.parentNode.className += " rotate";
+    }
+
+    function flipBack(element) {
+        var parent = element.parentNode.parentNode.parentNode;
+        if (parent.className.indexOf("rotate") != -1) {
+            parent.className = parent.className.replace(" rotate", "");
+        }
+    }
+
+    function $lo(app) {
+        return app.localizations[0];
+    }
+
+    function getAppCategory(app) {
+        var category = ($lo(app).categories) ? $lo(app).categories[0] : "(no category)";
+        category = category.replace("!", ", ");
+        return category;
+    }
+
+    function getAppDownloads(app) {
+        return commaFormat(app.total_downloads);
+    }
+
+    function getAppSize(app) {
+        var bytes = app.installed_size;
+        var ext = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+        var unitCount = 0;
+        for(; bytes > 1024; unitCount++) { bytes = bytes / 1024 };
+        // if you are in bytes or kb, then round to full integer, else round to 2 decimal places
+        bytes = (unitCount > 1) ? twoDecimalPlaces(bytes) : Math.ceil(bytes);
+            
+        return twoDecimalPlaces(bytes) + ext[unitCount];
+    }
+
+    function getStarImage(app) {
+        var rating = app.rating;
+        if (rating < 0.3) {
+            return "stars_0-5"; // we need a 0-0
+        } else if (rating < 0.7) {
+            return "stars_0-5";
+        } else if (rating < 1.3) {
+            return "stars_1-0";
+        } else if (rating < 1.7) {
+            return "stars_1-5";
+        } else if (rating < 2.3) {
+            return "stars_2-0";
+        } else if (rating < 2.7) {
+            return "stars_2-5";
+        } else if (rating < 3.3) {
+            return "stars_3-0";
+        } else if (rating < 3.7) {
+            return "stars_3-5";
+        } else if (rating < 4.3) {
+            return "stars_4-0";
+        } else if (rating < 4.7) {
+            return "stars_4-5";
+        } else {
+            return "stars_5-0";
+        }
+    }
+
+    function twoDecimalPlaces(number) {
+        return Math.round(number * 100) / 100;
+    }
+
+    function commaFormat(amount) {
+        var re = /(-?\d+)(\d{3})/
+        while (re.test(amount)) {
+            amount = amount.replace(re, "$1,$2");
+        }
+        return amount;
+    }
+
+    function getAppPrice(app) {
+        var price = $lo(app).price;
+        if (price == 0) return "FREE";
+
+        // yes, putting a dollar sign here is evil. does writing TODO in the comment make it better?
+        price = "$" + price;
+
+        // prices just look awkward if they don't have two places to the right of the decimal
+        if (("" + price).charAt(price.length - 2) == ".") price += 0;
+
+        return price;
+    }
+</script>
 </body>
 </html>
