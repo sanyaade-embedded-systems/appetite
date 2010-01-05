@@ -5,20 +5,51 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Appetite  |  Stuff your apps.</title>
     <link href="styles.css" rel="stylesheet" type="text/css"/>
+
+    <script src="js/prototype.js" type="text/javascript"></script>
+    <script src="js/data.js" type="text/javascript"></script>
+    <script src="js/client.js" type="text/javascript"></script>
+
     <script type="text/javascript">
         var selectedTab;
         var selectedTabElement;
 
-        function selectTab(h2, type) {
+        var channels = { catalog: true, web: true, beta: true };
+        var appetite = new Appetite(data);
+
+        function selectTab(h2) {
             h2.parentNode.parentNode.className = "tab selected";
-            selectedTabElement.parentNode.parentNode.className = "tab";
+            if (selectedTabElement) selectedTabElement.parentNode.parentNode.className = "tab";
 
             selectedTabElement = h2;
-            selectedTab = type;
+            selectedTab = h2.id;
+
+            loadApps(selectedTab);
+        }
+
+        function loadApps(type, search) {
+            // sync the channels object with the channels checkboxes
+
+            // request the right data from the server
+            var functionName = (search && search != "") ?
+                               "search_" + selectedTab :
+                               "explore_" + selectedTab;
+
+            console.log(functionName);
+
+            var appFunction = appetite[functionName];
+
+            console.log(appFunction);
+
+            var apps = appFunction();
+
+            console.log(apps);
+
+            // display the data
         }
     </script>
 </head>
-<body>
+<body onload="selectTab($('top_rated'))">
 <div class="wrapper">
 <div class="pg_head_wrapper">
     <div class="pg_hd"><img class="logo" src="images/logo.png" width="218" height="58"/>
@@ -35,37 +66,37 @@
     <div class="navbar">
         <div class="tab">
             <div class="tab_head">
-                <h2 onclick="selectTab(this, 'top_rated')">Top Rated</h2>
+                <h2 id="top_rated" onclick="selectTab(this)">Top Rated</h2>
             </div>
         </div>
         <div class="tab">
             <div class="tab_head">
-                <h2 onclick="selectTab(this, 'top_paid')">Top Paid</h2>
+                <h2 id="top_paid" onclick="selectTab(this)">Top Paid</h2>
             </div>
         </div>
         <div class="tab">
             <div class="tab_head">
-                <h2 onclick="selectTab(this, 'top_free')">Top Free</h2>
+                <h2 id="top_free" onclick="selectTab(this)">Top Free</h2>
             </div>
         </div>
         <div class="tab">
             <div class="tab_head">
-                <h2 onclick="selectTab(this, 'top_grossing')">Top Grossing</h2>
+                <h2 id="top_grossing" onclick="selectTab(this)">Top Grossing</h2>
             </div>
         </div>
         <div class="tab">
             <div class="tab_head">
-                <h2 onclick="selectTab(this, 'top_overall')">Top Overall</h2>
-            </div>
-        </div>
-        <div class="tab selected">
-            <div class="tab_head">
-                <h2 onclick="selectTab(this, 'newest')">Newest</h2>
+                <h2 id="top_overall" onclick="selectTab(this)">Top Overall</h2>
             </div>
         </div>
         <div class="tab">
             <div class="tab_head">
-                <h2 onclick="selectTab(this, 'all')">All</h2>
+                <h2 id="newest" onclick="selectTab(this)">Newest</h2>
+            </div>
+        </div>
+        <div class="tab">
+            <div class="tab_head">
+                <h2 id="all" onclick="selectTab(this)">All</h2>
             </div>
         </div>
     </div>
@@ -74,13 +105,13 @@
 <div class="sort">
     <table border="0" cellspacing="0" cellpadding="0">
         <tr>
-            <td><input name="checkbox" type="checkbox" id="checkbox" checked="checked"/></td>
+            <td><input name="checkbox" type="checkbox" id="chk_catalog" checked="checked"/></td>
             <td>Palm App Catalog</td>
             <td>&nbsp;</td>
-            <td><input name="checkbox2" type="checkbox" id="checkbox2" checked="checked"/></td>
+            <td><input name="checkbox2" type="checkbox" id="chk_web" checked="checked"/></td>
             <td>Web Distribution</td>
             <td>&nbsp;</td>
-            <td><input name="checkbox3" type="checkbox" id="checkbox3" checked="checked"/></td>
+            <td><input name="checkbox3" type="checkbox" id="chk_beta" checked="checked"/></td>
             <td>Beta</td>
         </tr>
     </table>
