@@ -1,5 +1,6 @@
 function Appetite(data) {
     this._data = data;
+    this._items = data.channel.items;
     this._icons = [];
     this._byid = {};
     this._free = [];
@@ -54,7 +55,7 @@ Appetite.prototype = {
         return opts;
     },
     
-    filter: function(filterFunc, opts) {
+    orderBy: function(dataSet, opts) {
         return filterFunc(withDefaults(opts));
     },
     
@@ -106,6 +107,7 @@ Appetite.prototype = {
     },
     
     // /app?id=[id]&locale=*
+    // TODO: Ignore locale
     app: function(id, locale) {
         return this._byid[id];
     },
@@ -116,7 +118,7 @@ Appetite.prototype = {
     explore_top_rated: function(opts) {
         opts = this.withDefaults(opts);
         
-        return this._data.channel.items.sort(this.sortByRating).slice(opts.start, opts.size);
+        return this._items.sort(this.sortByRating).slice(opts.start, opts.size);
     },
     
     // /explore/top_paid
@@ -135,19 +137,19 @@ Appetite.prototype = {
     explore_top_overall: function(opts) {
         opts = this.withDefaults(opts);
         
-        return this._data.channel.items.sort(this.sortByDownloads).slice(opts.start, opts.size);
+        return this._items.sort(this.sortByDownloads).slice(opts.start, opts.size);
     },
 
     explore_top_grossing: function(opts) {
         opts = this.withDefaults(opts);
         
-        return this._data.channel.items.sort(this.sortByGross).slice(opts.start, opts.size);
+        return this._items.sort(this.sortByGross).slice(opts.start, opts.size);
     },
 
     explore_all: function(opts) {
         opts = this.withDefaults(opts);
 
-        return this._data.channel.items.slice(opts.start, opts.size);
+        return this._items.slice(opts.start, opts.size);
     },
 
     explore_newest: function(opts) {
@@ -159,20 +161,19 @@ Appetite.prototype = {
             return (a.pubDate < b.pubDate) ? 1 : -1;
         }
 
-        return this._data.channel.items.sort(byNewestDate).slice(opts.start, opts.size);
+        return this._items.sort(byNewestDate).slice(opts.start, opts.size);
     },
     
     // -- SEARCH
     search_all: function(query, opts) {
         opts = this.withDefaults(opts);
         
-        var items = this._data.channel.items;
         var results = [];
         query = query.toLowerCase();
         
-        for (var i in items) {
+        for (var i in this._items) {
             if (items.hasOwnProperty(i)) {
-                var item = items[i];
+                var item = this._items[i];
                 if ( (item.title.toLowerCase().indexOf(query) > -1) || (item.description.toLowerCase().indexOf(query) > -1) ) {
                     results.push(item);
                 }
