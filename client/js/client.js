@@ -62,7 +62,8 @@ Appetite.prototype = {
         return filterFunc(withDefaults(opts));
     },
     
-    sortbyRating: function(a, b) {
+    // -- Sorts
+    sortByRating: function(a, b) {
         var ratingA = parseFloat(a.rating);
         var ratingB = parseFloat(b.rating);
         
@@ -71,6 +72,14 @@ Appetite.prototype = {
         return (ratingA < ratingB) ? 1 : -1;
     },
     
+    sortByDownloads: function(a, b) {
+        var downloadsA = parseInt(a.total_downloads);
+        var downloadsB = parseInt(b.total_downloads);
+        
+        if (downloadsA == downloadsB) return 0;
+        
+        return (downloadsA < downloadsB) ? 1 : -1;
+    },
     
     // /icons?count=[1+]&uniqueIcons=[true|false]
     icons: function(count, uniqueIcons) {
@@ -94,20 +103,20 @@ Appetite.prototype = {
     explore_top_rated: function(opts) {
         opts = this.withDefaults(opts);
         
-        return this.data().channel.items.sort(this.sortbyRating).slice(opts.start, opts.size);
+        return this.data().channel.items.sort(this.sortByRating).slice(opts.start, opts.size);
     },
     
     // /explore/top_paid
     explore_top_paid: function(opts) {
         opts = this.withDefaults(opts);
         
-        return this._paid.sort(this.sortbyRating).slice(opts.start, opts.size);
+        return this._paid.sort(this.sortByDownloads).slice(opts.start, opts.size);
     },
 
     explore_top_free: function(opts) {
         opts = this.withDefaults(opts);
         
-        return this._free.sort(this.sortbyRating).slice(opts.start, opts.size);
+        return this._free.sort(this.sortByDownloads).slice(opts.start, opts.size);
     },
 
     explore_all: function(opts) {
