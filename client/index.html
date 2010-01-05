@@ -96,6 +96,9 @@
             var ext = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
             var unitCount = 0;
             for(; bytes > 1024; unitCount++) { bytes = bytes / 1024 };
+            // if you are in bytes or kb, then round to full integer, else round to 2 decimal places
+            bytes = (unitCount > 1) ? twoDecimalPlaces(bytes) : Math.ceil(bytes);
+                
             return twoDecimalPlaces(bytes) + ext[unitCount];
         }
 
