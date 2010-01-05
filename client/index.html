@@ -88,7 +88,7 @@
         }
 
         function getAppDownloads(app) {
-            return app.total_downloads;
+            return commaFormat(app.total_downloads);
         }
 
         function getAppSize(app) {
@@ -125,9 +125,17 @@
                 return "stars_5-0";
             }
         }
-        
+
         function twoDecimalPlaces(number) {
             return Math.round(number * 100) / 100;
+        }
+
+        function commaFormat(amount) {
+            var re = /(-?\d+)(\d{3})/
+            while (re.test(amount)) {
+                amount = amount.replace(re, "$1,$2");
+            }
+            return amount;
         }
 
         function getAppPrice(app) {
