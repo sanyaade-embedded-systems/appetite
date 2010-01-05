@@ -64,7 +64,7 @@
 
                 var appHTML = '<div class="module">' +
                             '<div class="module_crnr"><img src="images/crnr_cat.png" width="35" height="35" /></div>' +
-                            '<img class="screen" src="' + app.localizations[0].images.images_1[0].url + '" width="106" height="158" />' +
+                            '<img class="screen" src="' + app.localizations[0].images.image_1[0].url + '" width="106" height="158" />' +
                             '<div class="module_hd"><img class="icon" src="' + app.icons[2].url + '" width="32" height="32" /> FREE' +
                                 '<div class="clearing">&nbsp;</div>' +
                             '</div>' +
@@ -80,7 +80,12 @@
                 appsHTML += appHTML;
             }
 
-            appContainer.innerHTML = appHTML;
+            appContainer.innerHTML = appsHTML;
+        }
+
+        function getAppCategory(app) {
+            var category = app.localizations[0].categories.content[0];
+            
         }
     </script>
 </head>
