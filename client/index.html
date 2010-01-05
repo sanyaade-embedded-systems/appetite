@@ -38,15 +38,9 @@
                                "search_" + selectedTab :
                                "explore_" + selectedTab;
 
-            console.log(functionName);
-
             var appFunction = appetite[functionName];
 
-            console.log(appFunction);
-
             var apps = appFunction.apply(appetite);
-
-            console.log(apps);
 
             // display the data
             displayApps(apps);
@@ -64,17 +58,17 @@
 
                 var appHTML = '<div class="module">' +
                             '<div class="module_crnr"><img src="images/crnr_cat.png" width="35" height="35" /></div>' +
-                            '<img class="screen" src="' + app.localizations[0].images.image_1[0].url + '" width="106" height="158" />' +
-                            '<div class="module_hd"><img class="icon" src="' + app.icons[2].url + '" width="32" height="32" /> FREE' +
+                            '<img class="screen" src="' + $lo(app).images.image_1[0].url + '" width="106" height="158" />' +
+                            '<div class="module_hd"><img class="icon" src="' + app.icons[2].url + '" width="32" height="32" /> ' + getAppPrice(app) +
                                 '<div class="clearing">&nbsp;</div>' +
                             '</div>' +
                             '<h1>' + app.title + '</h1>' +
-                            app.localizations[0].developer + '<br />' +
-                            'Entertainment, Movies<br />' +
-                            '<div class="module_rating"><img src="images/stars_4-0.png" width="77" height="12" /><br />' +
-                                '431 comments</div>' +
-                            'v0.65.0  |  6.23MB<br />' +
-                            '1,644,685 downloads' +
+                            $lo(app).developer + '<br />' +
+                            getAppCategory(app) + '<br />' +
+                            '<div class="module_rating"><img src="images/' + getStarImage(app) + '.png" width="77" height="12" /><br />' +
+                                app.total_comments + ' comments</div>' +
+                            'v' + app.version + '  |  ' + getAppSize(app) + '<br />' +
+                            getAppDownloads(app) + ' downloads' +
                             '<div class="module_foot"><img src="images/btn_moreinfo.png" alt="More Info" width="74" height="20" /><img src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
                           '</div>\n';
                 appsHTML += appHTML;
@@ -83,9 +77,39 @@
             appContainer.innerHTML = appsHTML;
         }
 
+        function $lo(app) {
+            return app.localizations[0];
+        }
+
         function getAppCategory(app) {
-            var category = app.localizations[0].categories.content[0];
+            var category = ($lo(app).categories) ? $lo(app).categories.content[0] : "(no category)";
+            category = category.replace("!", ", ");
+            return category;
+        }
+
+        function getAppDownloads(app) {
             
+        }
+
+        function getAppSize(app) {
+            
+        }
+
+        function getStarImage(app) {
+
+        }
+
+        function getAppPrice(app) {
+            var price = $lo(app).price.amount;
+            if (price == 0) return "FREE";
+
+            // yes, putting a dollar sign here is evil. does writing TODO in the comment make it better?
+            price = "$" + price;
+
+            // prices just look awkward if they don't have two places to the right of the decimal
+            if (("" + price).charAt(price.length - 2) == ".") price += 0;
+
+            return price;
         }
     </script>
 </head>
