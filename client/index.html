@@ -7,7 +7,7 @@
     <link href="styles.css" rel="stylesheet" type="text/css"/>
 
     <script src="js/prototype.js" type="text/javascript"></script>
-    <script src="js/data.all.js" type="text/javascript"></script>
+    <script src="js/data.some.js" type="text/javascript"></script>
     <script src="js/client.js" type="text/javascript"></script>
 
     <script type="text/javascript">
@@ -58,8 +58,8 @@
 
                 var appHTML = '<div class="module">' +
                             '<div class="module_crnr"><img src="images/crnr_cat.png" width="35" height="35" /></div>' +
-                            '<img class="screen" src="' + $lo(app).images.image_1[0].url + '" width="106" height="158" />' +
-                            '<div class="module_hd"><img class="icon" src="' + app.icons[2].url + '" width="32" height="32" /> ' + getAppPrice(app) +
+                            '<img class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                            '<div class="module_hd"><img class="icon" src="' + app.icons[1].url + '" width="32" height="32" /> ' + getAppPrice(app) +
                                 '<div class="clearing">&nbsp;</div>' +
                             '</div>' +
                             '<h1>' + app.title + '</h1>' +
@@ -82,7 +82,7 @@
         }
 
         function getAppCategory(app) {
-            var category = ($lo(app).categories) ? $lo(app).categories.content[0] : "(no category)";
+            var category = ($lo(app).categories) ? $lo(app).categories[0] : "(no category)";
             category = category.replace("!", ", ");
             return category;
         }
@@ -142,11 +142,11 @@
         }
 
         function getAppPrice(app) {
-            var price = $lo(app).price.amount;
+            var price = $lo(app).price;
             if (price == 0) return "FREE";
 
             // yes, putting a dollar sign here is evil. does writing TODO in the comment make it better?
-            price = "$" + twoDecimalPlaces(price);
+            price = "$" + price;
 
             // prices just look awkward if they don't have two places to the right of the decimal
             if (("" + price).charAt(price.length - 2) == ".") price += 0;
