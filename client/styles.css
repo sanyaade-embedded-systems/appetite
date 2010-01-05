@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #40425e;
+	font-family: "Lucida Grand", Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+/* -------  PAGE HEAD  --------- */
+
+.pg_head_wrapper {
+	background-image: url(images/pg_hd_bg.png);
+	background-repeat: repeat-x;
+	height: 81px;
+}
+
+.pg_hd {
+	background-image: url(images/pg_hd-bg2.png);
+	background-position: right top;
+	height: 81px;
+	background-repeat: no-repeat;
+	margin-right: 18px;
+}
+.pg_hd img.logo {
+	float: left;
+	margin-left: 18px;
+	margin-top: 12px;
+}
+.tag {
+	float: left;
+	font-size: 14px;
+	color: #3c3e5b;
+	margin-top: 37px;
+	margin-left: 12px;
+}
+.search_wrapper {
+	float: right;
+	margin-left: 6px;
+	margin-top: 32px;
+}
+.search_field {
+	background-image: url(images/search_bg.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding: 3px;
+	float: right;
+}
+.search_field input {
+	font-size: 11px;
+	background-image: url(images/trans.png);
+	background-repeat: repeat;
+	background: transparent;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	margin-left: 5px;
+	width: 140px;
+	color: #999999;
+	margin-right: 8px;
+}
+
+
+/* -------  NAVBAR  --------- */
+
+.navbar_wrapper {
+	background-color: #000000;
+}
+.navbar {
+	background-color: #000000;
+	color: #FFFFFF;
+	width: 550px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 29px;
+}
+.selected {
+	background-color: transparent;
+	background-image: url(images/tab_bg.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+.selected div.tab_head{
+	background-color: transparent;
+	background-image: url(images/tab_bg.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+.selected div.tab_head h2{
+	background-color: transparent;
+	background-image: url(images/tab_bg.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	color: #FFFFFF;
+}
+.tab, .tab_head, .tab_head h2 {
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+.tab {
+	padding-right: 14px;
+	float: left;
+	margin-top: 4px;
+}
+
+.tab .tab_head {
+    cursor: pointer
+}
+
+.selected .tab_head {
+    cursor: default;
+}
+
+.tab_head {
+	background-position: top right;
+	margin-right: -14px;
+	padding-right: 10px;
+	height: 25px;
+} 
+.tab_head h2 {
+	background-position: top left;
+	margin: 0; /* reset main site styles*/
+	border: 0; /* padding-left = image gap + interior padding ... no padding-right */
+	height: 24px !important;
+	height: 1%; /* IE Holly Hack */
+	padding-top: 0px;
+	padding-right: 0;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: normal;
+	color: #9fa2c7;
+} 
+
+
+/* -------  PAGE CONTENT  --------- */
+
+.pg_content {
+	background-image: url(images/content_bg.png);
+	background-repeat: no-repeat;
+	background-position: center -4px;
+}
+.module {
+	background-image: url(images/module_bg.png);
+	background-repeat: no-repeat;
+	height: 193px;
+	width: 238px;
+	position: relative;
+	padding: 10px;
+	color: #FFFFFF;
+	float: left;
+	margin: 18px;
+	line-height: 14px;
+}
+.back {}
+.module_crnr {
+	height: 35px;
+	width: 35px;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+}
+.module_hd {
+	vertical-align: middle;
+	line-height: 32px;
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+.module_hd img {
+	vertical-align: middle;
+	margin-right: 12px;
+}
+.module h1 {
+	font-size: 15px;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+}
+.module img.screen {
+	float: right;
+}
+.back img.screen {
+	float: left;
+	margin-right: 10px;
+}
+.back div.description {
+	height: 155px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-right: 5px;
+}
+.module img.icon {
+	float: left;
+}
+.module_foot {
+	position: absolute;
+	left: 0px;
+	bottom: 10px;
+	width: 257px;
+	text-align: center;
+}
+.module_foot  img {
+	margin-right: 4px;
+	margin-left: 4px;
+}
+.module_rating {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.clearing {
+	clear: left;
+	height: 1px;
+	font-size: 0px;
+}
+.sort {
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 12px;
+	padding-top: 16px;
+}
+.sort td {
+	padding-right: 2px;
+	padding-left: 2px;
+}
+.sort table {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+.pg_foot {
+	color: #FFFFFF;
+	text-align: center;
+	margin-bottom: 18px;
+}
