@@ -1,10 +1,17 @@
 function Appetite(data) {
     this._data = data;
-    this._items = data.channel.items;
+    this._items = {
+        all: data.channel.items,
+        free: [],
+        paid: []
+    };
+    
+    // this._items = data.channel.items;
+    // this._free = [];
+    // this._paid = [];
+
     this._icons = [];
     this._byid = {};
-    this._free = [];
-    this._paid = [];
 
     var self = this;
 
@@ -29,9 +36,9 @@ function Appetite(data) {
                 if (item.localizations[0]) {
                     var amount = item.localizations[0].price;
                     if (amount == 0) {
-                        self._free.push(item);
+                        self._items['free'].push(item);
                     } else {
-                        self._paid.push(item);
+                        self._items['paid'].push(item);
                     }                    
                 }
             }
@@ -42,12 +49,58 @@ function Appetite(data) {
 }
 
 Appetite.prototype = {
+    /* the engine behind the whole thing */
+    find: function(opts) {
+        // get the options ready
+        opts = this.withDefaults(opts);
+        
+        // get the initial data set ready
+        var data = this._items[opts.data];
+        
+        // filter the data set if there is a query
+        if (opts.query) {
+            data = this.filter(data, opts.query, opts.channel);
+        }
+        
+        // sort
+        data = data.sort(this.sorts[opts.order]);
+        
+        // return a subset back
+        return data.slice(opts.start, opts.size);
+    },
+    
+    filter: function(data, query, channel) {
+        var results = [];
+        query = query.toLowerCase();
+        
+        for (var i in data) {
+            if (data.hasOwnProperty(i)) {
+                var item = data[i];
+                
+                // check channel and stop it if not in the channel!
+                // TODO
+                
+                if ( (item.title.toLowerCase().indexOf(query) > -1) || (item.description.toLowerCase().indexOf(query) > -1) ) {
+                    results.push(item);
+                }
+            }
+        }
+        return results;
+    },
+    
     withDefaults: function(opts) {
         opts = opts || {};
-        if (opts.byCategory) {
-            // deal with category sorting
+        // if (opts.byCategory) {
+        //     // deal with category sorting
+        // }
+        
+        // Get the right settings for a given type of query
+        if (opts.type && this.types[opts.type]) {
+            opts = this.types[opts.type](opts);
         }
 
+        if (! (opts.data == 'free' || opts.data == 'paid' || opts.data == 'all' ) ) opts.data = 'all';
+        if (! (opts.order == 'alpha' || opts.order == 'rating' || opts.order == 'downloads' || opts.order == 'gross' || opts.order == 'newest') ) opts.order = 'alpha';
         opts.start   = opts.start-1 || 0; // 1 based? really? :)
         opts.size    = opts.size || 50;
         opts.channel = opts.channel || 'wcb';  
@@ -55,42 +108,82 @@ Appetite.prototype = {
         return opts;
     },
     
-    orderBy: function(dataSet, opts) {
-        return filterFunc(withDefaults(opts));
+    // -- From Type
+    types: {
+        top_rated: function(opts) {
+            opts.order = 'rating';
+            return opts;
+        },
+        top_paid: function(opts) {
+            opts.order = 'downloads';
+            opts.data = 'paid';
+            return opts;
+        },
+        top_free: function(opts) {
+            opts.order = 'downloads';
+            opts.data = 'free';
+            return opts;
+        },
+        top_overall: function(opts) {
+            opts.order = 'downloads';
+            return opts;
+        },
+        top_grossing: function(opts) {
+            opts.order = 'gross';
+            return opts;
+        },
+        newest: function(opts) {
+            opts.order = 'newest';
+            return opts;
+        }
     },
     
     // -- Sorts
-    sortByRating: function(a, b) {
-        var ratingA = parseFloat(a.rating);
-        var ratingB = parseFloat(b.rating);
-        
-        if (ratingA == ratingB) return 0;
-        
-        return (ratingA < ratingB) ? 1 : -1;
-    },
+    sorts: {
+        alpha: function(a, b) {
+            if (a.title == b.title) return 0;
     
-    sortByDownloads: function(a, b) {
-        var downloadsA = parseInt(a.total_downloads);
-        var downloadsB = parseInt(b.total_downloads);
-        
-        if (downloadsA == downloadsB) return 0;
-        
-        return (downloadsA < downloadsB) ? 1 : -1;
-    },
+            return (a.title > b.title) ? 1 : -1;
+        },
 
-    sortByGross: function(a, b) {
-        var downloadsA = parseInt(a.total_downloads);
-        var downloadsB = parseInt(b.total_downloads);
+        rating: function(a, b) {
+            var ratingA = parseFloat(a.rating);
+            var ratingB = parseFloat(b.rating);
         
-        var priceA = parseFloat(a.localizations[0].price);
-        var priceB = parseFloat(b.localizations[0].price);
+            if (ratingA == ratingB) return 0;
         
-        var grossA = downloadsA * priceA;
-        var grossB = downloadsB * priceB;
+            return (ratingA < ratingB) ? 1 : -1;
+        },
+    
+        downloads: function(a, b) {
+            var downloadsA = parseInt(a.total_downloads);
+            var downloadsB = parseInt(b.total_downloads);
         
-        if (grossA == grossB) return 0;
+            if (downloadsA == downloadsB) return 0;
         
-        return (grossA < grossB) ? 1 : -1;
+            return (downloadsA < downloadsB) ? 1 : -1;
+        },
+
+        gross: function(a, b) {
+            var downloadsA = parseInt(a.total_downloads);
+            var downloadsB = parseInt(b.total_downloads);
+        
+            var priceA = parseFloat(a.localizations[0].price);
+            var priceB = parseFloat(b.localizations[0].price);
+        
+            var grossA = downloadsA * priceA;
+            var grossB = downloadsB * priceB;
+        
+            if (grossA == grossB) return 0;
+        
+            return (grossA < grossB) ? 1 : -1;
+        },
+    
+        newest: function(a, b) {
+            if (a.pubDate == b.pubDate) return 0;
+        
+            return (a.pubDate < b.pubDate) ? 1 : -1;
+        }
     },
     
     // -- API
@@ -112,74 +205,54 @@ Appetite.prototype = {
         return this._byid[id];
     },
     
-    // -- EXPLORE
+    // -- EXPLORE (LEGACY)
     
     // /explore/top_rated?by_category=[true|false]&start=[1+]&size=[1+]&channel=[w][b][c]
     explore_top_rated: function(opts) {
-        opts = this.withDefaults(opts);
-        
-        return this._items.sort(this.sortByRating).slice(opts.start, opts.size);
+        opts = opts || {};
+        opts.type = 'top_rated';
+
+        return this.find(opts);
     },
     
     // /explore/top_paid
     explore_top_paid: function(opts) {
-        opts = this.withDefaults(opts);
+        opts = opts || {};
+        opts.type = 'top_paid';
         
-        return this._paid.sort(this.sortByDownloads).slice(opts.start, opts.size);
+        return this.find(opts);        
     },
 
     explore_top_free: function(opts) {
-        opts = this.withDefaults(opts);
+        opts = opts || {};
+        opts.type = 'top_free';
         
-        return this._free.sort(this.sortByDownloads).slice(opts.start, opts.size);
+        return this.find(opts);        
     },
 
     explore_top_overall: function(opts) {
-        opts = this.withDefaults(opts);
+        opts = opts || {};
+        opts.type = 'top_overall';
         
-        return this._items.sort(this.sortByDownloads).slice(opts.start, opts.size);
+        return this.find(opts);        
     },
 
     explore_top_grossing: function(opts) {
-        opts = this.withDefaults(opts);
+        opts = opts || {};
+        opts.type = 'top_grossing';
         
-        return this._items.sort(this.sortByGross).slice(opts.start, opts.size);
-    },
-
-    explore_all: function(opts) {
-        opts = this.withDefaults(opts);
-
-        return this._items.slice(opts.start, opts.size);
+        return this.find(opts);        
     },
 
     explore_newest: function(opts) {
-        opts = this.withDefaults(opts);
-        
-        var byNewestDate = function(a, b) {
-            if (a.pubDate == b.pubDate) return 0;
-            
-            return (a.pubDate < b.pubDate) ? 1 : -1;
-        }
+        opts = opts || {};
+        opts.type = 'newest';
 
-        return this._items.sort(byNewestDate).slice(opts.start, opts.size);
+        return this.find(opts);                
     },
-    
-    // -- SEARCH
-    search_all: function(query, opts) {
-        opts = this.withDefaults(opts);
-        
-        var results = [];
-        query = query.toLowerCase();
-        
-        for (var i in this._items) {
-            if (items.hasOwnProperty(i)) {
-                var item = this._items[i];
-                if ( (item.title.toLowerCase().indexOf(query) > -1) || (item.description.toLowerCase().indexOf(query) > -1) ) {
-                    results.push(item);
-                }
-            }
-        }
-        return results.slice(opts.start, opts.size);
-    }
+
+    explore_all: function(opts) { // all really means "by alpha"
+        return this.find(opts);        
+    }    
     
 };
