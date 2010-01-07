@@ -108,7 +108,7 @@
     var selectedTabElement;
 
     // a "client object" that wraps the Appetite API with JavaScript functions
-    var appetite = new Appetite(data);
+    var appetite = new Appetite(apps);
 
     // how many apps to show
     var appCount = 48;
@@ -121,8 +121,7 @@
     // app list as the user types
     function doSearch(searchElement) {
         // cancel any pending search requests
-        // FIXME: is this the right way to cancel the timer?
-        if (searchTimer) searchTimer.cancelled = true;
+        if (searchTimer) clearTimeout(searchTimer);
 
         // copy search string from input text into global state
         searchString = searchElement.value;

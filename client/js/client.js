@@ -1,7 +1,6 @@
-function Appetite(data) {
-    this._data = data;
-    this._items = {
-        all: data.channel.items,
+function Appetite(apps) {
+    this._apps = {
+        all: apps,
         free: [],
         paid: []
     };
@@ -11,30 +10,28 @@ function Appetite(data) {
 
     var self = this;
 
-    var iconInfo = function(item) {
+    var iconInfo = function(app) {
         return {
-          id: item.guid,
-          icon: item.icons[0].url,
-          name: item.title
+          id: app.guid,
+          icon: app.icons[0].url,
+          name: app.title
         }
     };
 
     var generateCaches = function() {
-        var items = data.channel.items;
-
-        for (var i in items) {
-            if (items.hasOwnProperty(i)) {
-                var item = items[i];
-                self._icons.push(iconInfo(item));
-                self._byid[item.guid] = item;
+        for (var i in apps) {
+            if (apps.hasOwnProperty(i)) {
+                var app = apps[i];
+                self._icons.push(iconInfo(app));
+                self._byid[app.guid] = app;
 
                 // dip into the first localization
-                if (item.localizations[0]) {
-                    var amount = item.localizations[0].price;
+                if (app.localizations[0]) {
+                    var amount = app.localizations[0].price;
                     if (amount == 0) {
-                        self._items['free'].push(item);
+                        self._apps['free'].push(app);
                     } else {
-                        self._items['paid'].push(item);
+                        self._apps['paid'].push(app);
                     }
                 }
             }
@@ -51,59 +48,59 @@ Appetite.prototype = {
         opts = this.withDefaults(opts);
 
         // get the initial data set ready
-        var data = this._items[opts.data];
+        var apps = this._apps[opts.set];
 
         // filter the data set if there is a query
         if (opts.query) {
-            data = this.filter(data, opts.query, opts.channels);
+            apps = this.filter(apps, opts.query, opts.channels);
         // else just weed the channels if we need too
         } else if (opts.channels != 'bcw') {
-            data = this.weedChannels(data, opts.channels);
+            apps = this.weedChannels(apps, opts.channels);
         }
 
         // sort
-        data = data.sort(this.sorts[opts.order]);
+        apps = apps.sort(this.sorts[opts.order]);
 
         // return a subset back
-        return data.slice(opts.start, opts.size);
+        return apps.slice(opts.start, opts.size);
     },
     
-    itemIsInChannel: function(channels, itemchannel) {
-        itemchannel = itemchannel || 'c';
+    appIsInChannel: function(channels, appchannel) {
+        appchannel = appchannel || 'c';
         
-        return (channels.indexOf(itemchannel) > -1); // if this item is in the channels that we want
+        return (channels.indexOf(appchannel) > -1); // if this app is in the channels that we want
     },
     
-    weedChannels: function(data, channels) {
+    weedChannels: function(apps, channels) {
         var results = [];
 
-        for (var i in data) {
-            if (data.hasOwnProperty(i)) {
-                var item = data[i];
+        for (var i in apps) {
+            if (apps.hasOwnProperty(i)) {
+                var app = apps[i];
 
                 // check channel and stop it if not in the channel!
                 // NOTE: if there is no channel, assume that it is device
-                if (this.itemIsInChannel(channels, item.channel)) {
-                    results.push(item);                    
+                if (this.appIsInChannel(channels, app.channel)) {
+                    results.push(app);                    
                 }
             }
         }
         return results;        
     },
 
-    filter: function(data, query, channels) {
+    filter: function(apps, query, channels) {
         var results = [];
         query = query.toLowerCase();
 
-        for (var i in data) {
-            if (data.hasOwnProperty(i)) {
-                var item = data[i];
+        for (var i in apps) {
+            if (apps.hasOwnProperty(i)) {
+                var app = apps[i];
 
                 // check channel and stop it if not in the channel!
                 // NOTE: if there is no channel, assume that it is device
-                if (this.itemIsInChannel(channels, item.channel)) {
-                    if ( (item.title.toLowerCase().indexOf(query) > -1) || (item.description.toLowerCase().indexOf(query) > -1) ) {
-                        results.push(item);
+                if (this.appIsInChannel(channels, app.channel)) {
+                    if ( (app.title.toLowerCase().indexOf(query) > -1) || (app.description.toLowerCase().indexOf(query) > -1) ) {
+                        results.push(app);
                     }
                 }
             }
@@ -119,7 +116,7 @@ Appetite.prototype = {
             opts = this.types[opts.type](opts);
         }
 
-        if (! (opts.data == 'free' || opts.data == 'paid' || opts.data == 'all' ) ) opts.data = 'all';
+        if (! (opts.set == 'free' || opts.set == 'paid' || opts.set == 'all' ) ) opts.set = 'all';
         if (! (opts.order == 'alpha' || opts.order == 'rating' || opts.order == 'downloads' || opts.order == 'gross' || opts.order == 'newest') ) opts.order = 'alpha';
         opts.start    = opts.start-1 || 0; // 1 based? really? :)
         opts.size     = opts.size || 50;
@@ -136,12 +133,12 @@ Appetite.prototype = {
         },
         top_paid: function(opts) {
             opts.order = 'downloads';
-            opts.data = 'paid';
+            opts.set = 'paid';
             return opts;
         },
         top_free: function(opts) {
             opts.order = 'downloads';
-            opts.data = 'free';
+            opts.set = 'free';
             return opts;
         },
         top_overall: function(opts) {
