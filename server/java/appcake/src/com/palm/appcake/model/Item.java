@@ -105,6 +105,9 @@ public class Item {
 	@XStreamAlias("total_comments")
 	private String total_comments;
 	
+	@Persistent
+	private String total_accounts;
+	
 	@Persistent 
 	@XStreamAlias("min_os")
 	private String minOs;

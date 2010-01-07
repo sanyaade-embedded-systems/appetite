@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
 
 import com.palm.appcake.model.converter.PriceConverter;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -60,7 +61,10 @@ public class Localization {
 	@XStreamAlias("support_url")
 	private String supportUrl;
 	private Categories categories;
-	private Images images;
+	//private Images images;
+    @Persistent
+    private List<Image> images = new ArrayList<Image>();
+
 
 	public Localization() {}
 	
