@@ -18,10 +18,10 @@ import java.util.List;
  */
 public class JSONConverter {
     public static void main(String[] args) throws Exception {
-	String filename = "new.catalog.xml";
-	if (args.length > 0 && args[0] != null) {
-		filename = args[0];
-	}
+        String filename = "new.catalog.xml";
+        if (args.length > 0 && args[0] != null) {
+            filename = args[0];
+        }
 
         JSONConverter.convert(filename);
     }
@@ -33,7 +33,7 @@ public class JSONConverter {
 
         StringBuilder sb = new StringBuilder();
 
-        sb.append("[\n");
+        sb.append("var apps = [\n");
 
         List elements = XPath.selectNodes(catalog, "/rss/channel/item");
 
@@ -44,7 +44,7 @@ public class JSONConverter {
             Element element = (Element) elements.get(i);
 
             // filter out non-US elements
-            if (!getText(element, "ac:country").equals("US") || !getText(element, "ac:language").equals("en")) continue;
+            //if (!getText(element, "ac:country").equals("US") || !getText(element, "ac:language").equals("en")) continue;
 
             process(element, sb, new String[] {
                     "title",
@@ -57,7 +57,6 @@ public class JSONConverter {
                     "ac:rating",
                     "ac:total_downloads",
                     "ac:total_comments",
-                    "ac:total_accounts",
                     "ac:min_os",
                     "ac:devices",
                     "ac:language",
@@ -75,7 +74,12 @@ public class JSONConverter {
 
         sb.append("\n]");
 
-        File output = new File("catalog.json");
+        sb.append("\n// check to see if you are running inside of node.js and export if you are\n");
+        sb.append("if (typeof GLOBAL == \"object\" && typeof GLOBAL['node'] == \"object\") {\n");
+        sb.append("    exports.apps = apps;\n");
+        sb.append("}");
+
+        File output = new File("catalog_us_en.json");
         output.delete();
 
         FileOutputStream out = new FileOutputStream(output);
@@ -114,7 +118,14 @@ public class JSONConverter {
         json.append("\"localizations\": [");
 
         // get the icon elements
-        List localizations = es(element, "ac:localizations/ac:localization");
+        List localizations = es(element, "ac:localizations/ac:localization[@ac:country='US'][@ac:language='en']");
+        if (localizations.isEmpty()) {
+            localizations = es(element, "ac:localizations/ac:localization[@ac:country='AC'][@ac:language='en']");
+        }
+        if (localizations.isEmpty()) {
+            localizations = es(element, "ac:localizations/ac:localization[@ac:country='AC']");
+        }
+
         for (int i = 0; i < localizations.size(); i++) {
             if (i > 0) json.append(", ");
             json.append("{\n");
@@ -128,8 +139,8 @@ public class JSONConverter {
             json.append("\"" + l.getAttributeValue("language", ns) + "\",\n");
 
             process(l, json, new String[] {
-                    "ac:title",
-                    "ac:summary",
+//                    "ac:title",
+//                    "ac:summary",
                     "ac:price",
                     "ac:developer",
                     "ac:developer_url",
