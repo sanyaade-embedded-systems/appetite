@@ -55,7 +55,10 @@ Appetite.prototype = {
 
         // filter the data set if there is a query
         if (opts.query) {
-            data = this.filter(data, opts.query, opts.channel);
+            data = this.filter(data, opts.query, opts.channels);
+        // else just weed the channels if we need too
+        } else if (opts.channels != 'bcw') {
+            data = this.weedChannels(data, opts.channels);
         }
 
         // sort
@@ -64,8 +67,31 @@ Appetite.prototype = {
         // return a subset back
         return data.slice(opts.start, opts.size);
     },
+    
+    itemIsInChannel: function(channels, itemchannel) {
+        itemchannel = itemchannel || 'c';
+        
+        return (channels.indexOf(itemchannel) > -1); // if this item is in the channels that we want
+    },
+    
+    weedChannels: function(data, channels) {
+        var results = [];
 
-    filter: function(data, query, channel) {
+        for (var i in data) {
+            if (data.hasOwnProperty(i)) {
+                var item = data[i];
+
+                // check channel and stop it if not in the channel!
+                // NOTE: if there is no channel, assume that it is device
+                if (this.itemIsInChannel(channels, item.channel)) {
+                    results.push(item);                    
+                }
+            }
+        }
+        return results;        
+    },
+
+    filter: function(data, query, channels) {
         var results = [];
         query = query.toLowerCase();
 
@@ -74,10 +100,11 @@ Appetite.prototype = {
                 var item = data[i];
 
                 // check channel and stop it if not in the channel!
-                // TODO
-
-                if ( (item.title.toLowerCase().indexOf(query) > -1) || (item.description.toLowerCase().indexOf(query) > -1) ) {
-                    results.push(item);
+                // NOTE: if there is no channel, assume that it is device
+                if (this.itemIsInChannel(channels, item.channel)) {
+                    if ( (item.title.toLowerCase().indexOf(query) > -1) || (item.description.toLowerCase().indexOf(query) > -1) ) {
+                        results.push(item);
+                    }
                 }
             }
         }
@@ -86,9 +113,6 @@ Appetite.prototype = {
 
     withDefaults: function(opts) {
         opts = opts || {};
-        // if (opts.byCategory) {
-        //     // deal with category sorting
-        // }
 
         // Get the right settings for a given type of query
         if (opts.type && this.types[opts.type]) {
@@ -97,9 +121,9 @@ Appetite.prototype = {
 
         if (! (opts.data == 'free' || opts.data == 'paid' || opts.data == 'all' ) ) opts.data = 'all';
         if (! (opts.order == 'alpha' || opts.order == 'rating' || opts.order == 'downloads' || opts.order == 'gross' || opts.order == 'newest') ) opts.order = 'alpha';
-        opts.start   = opts.start-1 || 0; // 1 based? really? :)
-        opts.size    = opts.size || 50;
-        opts.channel = opts.channel || 'wcb';
+        opts.start    = opts.start-1 || 0; // 1 based? really? :)
+        opts.size     = opts.size || 50;
+        opts.channels = opts.channels || 'bcw'; // b: beta, c: palm catalog, w: web distro
 
         return opts;
     },

@@ -22,7 +22,6 @@ var data = {
 "rating": "2.9",
 "total_downloads": "1352",
 "total_comments": "17",
-"total_accounts": "1270",
 "min_os": "webOS 1.0.0",
 "devices": "Palm Pre, Palm Pixi",
 "language": "en",
