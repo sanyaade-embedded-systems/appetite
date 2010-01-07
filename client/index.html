@@ -412,7 +412,7 @@
     }
 
     function installApp(packageid) {
-        loadSmsPopup(packageid);
+        //loadSmsPopup(packageid);
 
         var size = getDimensions();
 
@@ -431,7 +431,7 @@
         popup.style.width = popupSize.width + "px";
         popup.style.height = popupSize.height + "px";
 
-        popup.innerHTML = '<div style="width: 100%; height: 100%; margin: 0 auto"><img width="64" height="64" src="images/loading.gif"/></div>';
+        popup.innerHTML = '<div style="width: 100%; height: 100%; margin: 0 auto"><img style="margin: 28px 200px" width="64" height="64" src="images/loading.gif"/></div>';
     }
 
     function loadSmsPopup(packageid) {
