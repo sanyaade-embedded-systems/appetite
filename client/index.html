@@ -12,7 +12,7 @@
         <div class="tag">A demonstration of Palm's open app ecosystem</div>
         <div class="search_wrapper">
             <div class="search_field">
-                <input onkeypress="doSearch(this)" type="text" id="search" value="Search"
+                <input onkeydown="doSearch(this)" type="text" id="search" value="Search"
                        onfocus="searchFocus(this)" onblur="searchBlur(this)">
             </div>
         </div>
@@ -128,7 +128,7 @@
 
         // create a timer to refresh apps in 1.5 seconds; if the search results are
         // refreshed in advance of this, the timer will be cancelled and the ref cleared
-        searchTimer = setTimeout(loadApps, 1500);
+        searchTimer = setTimeout(loadApps, 100);
     }
 
     // invoked when the user clicks on one of the tab H2 elements
@@ -202,33 +202,7 @@
 
             //console.log(app);
 
-            var appHTML =
-                  '<div class="module">' +
-                    '<div class="app-card">' +
-                      '<div class="card front">' +
-                        '<div class="module_crnr"><img src="images/crnr_' + getAppCorner(app) + '.png" width="35" height="35" /></div>' +
-                        '<img class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
-                        '<div class="module_hd"><img class="icon" src="' + app.icons[1].url + '" width="32" height="32" /> ' + getAppPrice(app) +
-                            '<div class="clearing">&nbsp;</div>' +
-                        '</div>' +
-                        '<h1>' + app.title + '</h1>' +
-                        $lo(app).developer + '<br />' +
-                        getAppCategory(app) + '<br />' +
-                        '<div class="module_rating"><img src="images/' + getStarImage(app) + '.png" width="77" height="12" /><br />' +
-                            app.total_comments + ' comments</div>' +
-                        'v' + app.version + '  |  ' + getAppSize(app) + '<br />' +
-                        getAppDownloads(app) + ' downloads' +
-                        '<div class="module_foot"><img onclick="flipOver(this)" src="images/btn_moreinfo.png" alt="More Info" width="74" height="20" /><img onclick="installApp(\'' + app.packageid + '\')" src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
-                      '</div>\n' +
-                      '<div class="card back back2"><img class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
-                        '<div class="description">' +
-                          '<h1>' + app.title + '</h1>' +
-                          app.description +
-                        '</div>' +
-                        '<div class="module_foot"><img onclick="flipBack(this)" src="images/btn_back.png" alt="More Info" width="74" height="20" /><img onclick="installApp(\'' + app.packageid + '\')" src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
-                      '</div>\n' +
-                    '</div>\n' +
-                  '</div>';
+            var appHTML = getAppHTML(app);
             appsHTML += appHTML;
         }
 
@@ -236,6 +210,84 @@
         
         // decide to show or hide the more apps button
         showOrHideMoreAppsButton(apps);
+    }
+
+    function getAppHTML(app) {
+        if (supportsFancyTransforms()) {
+            return '<div class="module">' +
+              '<div class="app-card">' +
+                '<div class="card front">' +
+                  '<div class="module_crnr"><img src="images/crnr_' + getAppCorner(app) + '.png" width="35" height="35" /></div>' +
+                  '<img class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                  '<div class="module_hd"><img class="icon" src="' + app.icons[1].url + '" width="32" height="32" /> ' + getAppPrice(app) +
+                      '<div class="clearing">&nbsp;</div>' +
+                  '</div>' +
+                  '<h1>' + app.title + '</h1>' +
+                  $lo(app).developer + '<br />' +
+                  getAppCategory(app) + '<br />' +
+                  '<div class="module_rating"><img src="images/' + getStarImage(app) + '.png" width="77" height="12" /><br />' +
+                      app.total_comments + ' comments</div>' +
+                  'v' + app.version + '  |  ' + getAppSize(app) + '<br />' +
+                  getAppDownloads(app) + ' downloads' +
+                  '<div class="module_foot"><img onclick="flipOver(this)" src="images/btn_moreinfo.png" alt="More Info" width="74" height="20" /><img onclick="installApp(\'' + app.packageid + '\')" src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
+                '</div>\n' +
+                '<div class="card back back2"><img class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                  '<div class="description">' +
+                    '<h1>' + app.title + '</h1>' +
+                    app.description +
+                  '</div>' +
+                  '<div class="module_foot"><img onclick="flipBack(this)" src="images/btn_back.png" alt="More Info" width="74" height="20" /><img onclick="installApp(\'' + app.packageid + '\')" src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
+                '</div>\n' +
+              '</div>\n' +
+            '</div>';
+        } else {
+            return '<div class="simple-cards">' +
+              '<div class="simple-module">' +
+                  '<div class="module_crnr"><img src="images/crnr_' + getAppCorner(app) + '.png" width="35" height="35" /></div>' +
+                  '<img class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                  '<div class="module_hd"><img class="icon" src="' + app.icons[1].url + '" width="32" height="32" /> ' + getAppPrice(app) +
+                      '<div class="clearing">&nbsp;</div>' +
+                  '</div>' +
+                  '<h1>' + app.title + '</h1>' +
+                  $lo(app).developer + '<br />' +
+                  getAppCategory(app) + '<br />' +
+                  '<div class="module_rating"><img src="images/' + getStarImage(app) + '.png" width="77" height="12" /><br />' +
+                      app.total_comments + ' comments</div>' +
+                  'v' + app.version + '  |  ' + getAppSize(app) + '<br />' +
+                  getAppDownloads(app) + ' downloads' +
+                  '<div class="module_foot"><img onclick="showBack(this)" src="images/btn_moreinfo.png" alt="More Info" width="74" height="20" /><img onclick="installApp(\'' + app.packageid + '\')" src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
+              '</div>\n' +
+              '<div class="simple-module back hidden"><img class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                  '<div class="description">' +
+                    '<h1>' + app.title + '</h1>' +
+                    app.description +
+                  '</div>' +
+                  '<div class="module_foot"><img onclick="showFront(this)" src="images/btn_back.png" alt="More Info" width="74" height="20" /><img onclick="installApp(\'' + app.packageid + '\')" src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
+              '</div>\n' +
+            '</div>';
+        }
+    }
+
+    function showBack(node) {
+        var cardContainer = node.parentNode;
+        while (cardContainer.className != "simple-cards") cardContainer = cardContainer.parentNode;
+
+        var children = cardContainer.childElements();
+        children[0].className = "simple-module hidden";
+        children[1].className = "simple-module back";
+    }
+
+    function showFront(node) {
+        var cardContainer = node.parentNode;
+        while (cardContainer.className != "simple-cards") cardContainer = cardContainer.parentNode;
+
+        var children = cardContainer.childElements();
+        children[0].className = "simple-module";
+        children[1].className = "simple-module back hidden";
+    }
+
+    function supportsFancyTransforms() {
+        return false;
     }
 
     function getAppCorner(app) {
