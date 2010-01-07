@@ -62,7 +62,7 @@ Appetite.prototype = {
         apps = apps.sort(this.sorts[opts.order]);
 
         // return a subset back
-        return apps.slice(opts.start, opts.size);
+        return apps.slice(opts.start, opts.count);
     },
 
     appIsInChannel: function(channels, appchannel) {
@@ -119,7 +119,7 @@ Appetite.prototype = {
         if (! (opts.set == 'free' || opts.set == 'paid') ) opts.set = 'all';
         if (! (opts.order == 'alpha' || opts.order == 'rating' || opts.order == 'downloads' || opts.order == 'gross' || opts.order == 'newest') ) opts.order = 'alpha';
         opts.start    = opts.start-1 || 0; // 1 based? really? :)
-        opts.size     = opts.size || 50;
+        opts.count    = opts.count || 50;
         opts.channels = opts.channels || 'bcw'; // b: beta, c: palm catalog, w: web distro
 
         return opts;
