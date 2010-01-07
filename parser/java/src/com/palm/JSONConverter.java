@@ -37,10 +37,8 @@ public class JSONConverter {
 
         List elements = XPath.selectNodes(catalog, "/rss/channel/item");
 
+        int count = 0;
         for (int i = 0; i < elements.size(); i++) {
-            if (i > 0) sb.append(", ");
-            sb.append("{\n");
-
             Element element = (Element) elements.get(i);
 
             // filter out non-US elements
@@ -52,6 +50,11 @@ public class JSONConverter {
                 results = es(element, "ac:localizations/ac:localization[@ac:country='AC']");
                 if (results.isEmpty()) continue;
             }
+
+            count++;
+
+            if (count > 1) sb.append(", ");
+            sb.append("{\n");
 
             process(element, sb, new String[] {
                     "title",

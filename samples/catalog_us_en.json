@@ -986,7 +986,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Forbes.com",
     "description": "(Submitted for US only) The latest business news, financial analysis, stock/index prices from Forbes.com! Get the latest stories from Forbes.com on the Latest News page. Pick an editorial channel such as Markets, Business, Personal Finance, Technology or see most emailed and popular stories. Download articles for reading when no connection is available.  See the latest stock/index prices and edit the symbols. Share articles via email and social networks with Facebook, Yahoo Buzz, Digg and Reddit. Powered by BlueSwitch.",
     "pubDate": "2009-12-23 22:29:23",
@@ -1813,7 +1812,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Zilch Lite",
     "description": "(Submitted for US only) Zilch is a modest little dice game in which the player races the computer to 10,000 points. It is easy to learn and quick to play. It is a game of skill and luck in which the best player prevails.\000a\000aZilch will make waiting in lines more bearable. It will make long trips seem shorter. It might just make the security line at the airport enjoyable. Actually, that's pretty good for a little dice game.\000a\000awebOS 1.1 or greater is required\000a\000aNew in v0.9.2:\000a* Fixed a bug that was causing the game to freeze.",
     "pubDate": "2009-12-15 02:55:15",
@@ -2061,7 +2059,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "The New York Times",
     "description": "Follow the news and in-depth analysis from The New York Times. Stay up-to-date on trends in business, politics, sports, arts and more. Now you can e-mail an article to a friend and send to another device using SMS. You can do all this and more from your new Palm.",
     "pubDate": "2009-10-03 09:17:33",
@@ -2208,7 +2205,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Kosher2Go",
     "description": "Powered by the Shamash.Org kosher database (the world’s largest and most accurate kosher database), Kosher2Go  provides access to over 2700 kosher establishments in over 50 countries.   Information displayed for each entry includes: name, address, telephone, URL, cuisine type, rating, kosher supervising authority, hours, average cost, distance to location, type of restaurant (meat, dairy, etc.) and reviews.",
     "pubDate": "2009-10-03 09:22:44",
@@ -3077,7 +3073,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Mezzoman - Free",
     "description": "(Submitted for US, Canada, Ireland, and the United Kingdom only) Powered by the Google Maps API and Yelp. Mezzoman - Free is the first application to find places to meet friends, family and/or business associates in the middle. Using a proprietary 2 point system, Mezzoman can easily find a place to meet in the middle so everyone can save time, money and gas! \000aMeeting up with friends, clients or family members in the middle couldn’t be easier. Simply enter your address, your friend’s address, type in a search term (like Sushi) and hit Mezzoman Go! The results you get will be based on the exact midpoint between the two points based on roads; this means your midpoint will always be in an area accessible to you. Mezzoman can also use your current GPS coordinates to make it quick and easy for you to meet with someone when you are not at a known address or are on the road. Additionally, you can add a Contact’s address to any address field with the tap of a button. \000a	Since the results are based on Yelp, you can easily find a top rated Sushi bar between your place and theirs, or a great place to Karaoke between your office and their office. You can also easily call a business result, email it, find it on a map, or read reviews on it at Yelp.com.  Mezzoman – Free is limited to only 2 addresses at one time, it can’t send a result via email, and results are limited to only 5 per search. The Paid version offers up three addresses, results can be sent via email and the result size is 20.",
     "pubDate": "2009-10-05 22:55:05",
@@ -3265,7 +3260,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "PicHunt - Pets",
     "description": "EpicTilt presents the PicHunt - Pets! Enjoy the classic and popular photo hunt game in the palm of your hand, featuring 50 photos of cute cuddly pets and animals! Find and poke the five differences before the timer runs out. You only have three lives and three hints per game. Compare your scores to the rest of the PicHunt users around the world on the Worldwide Scoreboard!",
     "pubDate": "2009-11-17 17:17:17",
@@ -3447,7 +3441,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Polar Bowling",
     "description": "(Submitted for US only) Pass the time by competing in Polar Bowling. PB gives you the chance to Step away from the normal world and enter the world of competitive Polar Bowling. This game will test your polar bear bowling abilities. Refine your skills over time and improve your high scores to become the Polar Bowling champion. This is the great game for the casual gamer because you can just pick up and play. MXweb hopes you enjoy the game!",
     "pubDate": "2009-10-05 22:59:05",
@@ -4434,8 +4427,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
-, {
     "title": "The Weather Channel",
     "description": "Get FREE, personalized weather information with the newest application from The Weather Channel(r) for Palm Pre and Pixi.  When you are on-the-go, this GPS-enabled app gives you instant access to accurate and local weather details that you need to stay informed.  Browse interactive radar and satellite maps, and check current conditions and hourly forecasts when you’re out and about. And when you’re making longer-term plans, the 36-hour and 10-day forecasts are right at your fingertips.  \000a\000aTake the weather with you!",
     "pubDate": "2009-10-17 23:08:17",
@@ -4843,7 +4834,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Newsweek Mobile, North America",
     "description": "(Submitted for US, Canada only) Passionate about the news? Get in-depth insight and analysis into the most significant issues of the day with NEWSWEEK’s opinion-leading editorial from the most influential names in journalism. You can also customize your news experience by adding feeds from all of your favorite news outlets. Only from NEWSWEEK. Only on your Palm. Do you NEWSWEEK?",
     "pubDate": "2009-10-17 23:05:17",
@@ -5210,7 +5200,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "billiger.de",
     "description": "Price comparison for more than 2500 shops in Germany!\000a\000aCheck if the \"sale price\" is really a good deal in seconds. Simply search for the UPC or the product name.\000a \000aHighlights:\000aPrice comparison on one of the biggest onlineshop-databases in Germany. Test reviews from the most trusted product test magazines. \000a\000aFirst hand reviews and ratings of products and onlineshops by users like you. \000a\000a* We're working on the integration of an EAN-Codescanner. Update will follow soon. *",
     "pubDate": "2009-12-10 23:54:10",
@@ -5247,11 +5236,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
-, {
-, {
-, {
-, {
     "title": "Easy Stopwatch",
     "description": "This is a simple timer with lap/split time. If you have the timer running while in the background a notification will be shown each minute. This application supports both landscape and portrait views.",
     "pubDate": "2009-12-29 11:13:29",
@@ -5286,7 +5270,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "dkStopwatch",
     "description": "Stopwatch application can start, stop, continue, and reset. Lap list shows accrued time at each interval. The application can run in portrait and landscape modes.",
     "pubDate": "2009-11-17 17:19:17",
@@ -6223,8 +6206,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
-, {
     "title": "BILDmobil",
     "description": "BILDmobil - Aktuelle News aus Deutschland und der Welt auf ihrem Palm",
     "pubDate": "2009-10-15 03:11:15",
@@ -6261,7 +6242,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Freudian Therapist",
     "description": "Freudian Therapist turns your Palm Pre into your very own mobile therapy session.\000a\000aWhether you need to chat about your dreams, discuss the role your parents played in your choice of bathroom tiles, or you just can't figure out when a cigar is just a cigar, Freudian Therapist is for you!",
     "pubDate": "2009-10-21 17:10:21",
@@ -7109,7 +7089,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "M:Racing 40 Respect Points",
     "description": "Race through the streets for pink slips in the ultimate street racing MMORPG.\000a\000a(Note:  m:Racing is NOT an arcade-style racing simulation game.  It is an role-playing, racing-themed, MMO game.) \000a \000aAdd 40 Respect Points to your existing character.\000a\000aFeatures include: Master the tracks with Mission Mastery, race your friends and build the sickest ride from over 30 cars and 70 custom parts.\000a\000aHit the NOS and become a street racing king today!",
     "pubDate": "2009-12-09 22:04:09",
@@ -11379,7 +11358,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Enjoy Sudoku",
     "description": "Novices and experienced players alike will appreciate Enjoy Sudoku. Our wide range of difficulty levels, tutorial, extensive feature set, and advanced hint system offer something for every player.\000a\000aOur multi-stage hint system starts with a gentle reminder to get you back on track, and works up to an illustration of the exact technique to use and how it applies to the current board. Our hints ease those frustrating moments and teach you how to be a better player.\000a\000aFeatures include: unlimited play across fourteen difficulty levels, tutorial teaches you new techniques, large, high contrast digits are easy to read, enter games from the newspaper, solver helps you with games from the newspaper, advanced techniques at the higher levels, like X-Wings, sashimi fish, and XY-Chains, user interface optimized for fewer touches, never covers up the board while you are playing, automatic or manual pencil marks, save your game while you try alternatives, automatically saves your game when you get a phone call, switch applications, or lock the phone, highlighting helps you discover patterns, game clock; compares your time to other players, avoids graphic frills that distract from play. Note: hints require an Internet connection.\000a\000aIf you Enjoy Sudoku, this is the app for you!",
     "pubDate": "2009-11-26 00:56:26",
@@ -12997,7 +12975,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Backgrounds",
     "description": "*Busque más de 10.000 fondos de imágenes / Backgrounds\000a\000a*Nuevo fondo agregado diariamente\000a\000a*Los Fondos extraordinarios creados por nuestro equipo de diseñadores que usted no encontrará dondequiera más\000a\000a*Escoja más de 30 categorías como: Las películas,  Coches, Gracioso,  Animales, Navidad, Año\000aNuevo,  Modelos, Para chicos, Espacio, lindo,  Deportes,  Juegos, las Playas, Agua, Para chicas, la\000aNoche, Corazones, los Remolinos, Explosiones,  Edificios,  Ciudades, Fantasía, Puesta del sol, Tecnología, Flores y muchos más.",
     "pubDate": "2009-12-04 20:22:04",
@@ -13471,7 +13448,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Quick Contacts",
     "description": "Quick Contacts is the ultimate speed dialing application for your Palm Pre and Palm Pixi!\000aWith Quick Contacts, you can call, SMS and email all of your favorite contacts by just tapping on their photo and never even slide open your keyboard. \000aIt also has it's own QuickLaunch bar with your favorite Quicklaunch Buttons - Contacts, SMS, Email and Phone Dialer so you can make room on your phone's QuickLaunch bar.  That will let you get to everything quickly and easily.\000aOnce you start using Quick Contacts, you'll wonder what took you so long.\000a* List View, Reorder Contacts, Custom Backgrounds, Add a Prefix/Suffix so you can use calling cards, call extensions and even use Google Voice!",
     "pubDate": "2009-11-14 16:40:14",
@@ -13875,7 +13851,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "jBalls",
     "description": "This is a classic Russian game of ball alignment available for the Palm Pre or Pixi smartphones.\000a\000aThe game starts out with 3 randomly colored balls placed in 3 random locations on the main board. The user then takes a turn to move a single ball either horizontally or vertically (given there is a clear path to a chosen spot on the board) to try and align the same colored balls either horizontally, vertically, or diagonally.\000a\000aWhen a specified number of balls are aligned, they are removed from the game and points are awarded to the player. For each turn where no balls are aligned, 3 new randomly colored balls will appear on the board.\000a\000aThe user has the option to adjust the board size so that the game is easier to play on the smaller Palm Pixi screen.",
     "pubDate": "2009-11-17 17:10:17",
@@ -14786,7 +14761,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "TaskAdder",
     "description": "TaskAdder is the easy way for Toodledo users to add tasks to your Toodledo account while on the go from your webOS device. It does NOT sync tasks. It provides a simple way to add tasks without having to remember the complicated Toodledo syntax used to enter tasks by email, SMS, etc.\000a\000aOn initial launch, you'll enter your Toodledo login info (email and password). TaskAdder will then login to Toodledo and grab your Folders and Contexts. You can then easily enter a new Task and select Folder, Priority, Due Date, Context, Status and Repeat.\000a\000aTaskAdder will also allow you to view your Toodledo hotlist to see quickly see which tasks are important today.\000a\000a***A free account from http://www.toodledo.com is required for this app.***",
     "pubDate": "2009-11-20 23:49:20",
@@ -15117,7 +15091,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Yahtzee",
     "description": "Play the treasured dice game! Travel the globe, meet new characters and challenge them to a game, roll the dice and be the first to score a Yahtzee! Try your hand at the ultimate Yahtzee single-player adventure, Pass n Play with your friends or challenge them online. Dynamic, exciting gameplay, easy controls automatic scorekeeping deliver terrific mobile entertainment for you, your friends and family.",
     "pubDate": "2009-11-26 00:56:26",
@@ -16458,7 +16431,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "MemoryUpgrade",
     "description": "This is a memory upgrade for YOU. Your WebOS device has plenty of memory, so let your phone remember everything for you! Provide the details of what you want to remember (keywords, text, lists, images), and instantly recall them later. When you want to recall a memory, just start typing in the search field, and matching results will automatically appear as you type.\000a\000aYou can store individual pieces of information (e.g. what size are my air filters?), shopping lists, and even images. Want to make sure you don't forget where you parked? Take a picture! Assign it a keyword of \"park\", and you'll easily locate it later.\000a\000aMemoryUpgrade is fast! Your memories are stored in a database for fast performance and reliability. With MemoryUpgrade, you can have thousands of memories and recall any one of them in a split second!\000a\000aWhat if you want to use the same keywords for more than one thing? Not a problem! You can use the same keywords for as many memories as you like, and when you type in the keywords later, all of the matching memories will be displayed in a list. Just select the memory from the list to view/edit it, or press the Copy icon to copy the data to the clipboard. \000a\000aWhat if you want to remember sensitive information, such as passwords? You can set the secret flag, which will mask the data in the results list with asterisks, yet you will still be able to copy the actual data to the clipboard by pressing the Copy icon. This allows you to use your sensitive data without worrying about that person looking over your shoulder.\000a\000aDo you already have some data in a text file or spreadsheet? Do you want to enter your data more quickly using your computer? MemoryUpgrade can import tab-delimited text files.\000a\000aVisit http://xybyresoft.com/webos for more details and a video demonstration.",
     "pubDate": "2009-11-26 01:08:26",
@@ -16677,7 +16649,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "RIPTA",
     "description": "(Submitted for US only).\000a\000aRhode Island Public Transit Authority schedules now on your WebOS device! Take route information, time tables, and maps with you on the go.\000aFlick through the stops of each route to see their schedules, view their maps, and even see the map of Downtown Providence!",
     "pubDate": "2010-01-01 04:06:01",
@@ -18553,7 +18524,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Mancala",
     "description": "Think Checkers, but FAST! This is digital version of the classic board game, the fast-paced and strategic Mancala.  Play with a friend, or alone against two levels of computer difficulty.  Beautiful graphics and a plethora of customization options make this one of the most exciting versions of Mancala for any device.",
     "pubDate": "2009-12-03 00:11:03",
@@ -18663,7 +18633,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Tic Tac Toe",
     "description": "This is a classic tic tac toe game with a simple UI, and it's free",
     "pubDate": "2009-12-03 02:34:03",
@@ -20041,7 +20010,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Fuel",
     "description": "** v0.8.47 contains new features and bug fixes. ** : \000aFuel is aimed at making life, as it relates to your vehicle(s), a little easier... while helping you stay organized, wherever you live/travel. The most common thing people do with their vehicles, aside from drive them, is put fuel in them. What better time to get a glimpse of what is going on with your vehicle(s) than at the pump? Fuel allows you to track as many vehicles as you have, in your preferred unit of measure (Miles/Kilometers, Gallons/Imperial Gallons/Litres). It will also help you when you're traveling by converting the values you see on the pump to the ones you are used to seeing, whether its distance, volume or currency (via Google Finance - Currency Converter). It'll even allow you to record your current location (via Location Services) and show you the nearby gas stations (via Google Maps). You can set up odometer/date based service reminders (i.e. oil change, tune-up, tire rotation, etc), and even create your own reminder presets. Fuel allows you to manage your data via import/export with a Google Docs account... so your data is accessible in the formats that you decide.",
     "pubDate": "2009-12-07 22:50:07",
@@ -20944,7 +20912,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "EZ Calc",
     "description": "EZ Calc is a Tip Calculator, a Unit Converter and a Calculator in one. The main feature is the Tip Calculator, which automatically calculates the \"split\" amount depending on the number of people \"splitting\" the bill, the  user just needs to enter the total amount (with tax included) in the Bill field by using the on-screen keypad. The Unit Converter allows the user to convert popular units of measure (Distance/Area/Weight/Volume/Speed/Temperature). And the Calculator feature is pretty straightforward and the numbers are easily readable. This app is very easy to use and users will appreciate the simplicity.",
     "pubDate": "2009-12-29 10:31:29",
@@ -21127,9 +21094,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
-, {
-, {
     "title": "SoundCannon Soundboard",
     "description": "SoundCannon Soundboard is the premier soundboard application for WebOS. This soundboard currently includes sounds like rim shot, drum roll, crickets, computers, cows, squeaky gears, gongs, guns and glory. SoundCannon has 25 different awesome sound effects that you can use to help lower tension and mainly to have fun. A random button allows you to play a random sound, also we have included a timer for you to setup a sneak attack on all of your friends, family and coworkers. We have a major sound update planned for after the memory limit is fixed, also price might increase on next update so get it now!",
     "pubDate": "2009-12-10 00:54:10",
@@ -21589,7 +21553,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Cell Stalker",
     "description": "Track a phone online. Share your public pass-key with friends or keep it to yourself.  Tracks any Palm WebOS phone. Variable updates.  Optional password protection.  As precise as your phone allows.  Email your link to friends.  Optional subscription to view past locations and travel trails.",
     "pubDate": "2009-12-11 00:08:11",
@@ -23373,7 +23336,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Pittsburgh Football Fans",
     "description": "If you're a huge Pittsburgh fan, this is the app for you!  Pittsburgh Football Fans provides you with access to the latest news, videos, stats, schedule, standings and scores. You'll always know what's happening with the team! \000a\000aYou can also discuss the latest news and highlights with other Pittsburgh fans using the built in chat feature. Make sure your voice is heard! \000a\000aThere is no better or more comprehensive tool to stay up to date with Pittsburgh. If you are a true fan, you owe it to yourself to download Pittsburgh Football Fans today! \000a\000a\000a** Brighthouse Labs, and the Pittsburgh Football Fans application are in no way associated with the NFL or the Pittsburgh Steelers. All trademarks are owned by their respective owners.",
     "pubDate": "2009-12-11 23:51:11",
@@ -26979,7 +26941,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Compound Interest Calculator",
     "description": "Calculate the growth of an investment based on compound interest. Adjust your initial investment, monthly contribution and interest rate. Then play with the graph and watch your investment grow over time.",
     "pubDate": "2009-12-16 04:03:16",
@@ -27189,7 +27150,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Chronic Attack",
     "description": "THIS IS YOUR LAST STAND! Swivel your turrent left and right and defend yourself from the waves of endless attackers coming from all directions who want to blow you away. Are you ready to defend yourself in this highly addicting arcade shooter? Will you set the high kill score before getting blown away?",
     "pubDate": "2009-12-18 20:40:18",
@@ -27981,7 +27941,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Brainbuster",
     "description": "Test your general knowledge and broaden your horizons in a fun way with Brainbuster!\000aWith 27 questions in nine categories, this game with attractive graphics, guides you along the path of knowledge until you finally reach the well of eternal wisdom.\000aQuestions are in multiple choice format, and you are offered three alternative answers – but better be quick, the clock’s running!\000aDepending on the time you need to answer correctly, you are awarded credits, which you can then compare in a worldwide highscore list. In consideration to iphone users with limited contracts, the option „network connection with WiFi access only“ is offered in system settings.\000aBrainbuster really challenges you - within each round you will have to answer one question from each category: Geography, history, arts, literature, music, science, sports, movies and, finally, miscellaneous. Correct answers are never repeated, and for each wrong answer, there is a chance to redeem yourself later via the Bonus-chance feature. If you get them right this time, you have learned something new, and thus will increase your individual level of knowledge.\000aExtensive statistics constantly keep you updated about your personal score, your current level of knowledge, and your performance in each of the categories.\000aHave fun with Brainbuster!\000a\000aContent editors: Dylan Dryden & Jennifer Clarke\000a\000aShort description:\000a\000a* Lite version 27 questions, full version 2700 questions.\000a* Nine subject areas to test your knowledge (geography, history, arts, literature, music, science, sports, movies and miscellaneous)\000a* Extensive in-game statistics and worldwide highscore ranking\000a* User accounts (up to three accounts on one device)",
     "pubDate": "2009-12-18 20:10:18",
@@ -30249,7 +30208,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Guerreros Del Arpa",
     "description": "Guerreros Del Arpa, which translates to Warriors of the Harp, is a great band with a truly unique style. Mario Madrigal – the harpist, Gerardo Peña – the drummer, Nelson Torres – the lead vocalist, Salvador Yslas – the bass guitarist, and Antonio Salas – the guitarist, collaborated in 2004 to form Guerreros Del Arpa. Their upbeat music and exceptional style is a definite crowd pleaser.\000a\000a--This application features Guerreros Del Arpa’s album \"Raza Manoza\" in its entirety.",
     "pubDate": "2009-12-25 11:30:25",
@@ -31511,7 +31469,6 @@ var apps = [{
         ]
     }]
 }, {
-, {
     "title": "Movie Times",
     "description": "Movie Times provides you with movie listings and showtimes for theatres near you, searchable by film or by theatre. Searching through the full list of films showing in your city, you’ll find detailed info for each film including synopsis, promotional image, reviews, runtime, age ratings and genre.  Plus you’ll see which cinemas are showing the movie near you.  If you search for a specific theater you’ll find its contact info along with all of its showtimes.   Listings are available for up to four days in advance. \000a\000aWith Movie Times you’ll never have troubles finding a place to watch the latest new release blockbuster again!  Download today so you’ll always know what’s playing!",
     "pubDate": "2009-12-29 10:42:29",
