@@ -58,17 +58,37 @@ Appetite.prototype = {
             apps = this.weedChannels(apps, opts.channels);
         }
 
+        // if rating weeding is on, weed out ratings that are high but not quality (e.g. no real usage and just one 5)
+        if (opts.weedRatings) {
+            apps = this.weedRatings(apps);
+        }
+
         // sort
         apps = apps.sort(this.sorts[opts.order]);
 
         // return a subset back
-        return apps.slice(opts.start, opts.count);
+        return apps.slice(opts.start, opts.size);
     },
 
     appIsInChannel: function(channels, appchannel) {
         appchannel = appchannel || 'c';
 
         return (channels.indexOf(appchannel) > -1); // if this app is in the channels that we want
+    },
+
+    weedRatings: function(apps) {
+        var results = [];
+
+        for (var i in apps) {
+            if (apps.hasOwnProperty(i)) {
+                var app = apps[i];
+
+                if (app.total_comments > 10 && app.total_downloads > 800) {
+                    results.push(app);
+                }
+            }
+        }
+        return results;
     },
 
     weedChannels: function(apps, channels) {
@@ -119,7 +139,7 @@ Appetite.prototype = {
         if (! (opts.set == 'free' || opts.set == 'paid') ) opts.set = 'all';
         if (! (opts.order == 'alpha' || opts.order == 'rating' || opts.order == 'downloads' || opts.order == 'gross' || opts.order == 'newest') ) opts.order = 'alpha';
         opts.start    = opts.start-1 || 0; // 1 based? really? :)
-        opts.count    = opts.count || 50;
+        opts.size     = opts.size || 50;
         opts.channels = opts.channels || 'bcw'; // b: beta, c: palm catalog, w: web distro
 
         return opts;
@@ -129,6 +149,7 @@ Appetite.prototype = {
     types: {
         top_rated: function(opts) {
             opts.order = 'rating';
+            opts.weedRatings = true;
             return opts;
         },
         top_paid: function(opts) {
@@ -147,7 +168,6 @@ Appetite.prototype = {
         },
         top_grossing: function(opts) {
             opts.order = 'gross';
-            opts.set = 'paid';
             return opts;
         },
         newest: function(opts) {
