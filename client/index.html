@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Appetite  |  Stuff your apps.</title>
+    <title>Appetite  |  Stuff Your Palm</title>
     <link href="styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body onload="selectTab($('top_rated'))">
@@ -13,7 +13,8 @@
         <div class="tag">A demonstration of Palm's open app ecosystem</div>
         <div class="search_wrapper">
             <div class="search_field">
-                <input name="textfield2" type="text" id="textfield2" value="Search"/>
+                <input onkeypress="doSearch(this)" type="text" id="search" value="Search"
+                       onfocus="searchFocus(this)" onblur="searchBlur(this)" />
             </div>
         </div>
     </div>
@@ -61,61 +62,119 @@
     <div class="sort">
         <table border="0" cellspacing="0" cellpadding="0">
             <tr>
-                <td><input name="checkbox" type="checkbox" id="chk_catalog" checked="checked"/></td>
+                <td><input type="checkbox" id="chk_catalog" onchange="loadApps()" checked="checked"/></td>
                 <td>Palm App Catalog</td>
                 <td>&nbsp;</td>
-                <td><input name="checkbox2" type="checkbox" id="chk_web" checked="checked"/></td>
+                <td><input type="checkbox" id="chk_web" onchange="loadApps()" checked="checked"/></td>
                 <td>Web Distribution</td>
                 <td>&nbsp;</td>
-                <td><input name="checkbox3" type="checkbox" id="chk_beta" checked="checked"/></td>
+                <td><input type="checkbox" id="chk_beta" onchange="loadApps()" checked="checked"/></td>
                 <td>Beta</td>
             </tr>
         </table>
     </div>
-    <div id="app_container">
+    <div id="app_container_container">
+        <div id="app_container">
+        </div>
     </div>
     <div class="clearing">&nbsp;</div>
 </div>
 <div class="pg_foot">Copyright and all that jazz.</div>
 </div>
+
 <script src="js/prototype.js" type="text/javascript"></script>
 <script src="js/data.all.js" type="text/javascript"></script>
 <script src="js/client.js" type="text/javascript"></script>
 
 <script type="text/javascript">
+    // current search entered by the user, if any; should always be a string
+    var searchString = "";
+
+    // string corresponding to the currently selected tab
     var selectedTab;
+
+    // the DOM tab element that has been selected
     var selectedTabElement;
 
+    // tracks which channels (e.g., web, catalog, beta) are being displayed;
+    // listeners on the checkboxes in the HTML call a function which syncs
+    // the checkbox value with the properties on this object
     var channels = { catalog: true, web: true, beta: true };
+
+    // a "client object" that wraps the Appetite REST endpoints with JavaScript functions
     var appetite = new Appetite(data);
 
+    // the last function that was used to retrieve apps from the Appetite client.
+    // this ref is held to allow for paging more results in as the user requests
+    // them.
+    var lastClientFunction;
+
+    // a reference to the timer used to refresh search results after an input delay
+    var searchTimer;
+
+    // invoked by a listener on the search text box, this function will fire up a timer
+    // to do a search after a delay. the delay is to avoid constantly refreshing the
+    // app list as the user types
+    function doSearch(searchElement) {
+        // cancel any pending search requests
+        // FIXME: is this the right way to cancel the timer?
+        if (searchTimer) searchTimer.cancelled = true;
+
+        // copy search string from input text into global state
+        searchString = searchElement.value;
+
+        // create a timer to refresh apps in 1.5 seconds; if the search results are
+        // refreshed in advance of this, the timer will be cancelled and the ref cleared
+        searchTimer = setTimeout(loadApps, 1500);
+    }
+
+    // invoked when the user clicks on one of the tab H2 elements
     function selectTab(h2) {
+        // setting these classes causes the tab to appear selected on-screen
         h2.parentNode.parentNode.className = "tab selected";
+
+        // if a previous tab has been selected, eliminate the "selected" class so it
+        // no longer appears pressed
         if (selectedTabElement) selectedTabElement.parentNode.parentNode.className = "tab";
 
+        // set global state regarding the currently selected tab
         selectedTabElement = h2;
         selectedTab = h2.id;
 
-        loadApps(selectedTab);
+        // refresh the displayed apps to correspond to the new tab state
+        loadApps();
     }
 
-    function loadApps(type, search) {
+    // refreshes the displayed apps; relies on global state to determine which
+    // apps should be displayed
+    function loadApps() {
         // sync the channels object with the channels checkboxes
         channels.catalog = $("chk_catalog").checked;
         channels.web = $("chk_web").checked;
         channels.beta = $("chk_beta").checked;
 
-        // request the right data from the server
-        var functionName = (search && search != "") ?
+        // builds the name of the function to be invoked on the appetite client
+        var functionName = (searchString != "") ?
                            "search_" + selectedTab :
                            "explore_" + selectedTab;
 
+        // retrieve a reference to the function
         var appFunction = appetite[functionName];
 
+        if (!appFunction) {
+            console.log("WARNING: no function for '" + functionName + "'");
+            return;
+        }
+
+        // invoke the function, using apply() to map "this" to the appetite client
+        // return value will be apps to display
         var apps = appFunction.apply(appetite);
 
         // display the data
         displayApps(apps);
+
+        // hold on to the function in case user asks for more apps
+        lastClientFunction = appFunction;
     }
 
     function displayApps(apps) {
@@ -247,6 +306,21 @@
         if (("" + price).charAt(price.length - 2) == ".") price += 0;
 
         return price;
+    }
+
+    function searchFocus(searchElement) {
+        if (searchString == "") searchElement.value = "";
+
+        searchElement.className = "userValue";
+    }
+
+    function searchBlur(searchElement) {
+        searchString = searchElement.value; 
+
+        if (searchElement.value == "") {
+            searchElement.value = "Search";
+            searchElement.className = "";
+        }
     }
 </script>
 </body>
