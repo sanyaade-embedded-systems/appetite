@@ -54,8 +54,15 @@ var responders = {
 
 
 // -- Create the HTTP server binding
-var port = process.ENV['APPETITE_PORT'] || 8000;
 var host = process.ENV['APPETITE_HOST'] || 'localhost';
+var port = process.ENV['APPETITE_PORT'] || 8000;
+
+if (process.ARGV.length > 3) { // overwrite with command line args
+    port = process.ARGV[3];
+}
+if (process.ARGV.length > 2) {
+    host = process.ARGV[2];
+}
 
 http.createServer(function(request, response) {
     var path = request.uri.path.substring(1);
