@@ -118,10 +118,16 @@
     // a reference to the timer used to refresh search results after an input delay
     var searchTimer;
 
+    // if set to true, CSS Transforms will be used to flip the app card regardless of whether
+    // Appetite thinks your browser supports them
+    var fancyModeOverride = false;
+
     function setupAppetite() {
         document.observe('keydown', function(event) {
             if (event.keyCode == Event.KEY_ESC) {
                 hidePopup();
+            } else if (event.keyCode == 70 && event.ctrlKey) {
+                fancyModeOverride = !fancyModeOverride;
             }
         });
         selectTab($('top_rated'));
@@ -309,7 +315,7 @@
     }
 
     function supportsFancyTransforms() {
-        return false;
+        return fancyModeOverride;
     }
 
     function getAppCorner(app) {
