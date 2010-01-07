@@ -5,7 +5,7 @@
     <title>Appetite  |  Stuff Your Palm</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
-<body onload="selectTab($('top_rated'))">
+<body onload="setupAppetite()">
 <div class="wrapper">
 <div class="pg_head_wrapper">
     <div class="pg_hd"><img class="logo" src="images/logo.png" width="218" height="58">
@@ -81,8 +81,6 @@
     </div>
     <div class="clearing">&nbsp;</div>
     <div id="popup" class="hidden">
-        <form id="SMSForm" method="POST" action="/sms/post">
-        </form>
     </div>
     <div id="dimmer" class="hidden"></div>
 </div>
@@ -115,6 +113,16 @@
 
     // a reference to the timer used to refresh search results after an input delay
     var searchTimer;
+
+    function setupAppetite() {
+        document.observe('keydown', function(event) {
+            if (event.keyCode == Event.KEY_ESC) {
+                $("dimmer").className = "hidden";
+                $("popup").className = "hidden";
+            }
+        });
+        selectTab($('top_rated'));
+    }
 
     // invoked by a listener on the search text box, this function will fire up a timer
     // to do a search after a delay. the delay is to avoid constantly refreshing the
@@ -422,6 +430,8 @@
         popup.style.top = Math.round((size.visibleHeight / 2) - (popupSize.height / 2)) + "px";
         popup.style.width = popupSize.width + "px";
         popup.style.height = popupSize.height + "px";
+
+        popup.innerHTML = '<div style="width: 100%; height: 100%; margin: 0 auto"><img width="64" height="64" src="images/loading.gif"/></div>';
     }
 
     function loadSmsPopup(packageid) {
@@ -434,9 +444,12 @@
                 var popupHtml = xhr.responseText.replace("border:1px solid #494949;", "");
 
                 // add the packageid
-                //popupHtml += '<input type="hidden" name="packageid" value="\'' + packageId '\'" />';
+                popupHtml = '<form id="SMSForm" method="POST" action="/sms/post">' +
+                            '<input type="hidden" name="packageid" value="' + packageid + '" />' +
+                            popupHtml +
+                            '</form>';
 
-                $("SMSForm").innerHTML = popupHtml;
+                $("popup").innerHTML = popupHtml;
             }
         });
     }
