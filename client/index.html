@@ -81,7 +81,7 @@
     </div>
     <div class="clearing">&nbsp;</div>
 </div>
-<div id="more"><img src="images/btn_showmore_lg3.png" onclick="showMoreApps()"></div>
+<div id="more" style="display:block"><img src="images/btn_showmore_lg3.png" onclick="showMoreApps()"></div>
 <div class="pg_foot">Copyright and all that jazz.</div>
 </div>
 
@@ -102,12 +102,7 @@
     // the DOM tab element that has been selected
     var selectedTabElement;
 
-    // tracks which channels (e.g., web, catalog, beta) are being displayed;
-    // listeners on the checkboxes in the HTML call a function which syncs
-    // the checkbox value with the properties on this object
-    var channels = { catalog: true, web: true, beta: true };
-
-    // a "client object" that wraps the Appetite REST endpoints with JavaScript functions
+    // a "client object" that wraps the Appetite API with JavaScript functions
     var appetite = new Appetite(data);
 
     // how many apps to show
@@ -152,14 +147,16 @@
     // refreshes the displayed apps; relies on global state to determine which
     // apps should be displayed
     function loadApps() {
-        // sync the channels object with the channels checkboxes
-        channels.catalog = $("chk_catalog").checked;
-        channels.web = $("chk_web").checked;
-        channels.beta = $("chk_beta").checked;
-
+        // sync the channels setting with the channels checkboxes
+        var channels = "";
+        if ($("chk_catalog").checked) { channels = channels + "c"; }
+        if ($("chk_web").checked)     { channels = channels + "w"; }
+        if ($("chk_beta").checked)    { channels = channels + "b"; }
+        
         // Setup the parameters to query the apps
         var opts = {
-            size: appCount
+            size: appCount,
+            channels: channels
         };
 
         // set the type of query (top_rated etc) and all means just show 'em all, so no need for a type
@@ -180,6 +177,15 @@
     function showMoreApps() {
         appCount = appCount + 48;
         loadApps();
+    }
+    
+    function showOrHideMoreAppsButton(apps) {
+        // don't show the "show more apps" button if there aren't more apps!
+        if (appCount > apps.length) {
+            $('more').hide();
+        } else {
+            $('more').show();
+        }
     }
 
     function displayApps(apps) {
@@ -222,12 +228,15 @@
         }
 
         appContainer.innerHTML = appsHTML;
+        
+        // decide to show or hide the more apps button
+        showOrHideMoreAppsButton(apps);
     }
 
     function getAppCorner(app) {
-        if (app.channel == "web") {
+        if (app.channel == "w") {
             return "web";
-        } else if (app.channel == "beta") {
+        } else if (app.channel == "b") {
             return "beta";
         } else {
             return "cat";
