@@ -1,4 +1,4 @@
-// AppCake Service 
+// Appetite Service 
 
 var sys = require("sys"),
    http = require("http"),
