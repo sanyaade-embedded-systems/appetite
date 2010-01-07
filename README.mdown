@@ -3,7 +3,9 @@ Appetite
 
 AAppetite is a reference implementation of talking to the Palm Application Catalog back end.
 
-This sample is licensed in a way in which you can use it to create your app visualizations, and consists of a few pieces:
+This sample can be used to create your app visualizations, and consists of a few pieces:
 
 * client front end (ajax app)
 * server backend that servers up data to the ajax app
+
+See LICENSE file for more information regarding the licensing terms.
