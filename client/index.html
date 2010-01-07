@@ -81,6 +81,8 @@
     </div>
     <div class="clearing">&nbsp;</div>
     <div id="popup" class="hidden">
+        <div id="popupClose" onclick="hidePopup()">[close]</div>
+        <div id="popupContents"></div>
     </div>
     <div id="dimmer" class="hidden"> </div>
 
@@ -119,12 +121,15 @@
     function setupAppetite() {
         document.observe('keydown', function(event) {
             if (event.keyCode == Event.KEY_ESC) {
-                $("dimmer").className = "hidden";
-                $("popup").className = "hidden";
-                $("popup").innerHTML = "";
+                hidePopup();
             }
         });
         selectTab($('top_rated'));
+    }
+
+    function hidePopup() {
+        $("dimmer").className = "hidden";
+        $("popup").className = "hidden";
     }
 
     // invoked by a listener on the search text box, this function will fire up a timer
@@ -421,7 +426,8 @@
     }
 
     function installApp(packageid) {
-        loadSmsPopup(packageid);
+        // to use Ajax instead of an iframe, uncomment this
+        //loadSmsPopup(packageid);
 
         var size = getDimensions();
 
@@ -439,7 +445,10 @@
         popup.style.width = popupSize.width + "px";
         popup.style.height = popupSize.height + "px";
 
-        popup.innerHTML = '<div style="width: 100%; height: 100%; margin: 0 auto"><img style="margin: 28px 200px" width="64" height="64" src="images/loading.gif"/></div>';
+        $("popupContents").innerHTML = "<iframe scrolling=\"no\" frameborder=\"0\" width=\"" + popupSize.width + "px\" height=\"" + popupSize.height + "\" src=\"/sms/getPopup?iframe=true&packageid=" + packageid + "\"/>";
+
+        // to use Ajax, uncomment this and comment out the iframe
+        //popup.innerHTML = '<div style="width: 100%; height: 100%; margin: 0 auto"><img style="margin: 28px 200px" width="64" height="64" src="images/loading.gif"/></div>';
     }
 
     function loadSmsPopup(packageid) {
@@ -448,7 +457,7 @@
             onSuccess: function(xhr) {
                 if ($("popup").className == "hidden") return;
                 
-                //xhr.responseText.evalScripts();
+                xhr.responseText.evalScripts();
 
                 // kill the border
                 var popupHtml = xhr.responseText.replace("border:1px solid #494949;", "");
@@ -472,38 +481,6 @@
             top: document.body.scrollTop || document.documentElement.scrollTop
         }
     }
-
-    function palm_sms_updateCountryPrefix()
-    {
-        var menu = document.getElementById('palm_sms_countryMenu');
-        var value = menu.options[menu.selectedIndex].value;
-        var cc = value.split(":");
-        document.getElementById('palm_sms_callingPrefix').value = "+"+cc[0];
-        document.getElementById('palm_sms_cc').value = cc[1];
-    }
-
-    function palm_sms_showCountryMenu()
-    {
-        document.getElementById('palm_sms_countryNameDiv').style.display = 'none';
-        document.getElementById('palm_sms_countryMenuDiv').style.display = 'block';
-        document.getElementById('palm_sms_callingPrefix').style.display = 'block';
-        document.getElementById('palm_sms_phoneRow').setAttribute('class', 'palm_sms_withPrefix');
-    }
-
-    function palm_sms_verifySubmit()
-    {
-        var enteredPh = document.getElementById('palm_sms_phoneNum').value;
-        var sanitized = enteredPh.replace(/[\(\)\-\s]/g, '');
-        if (isNaN(parseFloat(sanitized)) || !isFinite(sanitized)) {
-            document.getElementById('palm_sms_msgError').innerHTML = "Please enter a valid phone number for the selected country";
-            document.getElementById('palm_sms_msgError').setAttribute('class', 'palm_sms_msgError');
-        } else {
-            document.getElementById('palm_sms_ph').value = sanitized;
-            document.getElementById('palm_sms_msgError').setAttribute('class', 'palm_sms_hide');
-            document.getElementById('SMSForm').submit();
-        }
-    }
-
 </script>
 </body>
 </html>

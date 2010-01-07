@@ -336,3 +336,12 @@ body {
     z-index: 10;
     font-size: 12pt;
 }
+
+#popupClose {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font: bold 10pt Arial;
+    color: blue;
+    cursor: pointer;
+}
