@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class JSONConverter {
     public static void main(String[] args) throws Exception {
-        String filename = "new.catalog.xml";
+        String filename = "catalog.device.xml";
         if (args.length > 0 && args[0] != null) {
             filename = args[0];
         }
@@ -33,7 +33,7 @@ public class JSONConverter {
 
         StringBuilder sb = new StringBuilder();
 
-        sb.append("var apps = [\n");
+        sb.append("var apps = [");
 
         List elements = XPath.selectNodes(catalog, "/rss/channel/item");
 
@@ -45,6 +45,13 @@ public class JSONConverter {
 
             // filter out non-US elements
             //if (!getText(element, "ac:country").equals("US") || !getText(element, "ac:language").equals("en")) continue;
+
+            // filter out the element if it doesn't have a US/en or AC localization
+            List results = es(element, "ac:localizations/ac:localization[@ac:country='US'][@ac:language='en']");
+            if (results.isEmpty()) {
+                results = es(element, "ac:localizations/ac:localization[@ac:country='AC']");
+                if (results.isEmpty()) continue;
+            }
 
             process(element, sb, new String[] {
                     "title",
@@ -61,7 +68,7 @@ public class JSONConverter {
                     "ac:devices",
                     "ac:language",
                     "ac:country"
-            });
+            }, "    ");
 
             processIcons(element, sb);
 
@@ -90,7 +97,7 @@ public class JSONConverter {
     private static void processIcons(Element element, StringBuilder json) throws JDOMException {
         Namespace ns = Namespace.getNamespace("http://palm.com/app.catalog.rss.extensions");
 
-        json.append("\"icons\": [");
+        json.append("    \"icons\": [");
 
         // get the icon elements
         List icons = es(element, "ac:icons/ac:asset_url");
@@ -100,13 +107,12 @@ public class JSONConverter {
 
             Element icon = (Element) icons.get(i);
 
-            json.append("\"type\": ");
+            json.append("        \"type\": ");
             json.append("\"" + icon.getAttributeValue("type", ns) + "\"");
             json.append(", \n");
-            json.append("\"url\": ");
+            json.append("        \"url\": ");
             json.append("\"" + icon.getTextTrim() + "\"");
-            
-            json.append("\n}\n");
+            json.append("\n    }");
         }
 
         json.append("],\n");
@@ -115,7 +121,7 @@ public class JSONConverter {
     private static void processLocalizations(Element element, StringBuilder json) throws JDOMException {
         Namespace ns = Namespace.getNamespace("http://palm.com/app.catalog.rss.extensions");
 
-        json.append("\"localizations\": [");
+        json.append("    \"localizations\": [");
 
         // get the icon elements
         List localizations = es(element, "ac:localizations/ac:localization[@ac:country='US'][@ac:language='en']");
@@ -132,10 +138,10 @@ public class JSONConverter {
 
             Element l = (Element) localizations.get(i);
 
-            json.append("\"country\": ");
+            json.append("        \"country\": ");
             json.append("\"" + l.getAttributeValue("country", ns) + "\",\n");
 
-            json.append("\"language\": ");
+            json.append("        \"language\": ");
             json.append("\"" + l.getAttributeValue("language", ns) + "\",\n");
 
             process(l, json, new String[] {
@@ -145,9 +151,9 @@ public class JSONConverter {
                     "ac:developer",
                     "ac:developer_url",
                     "ac:support_url"
-            });
+            }, "        ");
 
-            json.append("\"categories\": [");
+            json.append("        \"categories\": [");
             json.append("\"" + e(l, "ac:categories").getAttributeValue("primary", ns) + "\"");
             List cats = es(l, "ac:categories/ac:category");
             for (int j = 0; j < cats.size(); j++) {
@@ -156,16 +162,16 @@ public class JSONConverter {
             }
             json.append("],\n");
 
-            json.append("\"images\": [");
+            json.append("        \"images\": [\n");
             List imgs = es(l, "ac:images/ac:image/ac:asset_url[@ac:type='large']");
             for (int j = 0; j < imgs.size(); j++) {
-                if (j > 0) json.append(", ");
+                if (j > 0) json.append(",\n");
                 Element img = (Element) imgs.get(j);
-                json.append("\"" + img.getTextTrim() + "\"");
+                json.append("            \"" + img.getTextTrim() + "\"");
             }
-            json.append("],\n");
+            json.append("\n        ]\n");
 
-            json.append("\n}\n");
+            json.append("    }");
         }
 
         json.append("],\n");
@@ -176,10 +182,10 @@ public class JSONConverter {
         return (e == null) ? "" : e.getTextTrim();
     }
 
-    private static void process(Object ctx, StringBuilder csv, String[] paths) throws JDOMException {
+    private static void process(Object ctx, StringBuilder csv, String[] paths, String indent) throws JDOMException {
         for (int i = 0; i < paths.length; i++) {
             String path = paths[i];
-            add(csv, ctx, path);
+            add(csv, ctx, path, indent);
         }
     }
 
@@ -208,7 +214,7 @@ public class JSONConverter {
         return xp.selectNodes(ctx);
     }
 
-    private static void add(StringBuilder csv, Object ctx, String path) throws JDOMException {
+    private static void add(StringBuilder csv, Object ctx, String path, String indent) throws JDOMException {
         Element e = e(ctx, path);
 
         String text = (e == null) ? "" : e.getTextTrim();
@@ -216,6 +222,6 @@ public class JSONConverter {
         String field = path;
         if (field.indexOf(":") != -1) field = field.substring(field.indexOf(":") + 1);
 
-        csv.append("\"" + field + "\": " + escape(text) + ",\n");
+        csv.append(indent + "\"" + field + "\": " + escape(text) + ",\n");
     }
 }
