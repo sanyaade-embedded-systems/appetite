@@ -64,13 +64,13 @@ Appetite.prototype = {
         // return a subset back
         return apps.slice(opts.start, opts.size);
     },
-    
+
     appIsInChannel: function(channels, appchannel) {
         appchannel = appchannel || 'c';
-        
+
         return (channels.indexOf(appchannel) > -1); // if this app is in the channels that we want
     },
-    
+
     weedChannels: function(apps, channels) {
         var results = [];
 
@@ -81,11 +81,11 @@ Appetite.prototype = {
                 // check channel and stop it if not in the channel!
                 // NOTE: if there is no channel, assume that it is device
                 if (this.appIsInChannel(channels, app.channel)) {
-                    results.push(app);                    
+                    results.push(app);
                 }
             }
         }
-        return results;        
+        return results;
     },
 
     filter: function(apps, query, channels) {
@@ -116,7 +116,7 @@ Appetite.prototype = {
             opts = this.types[opts.type](opts);
         }
 
-        if (! (opts.set == 'free' || opts.set == 'paid' || opts.set == 'all' ) ) opts.set = 'all';
+        if (! (opts.set == 'free' || opts.set == 'paid') ) opts.set = 'all';
         if (! (opts.order == 'alpha' || opts.order == 'rating' || opts.order == 'downloads' || opts.order == 'gross' || opts.order == 'newest') ) opts.order = 'alpha';
         opts.start    = opts.start-1 || 0; // 1 based? really? :)
         opts.size     = opts.size || 50;
@@ -159,7 +159,6 @@ Appetite.prototype = {
     sorts: {
         alpha: function(a, b) {
             if (a.title == b.title) return 0;
-
             return (a.title > b.title) ? 1 : -1;
         },
 
@@ -167,7 +166,15 @@ Appetite.prototype = {
             var ratingA = parseFloat(a.rating);
             var ratingB = parseFloat(b.rating);
 
-            if (ratingA == ratingB) return 0;
+            // if the rating is the same (e.g. both 4) secondary sort by downloads
+            if (ratingA == ratingB) {
+                var downloadsA = parseInt(a.total_downloads);
+                var downloadsB = parseInt(b.total_downloads);
+
+                if (downloadsA == downloadsB) return 0;
+
+                return (downloadsA < downloadsB) ? 1 : -1;
+            }
 
             return (ratingA < ratingB) ? 1 : -1;
         },
@@ -176,7 +183,11 @@ Appetite.prototype = {
             var downloadsA = parseInt(a.total_downloads);
             var downloadsB = parseInt(b.total_downloads);
 
-            if (downloadsA == downloadsB) return 0;
+            // If the downloads are the same, use the name
+            if (downloadsA == downloadsB) {
+                if (a.title == b.title) return 0;
+                return (a.title > b.title) ? 1 : -1;
+            }
 
             return (downloadsA < downloadsB) ? 1 : -1;
         },
@@ -191,13 +202,21 @@ Appetite.prototype = {
             var grossA = downloadsA * priceA;
             var grossB = downloadsB * priceB;
 
-            if (grossA == grossB) return 0;
+            // If the gross is the same go with the alpha
+            if (grossA == grossB) {
+                if (a.title == b.title) return 0;
+                return (a.title > b.title) ? 1 : -1;
+            }
 
             return (grossA < grossB) ? 1 : -1;
         },
 
         newest: function(a, b) {
-            if (a.pubDate == b.pubDate) return 0;
+            // If the dates are the same, use the name
+            if (a.pubDate == b.pubDate) {
+                if (a.title == b.title) return 0;
+                return (a.title > b.title) ? 1 : -1;
+            }
 
             return (a.pubDate < b.pubDate) ? 1 : -1;
         }
