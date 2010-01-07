@@ -153,28 +153,20 @@
         channels.web = $("chk_web").checked;
         channels.beta = $("chk_beta").checked;
 
-        // builds the name of the function to be invoked on the appetite client
-        var functionName = (searchString != "") ?
-                           "search_" + selectedTab :
-                           "explore_" + selectedTab;
-
-        // retrieve a reference to the function
-        var appFunction = appetite[functionName];
-
-        if (!appFunction) {
-            console.log("WARNING: no function for '" + functionName + "'");
-            return;
+        // Setup the parameters to query the apps
+        var opts = {};
+        if (selectedTab && selectedTab != 'all') {
+            opts.type = selectedTab;
+        };
+        
+        // do a query if one is passed in
+        if (searchString != "") {
+            opts.query = searchString;
         }
-
-        // invoke the function, using apply() to map "this" to the appetite client
-        // return value will be apps to display
-        var apps = appFunction.apply(appetite);
+        var apps = appetite.find(opts);
 
         // display the data
         displayApps(apps);
-
-        // hold on to the function in case user asks for more apps
-        lastClientFunction = appFunction;
     }
 
     function displayApps(apps) {
