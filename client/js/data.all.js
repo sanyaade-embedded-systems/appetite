@@ -1,15 +1,4 @@
-var data = { 
-    "version": 2.0,
-"channel": {
-  "title": "Device App Updates for US",
-  "link": "http://www.palm.com",
-  "description": "Updates on the latest US Device channel applications for Palm webOS devices",
-  "language": "en-US",
-  "pubDate": "2009-12-29 01:28:55.0 UTC",
-  "lastBuildDate": "2009-12-29 01:28:55.0 UTC",
-  "distributionChannel": "Device",
-  "countryCode": "US",
-  "items": [
+var apps = [
 {
 "title": "Mine Search",
 "description": "Mine searcher is our take on this classic game. The object of the game is to select tiles to clear the \"field\" and to avoid mines. As the tiles are selected the number of mines that are adjacent to that tile is revealed to help the player determine the mines' locations. The game allows you to change board size and the number of mines in the field for varying difficulty and endless fun. Records are kept so you can keep track of your best times.\000a\000a-- If you had the beta version you must uninstall that prior to downloading.",
@@ -48692,7 +48681,7 @@ var data = {
 },{
 "title": "First Web Distribution",
 "description": "Since we don't have any Web distribution apps right now, let's put a placeholder in. I know we will only need it for a little bit right guys?",
-"pubDate": "2010-01-07 03:00:58",
+"pubDate": "2009-01-07 03:00:58",
 "guid": "1999.3333",
 "packageid": "com.fake.webdistro",
 "version": "1.0",
@@ -48728,7 +48717,7 @@ var data = {
 }]},{
 "title": "First Beta App",
 "description": "Since we don't have any beta apps right now, let's put a placeholder in. I know we will only need it for a little bit right guys?",
-"pubDate": "2010-01-07 03:00:58",
+"pubDate": "2009-01-07 03:00:58",
 "guid": "1999.3333",
 "packageid": "com.fake.betadistro",
 "version": "1.0",
@@ -48762,10 +48751,9 @@ var data = {
 "categories": ["Games", "Games!Strategy"],
 "images": ["http://cdn.downloads.palm.com/public/121/en/images/1/L/mines_2009-08-09_061656.jpg", "http://cdn.downloads.palm.com/public/121/en/images/2/L/mines_2009-20-08_071859_256A3E.jpg", "http://cdn.downloads.palm.com/public/121/en/images/3/L/mines_2009-08-09_061855.jpg"],
 }]}
-]
-}}
+];
 
 // check to see if you are running inside of node.js and export if you are
 if (typeof GLOBAL == "object" && typeof GLOBAL['node'] == "object") {
-    exports.data = data;
+    exports.apps = apps;
 }
