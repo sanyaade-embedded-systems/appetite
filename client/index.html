@@ -161,6 +161,8 @@
         var opts = {
             size: appCount
         };
+
+        // set the type of query (top_rated etc) and all means just show 'em all, so no need for a type
         if (selectedTab && selectedTab != 'all') {
             opts.type = selectedTab;
         };
