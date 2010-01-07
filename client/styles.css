@@ -311,7 +311,8 @@ body {
 .pg_foot {
 	color: #FFFFFF;
 	text-align: center;
-	margin-bottom: 18px;
+	margin: 18px;
+    font-size: larger;
 }
 
 .hidden {
