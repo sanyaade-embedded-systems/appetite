@@ -147,6 +147,7 @@ Appetite.prototype = {
         },
         top_grossing: function(opts) {
             opts.order = 'gross';
+            opts.set = 'paid';
             return opts;
         },
         newest: function(opts) {
