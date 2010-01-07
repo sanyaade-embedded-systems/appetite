@@ -1,13 +1,16 @@
-// Appetite Service 
+// Appetite Service that runs on node.js
 
-var sys = require("sys"),
-   http = require("http"),
-   posix = require("posix"),
-   apps = require("./apps").apps,
+// -- Load up the libraries
+var sys   = require("sys"),
+   http   = require("http"),
+   posix  = require("posix"),
+   apps   = require("./apps").apps,
    client = require("./client");
 
+// -- Create a proxy to the Appetite data
 var a = new client.Appetite(apps);
 
+// -- The responders handle the various URLs
 var responders = {
     // /apps?type=top_rated&by_category=[true|false]&start=[1+]&size=[1+]&channel=[w][b][c]&query=foo
     apps: function(params) {
@@ -42,6 +45,10 @@ var responders = {
     }  
 };
 
+// -- Create the HTTP server binding
+var port = process.ENV['APPETITE_PORT'] || 8000;
+var host = process.ENV['APPETITE_HOST'] || 'localhost';
+
 http.createServer(function(request, response) {
     var path = request.uri.path.substring(1);
     var output;
@@ -63,6 +70,6 @@ http.createServer(function(request, response) {
         response.sendBody(JSON.stringify(output.body));
     }
     response.finish();
-}).listen(8000);
+}).listen(port, host);
 
-sys.puts("Appetite Server is Listening");
+sys.puts("Appetite Server is Listening to " + host + ":" + port);
