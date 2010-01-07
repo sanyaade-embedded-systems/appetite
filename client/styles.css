@@ -49,7 +49,7 @@ body {
 }
 .search_field input {
 	font-size: 11px;
-	background-image: url(images/trans.png);
+	/*background-image: url(images/trans.png); TODO: image doesn't exist */
 	background-repeat: repeat;
 	background: transparent;
 	border-top-style: none;
@@ -275,6 +275,25 @@ body {
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
+}
+#more {
+	color: #FFFFFF;
+	text-align: center;
+	margin-top: 12px;
+    margin-bottom: 12px;
+}
+#more img {
+    cursor: pointer;
+}
+#loading {
+    margin: 0 auto;
+    width: 246px;
+    text-align: center;
+    vertical-align: middle;
+    clear: both;
+    font-size: x-large;
+    color: #FFFFFF;
+    padding-top: 16px;
 }
 .pg_foot {
 	color: #FFFFFF;
