@@ -430,7 +430,7 @@
         //loadSmsPopup(packageid);
         
         if (isWebOSDevice()) { // don't do an inline popup as you are on a webOS device, just go to the URL
-            window.open("http://developer.palm.com/appredirect/?packageid=" + packageid, "webosinstallwindow");
+            window.location = "http://developer.palm.com/appredirect/?packageid=" + packageid;
             return;
         }
 
