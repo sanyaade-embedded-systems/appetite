@@ -36404,11 +36404,11 @@ var apps = [{
     "country": "US",
     "icons": [{
     "type": "app",
-    "url": "http://cdn.downloads.palm.com/public/121/icon/icon_252D5E.png"
+    "url": "http://cdn.downloads.palm.com/"
     }
     , {
     "type": "scaled",
-    "url": "http://cdn.downloads.palm.com/public/121/icon/S/icon_252D5E.png"
+    "url": "http://cdn.downloads.palm.com/"
     }
     ],
     "localizations": [{
@@ -36421,7 +36421,7 @@ var apps = [{
     "developer_url": "http://not.a.developer.com",
     "support_url": "http://no.support.com",
     "categories": ["Games", "Games!Strategy"],
-    "images": ["http://cdn.downloads.palm.com/public/121/en/images/1/L/mines_2009-08-09_061656.jpg", "http://cdn.downloads.palm.com/public/121/en/images/2/L/mines_2009-20-08_071859_256A3E.jpg", "http://cdn.downloads.palm.com/public/121/en/images/3/L/mines_2009-08-09_061855.jpg"],
+    "images": ["http://cdn.downloads.palm.com/public/"],    
     }]},{
     "title": "First Web Distribution App",
     "description": "Since we don't have any web distro apps right now, let's put a placeholder in. I know we will only need it for a little bit right guys?",
@@ -36440,11 +36440,11 @@ var apps = [{
     "country": "US",
     "icons": [{
     "type": "app",
-    "url": "http://cdn.downloads.palm.com/public/121/icon/icon_252D5E.png"
+    "url": "http://cdn.downloads.palm.com/public/"
     }
     , {
     "type": "scaled",
-    "url": "http://cdn.downloads.palm.com/public/121/icon/S/icon_252D5E.png"
+    "url": "http://cdn.downloads.palm.com/public/"
     }
     ],
     "localizations": [{
@@ -36457,7 +36457,7 @@ var apps = [{
     "developer_url": "http://not.a.developer.com",
     "support_url": "http://no.support.com",
     "categories": ["Games", "Games!Strategy"],
-    "images": ["http://cdn.downloads.palm.com/public/121/en/images/1/L/mines_2009-08-09_061656.jpg", "http://cdn.downloads.palm.com/public/121/en/images/2/L/mines_2009-20-08_071859_256A3E.jpg", "http://cdn.downloads.palm.com/public/121/en/images/3/L/mines_2009-08-09_061855.jpg"],
+    "images": ["http://cdn.downloads.palm.com/public/"],
     }]}
 ]
 
