@@ -49660,3 +49660,8 @@ var data = {
 }
 ]
 }}
+
+// check to see if you are running inside of node.js and export if you are
+if (typeof GLOBAL == "object" && typeof GLOBAL['node'] == "object") {
+    exports.data = data;
+}
