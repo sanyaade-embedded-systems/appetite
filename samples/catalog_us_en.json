@@ -1224,7 +1224,42 @@
 }
 ]
 }, {
+"title": "Express Horoscopes",
+"description": "Introducing the FREE Express Horoscopes from Handmark®, the first app of it’s kind for the Palm® Pre™.  Know what is in store for you today, and what your future holds with your daily horoscope!  Instant readings and daily ratings for each zodiac sign, as well as celebrity birthdays for each day.  \000a \000aSpecial features include:\000a• Specific birthday readings and celebrity birthdays for each day \000a• Overall Zodiac view with star rating predictions \000a• Deep level views of each sign",
+"pubDate": "2009-12-10 02:17:23",
+"guid": "187.286",
+"packageid": "com.handmark.app.horoscopes",
+"version": "0.9.4",
+"installed_size": "1035260",
+"rating": "3.7",
+"total_downloads": "96760",
+"total_comments": "169",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/61/icon/icon_16248F.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/61/icon/S/icon_16248F.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Handmark Inc.",
+"developer_url": "http://www.pocketexpress.com",
+"support_url": "http://www.pocketexpress.com/temp/redirect.php?id=pre-horoscopes",
+"categories": ["Lifestyle", "Lifestyle!Social", "Lifestyle!Hobbies", "Lifestyle!Horoscope"],
+"images": ["http://cdn.downloads.palm.com/public/61/en/images/1/L/horoscopes_211EF.jpg", "http://cdn.downloads.palm.com/public/61/en/images/2/L/birthdays_189C9.jpg", "http://cdn.downloads.palm.com/public/61/en/images/3/L/horoscopesdetail_1CF91.jpg"],
+
+}
+]
+}, {
 "title": "CoinFlip",
 "description": "Need to make a quick decision, choose between two alternatives, or decide who goes first, and don't have a coin on you?  Now you can just whip out your Pre and flip a coin.  This simple but well-polished app does just that, with a clean, ad-free interface.",
 "pubDate": "2009-12-03 20:48:40",
@@ -1261,7 +1296,31 @@
 }
 ]
 }, {
+"title": "Limonade",
+"description": "trewte",
+"pubDate": "2009-11-04 17:32:04",
+"guid": "192.295",
+"packageid": "com.jason.app.lemonade",
+"version": "0.9.21",
+"installed_size": "3804787",
+"rating": "2.5",
+"total_downloads": "83914",
+"total_comments": "239",
+"min_os": "webOS 1.1.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/55/icon/icon_6313F.gif"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/55/icon/S/icon_6313F.gif"
+}
+],
+"localizations": []
+}, {
 "title": "Zilch Lite",
 "description": "(Submitted for US only) Zilch is a modest little dice game in which the player races the computer to 10,000 points. It is easy to learn and quick to play. It is a game of skill and luck in which the best player prevails.\000a\000aZilch will make waiting in lines more bearable. It will make long trips seem shorter. It might just make the security line at the airport enjoyable. Actually, that's pretty good for a little dice game.\000a\000awebOS 1.1 or greater is required\000a\000aNew in v0.9.2:\000a* Fixed a bug that was causing the game to freeze.",
 "pubDate": "2009-12-15 02:55:01",
@@ -1370,7 +1429,31 @@
 }
 ]
 }, {
+"title": "Tweed Trial",
+"description": "(Submitted for US only) NEW VERSION: better connection handling, shake to refresh\000aGo to http://tweed.pivotallabs.com/blog for release notes. \000aTweed is the next-generation Twitter client designed to leverage the Palm webOS platform. Explore twitter trends and participate in the global conversation. Automatically be notified of new tweets. Did a plane just land in the Hudson? What just happened on Lost? With Tweed, knowing is always just a few taps away.",
+"pubDate": "2009-11-14 17:02:20",
+"guid": "209.333",
+"packageid": "com.pivotallabs.webos.tweed",
+"version": "0.9.16",
+"installed_size": "4048945",
+"rating": "3.9",
+"total_downloads": "232585",
+"total_comments": "957",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "en",
+"country": "CA",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/22/icon/icon-trial_small.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/22/icon/S/icon-trial_small.png"
+}
+],
+"localizations": []
+}, {
 "title": "Blackout",
 "description": "(Submitted for US only) A simple game where you try to turn off all of the lights. Clicking on a light switches it and its non-diagonal neighbours on or off. New games can be started at any time.",
 "pubDate": "2009-12-23 22:58:53",
@@ -1839,7 +1922,31 @@
 }
 ]
 }, {
+"title": "CBC News",
+"description": "(Submitted for Canada only) Get the latest CBC news, sports, and entertainment on your Palm Pre. \000aThe CBC Palm Pre news app keeps you informed and entertained wherever you go.",
+"pubDate": "2009-10-17 23:06:17",
+"guid": "240.399",
+"packageid": "ca.cbc.cbcnews",
+"version": "1.0.1",
+"installed_size": "889942",
+"rating": "4.1",
+"total_downloads": "5038",
+"total_comments": "24",
+"min_os": "webOS 1.1.0",
+"devices": "Palm Pre",
+"language": "en",
+"country": "CA",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/216/icon/icon_news_small.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/216/icon/S/icon_news_small.png"
+}
+],
+"localizations": []
+}, {
 "title": "Mezzoman - Free",
 "description": "(Submitted for US, Canada, Ireland, and the United Kingdom only) Powered by the Google Maps API and Yelp. Mezzoman - Free is the first application to find places to meet friends, family and/or business associates in the middle. Using a proprietary 2 point system, Mezzoman can easily find a place to meet in the middle so everyone can save time, money and gas! \000aMeeting up with friends, clients or family members in the middle couldn’t be easier. Simply enter your address, your friend’s address, type in a search term (like Sushi) and hit Mezzoman Go! The results you get will be based on the exact midpoint between the two points based on roads; this means your midpoint will always be in an area accessible to you. Mezzoman can also use your current GPS coordinates to make it quick and easy for you to meet with someone when you are not at a known address or are on the road. Additionally, you can add a Contact’s address to any address field with the tap of a button. \000a	Since the results are based on Yelp, you can easily find a top rated Sushi bar between your place and theirs, or a great place to Karaoke between your office and their office. You can also easily call a business result, email it, find it on a map, or read reviews on it at Yelp.com.  Mezzoman – Free is limited to only 2 addresses at one time, it can’t send a result via email, and results are limited to only 5 per search. The Paid version offers up three addresses, results can be sent via email and the result size is 20.",
 "pubDate": "2009-10-05 22:55:05",
@@ -1948,7 +2055,42 @@
 }
 ]
 }, {
+"title": "Card Ace: Hold 'Em",
+"description": "Card Ace: Hold 'Em is the online multiplayer Texas Hold 'Em Poker game that Pre users have been waiting for! Compete against thousands of poker players online to rack up the biggest stack of chips. Play online any time, anywhere, against live human opponents. Card Ace makes it easy to play poker with your friends. Accept an invite with a single click to join a friend's game, or send them an invite to join yours. Want a quick fix? Jump into an online game in a heartbeat. Text chat and a unique picture based \"emote\" system let you communicate with friends and trash-talk your opponents while you build up your collections of hilarious Awards, and show 'em off to your friends online. Every day you play, you earn more free chips! Got Word Ace? Your Profile, Friend List, chips and XP all carry over between games!",
+"pubDate": "2009-10-05 22:48:05",
+"guid": "242.407",
+"packageid": "com.selfawaregames.cardace.holdem",
+"version": "1.0.1",
+"installed_size": "5831326",
+"rating": "3.3",
+"total_downloads": "168602",
+"total_comments": "386",
+"min_os": "webOS 1.1.0",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/112/icon/48pxSpadeIcon_pro.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/112/icon/S/48pxSpadeIcon_pro.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Self Aware Games",
+"developer_url": "http://selfawaregames.com",
+"support_url": "http://forum.selfawaregames.com",
+"categories": ["Games", "Games!Classics", "Games!Cards", "Games!Strategy"],
+"images": ["http://cdn.downloads.palm.com/public/112/en/images/1/L/holdem_2009-28-09_151235.png", "http://cdn.downloads.palm.com/public/112/en/images/2/L/holdem_2009-28-09_151815.png", "http://cdn.downloads.palm.com/public/112/en/images/3/L/holdem_2009-28-09_151247.png", "http://cdn.downloads.palm.com/public/112/en/images/4/L/holdem_2009-28-09_151311.png"],
+
+}
+]
+}, {
 "title": "Dungeon Quest",
 "description": "Dungeon Quest is a fantasy-themed RPG that engages players in \"fights\" and \"quests\" to advance.   Facebook Connect lets players invite their friends and complete help makes playing easy and fun.",
 "pubDate": "2009-10-05 23:08:05",
@@ -2057,7 +2199,31 @@
 }
 ]
 }, {
+"title": "AP Mobile en Español",
+"description": "AP Mobile. News you choose. Configura Mi Portada para recibir noticias que pertenecen a usted. Con más de mil noticieros locales, AP Mobile es la aplicación móvil de noticias más completo. Usted puede navegar galerías de fotos de alta qualidad y ver vídeo desde donde el día te lleva! Perfectamente integrado con su estilo de vida, noticias de última hora aparecen en su escritorio como alertas que usted puede compartir con sus contactos. AP Mobile: keeping you in the know on the go.",
+"pubDate": "2009-10-31 00:02:31",
+"guid": "151.414",
+"packageid": "com.apnews.webos",
+"version": "0.9.21",
+"installed_size": "2217559",
+"rating": "3.6",
+"total_downloads": "286068",
+"total_comments": "333",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/7/icon/APNews_appicon_pre_64x64_16F035.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/7/icon/S/APNews_appicon_pre_64x64_16F035.png"
+}
+],
+"localizations": []
+}, {
 "title": "PicHunt - Pets",
 "description": "EpicTilt presents the PicHunt - Pets! Enjoy the classic and popular photo hunt game in the palm of your hand, featuring 50 photos of cute cuddly pets and animals! Find and poke the five differences before the timer runs out. You only have three lives and three hints per game. Compare your scores to the rest of the PicHunt users around the world on the Worldwide Scoreboard!",
 "pubDate": "2009-11-17 17:17:05",
@@ -2274,7 +2440,31 @@
 }
 ]
 }, {
+"title": "WHEREConnect",
+"description": "WHEREConnect™ is a location based application that helps you find the people, places and things around you. Local information available includes everything from the weather, news, and restaurant reviews, to the movies info, traffic updates, and the ability to connect with other users. WHERE also helps you get where you are going with maps and directions.",
+"pubDate": "2009-10-21 17:20:21",
+"guid": "264.429",
+"packageid": "com.ulocate.app.whereconnect",
+"version": "0.9.23",
+"installed_size": "2878344",
+"rating": "3.2",
+"total_downloads": "2515",
+"total_comments": "12",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "en",
+"country": "CA",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/238/icon/icon48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/238/icon/S/icon48.png"
+}
+],
+"localizations": []
+}, {
 "title": "Polar Bowling",
 "description": "(Submitted for US only) Pass the time by competing in Polar Bowling. PB gives you the chance to Step away from the normal world and enter the world of competitive Polar Bowling. This game will test your polar bear bowling abilities. Refine your skills over time and improve your high scores to become the Polar Bowling champion. This is the great game for the casual gamer because you can just pick up and play. MXweb hopes you enjoy the game!",
 "pubDate": "2009-10-05 22:59:05",
@@ -2455,7 +2645,31 @@
 }
 ]
 }, {
+"title": "Classic",
+"description": "Classic es un Palm OS emulador para Pre/Pixi.\000aComplementa webOS con miles de aplicaciones Palm OS que no podrías hacer sin el.\000aCon Classic 2.0 recibirás compatibilidad  HotSync completa y  un paquete de applicaciones Palm OS de prueba gratis y juegos para comenzar.\000aContinua usando tus aplicaciones favoritas de Palm OS que se han ido  desarrollado durante los años y incluso ejecutalas dos veces más rápido con Classic en tu Nuevo poderoso Pre/Pixi.\000aCon Classic puedes proteger la inversión que realizaste con aplicaciones professional de Palm OS y  reduce el costo de adoptar nuevo hardware significativamente. ¿Hay alguna aplicación absolutamente necesaria para alguna tarea que no esta disponible para webOS, pero que necesitas para realizar tu trabajo diario? Con Classic no necesitas esperar por esa aplicacion – puedes seguir usando todas las fantásticas aplicaciones medicas, legales, de negocios, productividad, entretenimiento que adoptaste hace años. O incluso descubrir nuevas aplicaciones del catalogo de mas de 30,000 titulos desarrollados para Centro y Treo celulares.\000aClassic 2.0 incluye soporte completo de HotSync, networking, sonido, tarjetas virtual SD y gráficos mejorados.\000aClassic trae lo último en experiencias de juegos y entretenimiento a un nuevo nivel, habilitando famosos titulos de Palm OS para se usados en webOS.\000a* Aplicación disponible para compra despues de bajarla \000a**Aplicación disponible en Inglés",
+"pubDate": "2009-10-06 00:07:06",
+"guid": "202.453",
+"packageid": "com.motionapps.app.classic",
+"version": "2.0.0",
+"installed_size": "889934",
+"rating": "2.5",
+"total_downloads": "131679",
+"total_comments": "495",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/9/icon/icon_17AD70.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/9/icon/S/icon_17AD70.png"
+}
+],
+"localizations": []
+}, {
 "title": "Blobbers",
 "description": "Meet the Blobber. It is a little bubble which you can play with for hours. You can split, merge and throw it away. Change themes and toggle gravity modes.",
 "pubDate": "2009-10-09 17:17:09",
@@ -3176,7 +3390,42 @@
 }
 ]
 }, {
+"title": "CL USB Sync",
+"description": "Sincronización en ambas direcciones de los contactos, calendario, tareas y memos en la PC con Windows hacia teléfonos que operan por medio del WebOS. Sincronización directa y segura por medio del cable USB con Microsoft Outlook, Palm Desktop, Lotus Notes, ACT! y otras fuentes de datos. Para sincronizar se requiere tener instalado el programa CompanionLink for WebOS USB (pago único de US$39.95), descargable de http://www.companionlink.com/usbsync. Soporte técnico gratuito. Compatible con la Palm Pixi. Disponible en Inglés, Francés, Alemán y Español.",
+"pubDate": "2009-10-09 17:20:09",
+"guid": "311.491",
+"packageid": "com.companionlink.clusbsync",
+"version": "1.0.0",
+"installed_size": "1322496",
+"rating": "2.4",
+"total_downloads": "15398",
+"total_comments": "25",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/141/icon/48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/141/icon/S/48x48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "CompanionLink Software, Inc.",
+"developer_url": "http://www.companionlink.com/usbsync",
+"support_url": "http://www.companionlink.com/support",
+"categories": ["Business", "Business!Clients", "Business!Synchronize", "Business!Mobile"],
+"images": ["http://cdn.downloads.palm.com/public/141/en/images/1/L/1.jpg", "http://cdn.downloads.palm.com/public/141/en/images/2/L/6.jpg", "http://cdn.downloads.palm.com/public/141/en/images/3/L/2.jpg", "http://cdn.downloads.palm.com/public/141/en/images/4/L/4.png", "http://cdn.downloads.palm.com/public/141/en/images/5/L/5.png"],
+
+}
+]
+}, {
 "title": "Wooter!",
 "description": "(Submitted for US only) Wooter combines the portals for woot, sellout, shirt, kids and wine sites into one easy to use application. Want to check what's currently being sold? Simply fire up Wooter. Want to buy it? Click on \"I Want One!\". Want to hear what others have to say? Click on \"Discussions\". Wooter makes this very simple and easy to use. Wooter even supports Woot-Offs, but, currently, in a manual mode. Further Woot-Off support will be available in a future update.",
 "pubDate": "2009-10-09 18:02:09",
@@ -3717,8 +3966,56 @@
 }
 ]
 }, {
+"title": "Golf Caddie Demo",
+"description": "Seguir todos sus puntajes y estadisticas de golf con Golf Caddie con la funcionalidad del GPS integrado.\000aQuiere saber que distancia le queda hasta el hoyo? No hay problema, Golf Caddie tiene integrado GPS para cada hoyo y le indica la distancia delantera, central y posterior del green? Adicionalemene, hasta 5 puntos mas de interes pueden ser seguidos, como bunkers, agua etc. Quiere saber la distancia del golpe de la bola del tee? Golf Caddie puede hacerlo por usted tambien. Comenzar seguimiento desde el tee, peguele a la bola y deje que Golf Caddie haga el resto.\000aDescargue todos los campos que usted prefiera localmente a su mobil WebOS. Selecione ilimitado numero de jugadores y mantenga las ventajas.\000aSiga el numero de golpes, putts, greens en regulacion y golpes de fairways por cada hoyo y revise esta informacion despues de su ronda en la pantalla de estadisticas.  Quiere ver una tarjeta de puntuacion detallada?  Eso es possible tambien.\000aDecida que palos tiene en su bolsa de golf y que lejos usted golpea cada palo.  Golf Caddie puede sugerirle un palo cuando esta golpeando al green, por el frente, centro y posterior.\000aAyuda de Golf Caddie integrado.\000aActualmente mas de 7,000 campos estan en el mapa y se puede descargar localmente a su Palm mobile WebOS.",
+"pubDate": "2009-10-17 22:55:17",
+"guid": "347.545",
+"packageid": "com.dtw-consulting.gctrial",
+"version": "1.0.1",
+"installed_size": "2047568",
+"rating": "3.2",
+"total_downloads": "11001",
+"total_comments": "10",
+"min_os": "webOS 1.2.0",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/209/icon/icon48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/209/icon/S/icon48x48.png"
+}
+],
+"localizations": []
+}, {
+"title": "Golf Caddie",
+"description": "Seguir todos sus puntajes y estadisticas de golf con Golf Caddie con la funcionalidad del GPS integrado. Quiere saber que distancia le queda hasta el hoyo? No hay problema, Golf Caddie tiene integrado GPS para cada hoyo y le indica la distancia delantera, central y posterior del green? Adicionalemene, hasta 5 puntos mas de interes pueden ser seguidos, como bunkers, agua etc. Quiere saber la distancia del golpe de la bola del tee? Golf Caddie puede hacerlo por usted tambien. Comenzar seguimiento desde el tee, peguele a la bola y deje que Golf Caddie haga el resto. Descargue todos los campos que usted prefiera localmente a su mobil WebOS. Selecione ilimitado numero de jugadores y mantenga las ventajas. Siga el numero de golpes, putts, greens en regulacion y golpes de fairways por cada hoyo y revise esta informacion despues de su ronda en la pantalla de estadisticas. Quiere ver una tarjeta de puntuacion detallada? Eso es possible tambien. Decida que palos tiene en su bolsa de golf y que lejos usted golpea cada palo. Golf Caddie puede sugerirle un palo cuando esta golpeando al green, por el frente, centro y posterior. Ayuda de Golf Caddie integrado. Actualmente mas de 7,000 campos estan en el mapa y se puede descargar localmente a su Palm mobile WebOS.",
+"pubDate": "2009-10-16 21:58:16",
+"guid": "348.547",
+"packageid": "com.dtw-consulting.gcfull",
+"version": "1.0.1",
+"installed_size": "2047538",
+"rating": "4.3",
+"total_downloads": "542",
+"total_comments": "11",
+"min_os": "webOS 1.2.0",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/203/icon/icon48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/203/icon/S/icon48x48.png"
+}
+],
+"localizations": []
+}, {
 "title": "The Weather Channel",
 "description": "Get FREE, personalized weather information with the newest application from The Weather Channel(r) for Palm Pre and Pixi.  When you are on-the-go, this GPS-enabled app gives you instant access to accurate and local weather details that you need to stay informed.  Browse interactive radar and satellite maps, and check current conditions and hourly forecasts when you’re out and about. And when you’re making longer-term plans, the 36-hour and 10-day forecasts are right at your fingertips.  \000a\000aTake the weather with you!",
 "pubDate": "2009-10-17 23:08:17",
@@ -4187,7 +4484,31 @@
 }
 ]
 }, {
+"title": "Newsweek Mobile",
+"description": "Passionate about the news? Get in-depth insight and analysis into the most significant issues of the day with NEWSWEEK’s opinion-leading editorial from the most influential names in journalism. You can also customize your news experience by adding feeds from all of your favorite news outlets. Only from NEWSWEEK. Only on your Palm. Do you NEWSWEEK?",
+"pubDate": "2009-10-13 00:03:13",
+"guid": "363.562",
+"packageid": "com.newsweek.newsweekintl",
+"version": "0.9.0",
+"installed_size": "723372",
+"rating": "3.2",
+"total_downloads": "3946",
+"total_comments": "9",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "en",
+"country": "DE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/160/icon/NW_PalmPre_Icon_48x48.jpg"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/160/icon/S/NW_PalmPre_Icon_48x48.jpg"
+}
+],
+"localizations": []
+}, {
 "title": "Newsweek Mobile, North America",
 "description": "(Submitted for US, Canada only) Passionate about the news? Get in-depth insight and analysis into the most significant issues of the day with NEWSWEEK’s opinion-leading editorial from the most influential names in journalism. You can also customize your news experience by adding feeds from all of your favorite news outlets. Only from NEWSWEEK. Only on your Palm. Do you NEWSWEEK?",
 "pubDate": "2009-10-17 23:05:17",
@@ -4476,7 +4797,42 @@
 }
 ]
 }, {
+"title": "Puzle 15",
+"description": "Resuelve el clásico rompecabezas, conocido como puzle deslizante o selecciona uno de los variados temas incluidos. Tambien puede crear sus propios puzles con cualquier imagen de su dispositivo.",
+"pubDate": "2009-10-23 17:17:23",
+"guid": "383.589",
+"packageid": "com.mojojungle.15puzzle",
+"version": "0.9.0",
+"installed_size": "2041615",
+"rating": "3.8",
+"total_downloads": "72389",
+"total_comments": "80",
+"min_os": "webOS 1.1.0",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/280/icon/icon_48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/280/icon/S/icon_48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "MojoJungle",
+"developer_url": "http://www.mojojungle.com",
+"support_url": "http://www.mojojungle.com/apps/15puzzle",
+"categories": ["Games", "Games!Classics", "Games!Puzzles / Word Games"],
+"images": ["http://cdn.downloads.palm.com/public/280/en/images/1/L/15puzzle_1.png", "http://cdn.downloads.palm.com/public/280/en/images/2/L/15puzzle_2.png", "http://cdn.downloads.palm.com/public/280/en/images/3/L/15puzzle_3.png"],
+
+}
+]
+}, {
 "title": "Pack 'n' Track",
 "description": "Pack ‘n’ Track is a shipment tracking application that supports Federal Express (FedEx), United Parcel Service (UPS), the United States Postal Service (USPS), and Deutsche Post (DHL). Begin by entering a tracking number from one of the supported couriers and Pack ‘n’ Track will begin tracking your package immediately.  Don’t worry about specifying which courier the number belongs to as Pack ‘n’ Track is smart enough to figure out which tracking numbers belong to each currier.  Pack ‘n’ Track is integrated into the WebOs environment so it still tracks your packages even if it is not open on your phone using minimal resources!  Pack ‘n’ Track will also provides you with status change notifications each time the courier updates the status of you package.  These notifications work just like your email notifications and are configurable so you can even turn them completely off or have Pack ‘n’ Track only notify you when the package has been delivered.  In addition to status notifications, Pack ‘n’ Track will also provide you with some additional details (subject to courier availability) about your package such as its estimated date of arrival, the package’s weight, what service the package was shipped under, who signed for it once delivered, and where it was left at when delivered.  It doesn’t stop there though, we are working hard to bring you additional courier and useful tools such as a zip code finder/decoder, the ability to find shipping locations near you, and an estimated shipping cost calculator plus much much more!\000a\000aWE CURRENTLY HAVE LIMITED SUPPORT FOR MAILBOX INNOVATIONS AND FEDEX SMARTPOST.",
 "pubDate": "2009-10-21 17:08:21",
@@ -4549,7 +4905,31 @@
 }
 ]
 }, {
+"title": "wetter.com",
+"description": "All the important weather information - wherever you are!\000a\000aThe wetter.com weather application offers a 7 day weather forecast for every place on earth, including the current weather situation. The application delivers detailed weather information like temperature, wind and precipitation probability for the next 7 days! The weather data is presented in a clear and nice-looking way and contains all important information, so you?ll always stay informed!  \000a\000aYour last viewed locations are saved automatically and thanks to a smart navigation you can easily switch between them.\000a\000aFurthermore there are severe weather alerts and editorial weather forecasts for Germany, Austria and Switzerland. If there is a severe weather alert for your favourite location, you are notified about it even if the application is in the background.\000a\000aThe wetter.com weather application always delivers the right weather.  \000aIt doesn?t matter where you are, with the help of GPS positioning you can get the appropriate weather forecast.\000a\000aThis application impresses with its handsome layout and its reliable weather information. The available languages are German, English and Spanish. The weather application is a service of wetter.com - the popular German weather service. wetter.com stands for precise weather forecasts and excellent quality.",
+"pubDate": "2009-10-13 08:21:13",
+"guid": "300.596",
+"packageid": "com.wettercom.weatherapp",
+"version": "1.1.1",
+"installed_size": "2076261",
+"rating": "4.3",
+"total_downloads": "28647",
+"total_comments": "111",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "en",
+"country": "DE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/164/icon/palm_icon_48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/164/icon/S/palm_icon_48x48.png"
+}
+],
+"localizations": []
+}, {
 "title": "billiger.de",
 "description": "Price comparison for more than 2500 shops in Germany!\000a\000aCheck if the \"sale price\" is really a good deal in seconds. Simply search for the UPC or the product name.\000a \000aHighlights:\000aPrice comparison on one of the biggest onlineshop-databases in Germany. Test reviews from the most trusted product test magazines. \000a\000aFirst hand reviews and ratings of products and onlineshops by users like you. \000a\000a* We're working on the integration of an EAN-Codescanner. Update will follow soon. *",
 "pubDate": "2009-12-10 23:54:37",
@@ -4586,11 +4966,131 @@
 }
 ]
 }, {
+"title": "SPIEGEL ONLINE",
+"description": "Die Palm Pre Applikation SPIEGEL ONLINE erlaubt das schnelle und unkomplizierte  Abonnieren von Homepage- und Ressort-Meldungen des Nachrichtenangebots von SPIEGEL ONLINE. Waehlen Sie Ihre favorisierten Feeds per Knopfdruck aus und lassen Sie sich stets aktuell ueber alle Neuigkeiten der jeweiligen Ressorts informieren. Automatische Aktualisierungen und Benachrichtigungen auf dem Dashboard sorgen dafuer, dass Sie keine News mehr verpassen!",
+"pubDate": "2009-10-13 10:23:13",
+"guid": "386.598",
+"packageid": "de.spiegel.app.webos.spiegelonline",
+"version": "1.0.0",
+"installed_size": "842338",
+"rating": "3.4",
+"total_downloads": "17280",
+"total_comments": "85",
+"min_os": "webOS 1.1.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/169/icon/app_icon_48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/169/icon/S/app_icon_48x48.png"
+}
+],
+"localizations": []
+}, {
+"title": "Invertia",
+"description": "Toda la actualidad economica con las ultimas noticias publicadas en Invertia. / Up-to-date economic information with the latest news published in Invertia.",
+"pubDate": "2009-10-14 00:30:14",
+"guid": "389.602",
+"packageid": "telefonica.invertia",
+"version": "1.0.2",
+"installed_size": "152576",
+"rating": "2.5",
+"total_downloads": "258",
+"total_comments": "1",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "en",
+"country": "ES",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/172/icon/invertiap.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/172/icon/S/invertiap.png"
+}
+],
+"localizations": []
+}, {
+"title": "Terra Noticias",
+"description": "Toda la actualidad informativa con las ultimas noticias publicadas en Terra Noticias. / Up-to-date information with the latest news published in Terra Noticias (in Spanish).",
+"pubDate": "2009-10-14 00:31:14",
+"guid": "390.603",
+"packageid": "telefonica.terranoticias",
+"version": "1.0.2",
+"installed_size": "279552",
+"rating": "2.3",
+"total_downloads": "467",
+"total_comments": "4",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "en",
+"country": "ES",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/173/icon/noticiasp.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/173/icon/S/noticiasp.png"
+}
+],
+"localizations": []
+}, {
+"title": "Terra Tecnologia",
+"description": "Toda la actualidad tecnologica con las ultimas noticias publicadas en Terra Tecnologia. / Up-to-date technologic information with the latest news published in Terra Tecnologia (in Spanish).",
+"pubDate": "2009-10-14 00:31:14",
+"guid": "391.604",
+"packageid": "telefonica.terratecnologia",
+"version": "1.0.2",
+"installed_size": "279552",
+"rating": "3.2",
+"total_downloads": "266",
+"total_comments": "1",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "en",
+"country": "ES",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/174/icon/tecnologiap.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/174/icon/S/tecnologiap.png"
+}
+],
+"localizations": []
+}, {
+"title": "El Tiempo Terra",
+"description": "Predicciones meteorologicas para tu ciudad, actualizadas al instante desde El Tiempo Terra. / Weather forecast for your town, updated immediately from El Tiempo Terra (in Spanish).",
+"pubDate": "2009-10-14 00:34:14",
+"guid": "392.605",
+"packageid": "telefonica.eltiempo",
+"version": "1.0.2",
+"installed_size": "177152",
+"rating": "2.1",
+"total_downloads": "888",
+"total_comments": "4",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "en",
+"country": "ES",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/175/icon/tiempop.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/175/icon/S/tiempop.png"
+}
+],
+"localizations": []
+}, {
 "title": "Easy Stopwatch",
 "description": "This is a simple timer with lap/split time. If you have the timer running while in the background a notification will be shown each minute. This application supports both landscape and portrait views.",
 "pubDate": "2009-12-29 11:13:26",
@@ -4627,7 +5127,31 @@
 }
 ]
 }, {
+"title": "Trafico",
+"description": "(Submitted for Spain only.) Permite conocer las incidencias del trafico en Espana, de forma sencilla y comoda, mediante mapas, pudiendo seleccionar el tipo de incidencias a mostrar.",
+"pubDate": "2009-10-14 00:34:14",
+"guid": "304.607",
+"packageid": "com.mobivery.trafico",
+"version": "1.0.1",
+"installed_size": "1403154",
+"rating": "1.6",
+"total_downloads": "1434",
+"total_comments": "7",
+"min_os": "webOS 1.1.2",
+"devices": "Palm Pre",
+"language": "en",
+"country": "ES",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/176/icon/48x48_trafico_palm-pre.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/176/icon/S/48x48_trafico_palm-pre.png"
+}
+],
+"localizations": []
+}, {
 "title": "Blocks",
 "description": "Blocks is a classic and addictive puzzle game. The goal of the game is to slide the light-colored block off the board. To do this you must first slide the other blocks out of its way. This can be very tricky, but don't worry, the first puzzles are easy and will get you going quickly. Blocks remembers how far you have got, so you can pick it up and play at any time.\000a\000aThe blocks only slide along their oriented direction. So the horizontal blocks can only move left and right, while the vertical blocks slide up and down.\000a \000aOnce you complete all the puzzles in a difficulty level, the next level will be unlocked. There are four levels, easy, medium, hard and expert, each containing 25 puzzles for a total of 100 puzzles. You might fly through the first puzzles, but you'll be sweating over the later ones!\000a \000aWe hope you have fun playing the game. We're keen to hear what you think of it, so don't hesitate to write us with feedback, questions, or bugs (although we hope there aren't any!).",
 "pubDate": "2009-10-23 17:41:23",
@@ -5672,8 +6196,56 @@
 }
 ]
 }, {
+"title": "ServiCaixa - Venta de Entradas",
+"description": "ServiCaixa Movil: Aplicacion con la cartelera de Cine de ServiCaixa. Permite comprar entradas escogiendo el asiento exacto en sesiones numeradas. Caracteristicas principales: Busqueda por Pelicula y recinto (de la cartelera de ServiCaixa), personalizacion de cine favorito y de ubicacion para busquedas por proximidad.",
+"pubDate": "2009-10-14 14:24:14",
+"guid": "402.643",
+"packageid": "com.mobilesnack.servicaixa",
+"version": "1.0.0",
+"installed_size": "3283907",
+"rating": "3.9",
+"total_downloads": "1235",
+"total_comments": "8",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "en",
+"country": "ES",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/177/icon/ServiCaixa48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/177/icon/S/ServiCaixa48x48.png"
+}
+],
+"localizations": []
+}, {
+"title": "MoBank",
+"description": "MoBank is the new mobile banking and payment service working securely with your existing bank account. It is a quick, safe and convenient way to check your balance and recent transactions at 15 or so major UK banks, wherever and whenever you like.\000a\000aSimply download and register your account with MoBank to use the free Balance lookup and Mini-statement banking services.  You can join through our quick registration process on our website www.mobank.co.uk or by calling our contact centre on 0845 869 0000.  During this quick and easy process, choose a 4-digit PIN to protect access to the service. After setting up your MoBank account, simply enter your online banking credentials.  You are then free to view your balance and mini statement whenever you want. \000a\000aMoBank is completely secure. Each MoBank account is linked exclusively to a user's mobile phone and can be accessed only by entering the member's PIN. All secure data is stored on secured servers, not on the actual handset. If you happen to lose your mobile or if it is stolen, the security of your information is not compromised.",
+"pubDate": "2009-11-16 21:47:29",
+"guid": "408.650",
+"packageid": "com.mobank.yodlee",
+"version": "1.0.0",
+"installed_size": "992269",
+"rating": "3.6",
+"total_downloads": "3219",
+"total_comments": "15",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "en",
+"country": "GB",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/182/icon/Icon_transparent_small.jpg"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/182/icon/S/Icon_transparent_small.jpg"
+}
+],
+"localizations": []
+}, {
 "title": "BILDmobil",
 "description": "BILDmobil - Aktuelle News aus Deutschland und der Welt auf ihrem Palm",
 "pubDate": "2009-10-15 03:11:15",
@@ -5746,7 +6318,31 @@
 }
 ]
 }, {
+"title": "Paginas Amarillas",
+"description": "(Submitted for Spain only) (Submitted for Spain only.) Busca cerca de ti cualquier negocio que necesites en la base de datos de Paginas Amarillas de Espana: un bar, un restaurante, una tienda... Con esta aplicacion y la localizacion automatica de tu telefono solo tienes que escribir que buscas y tendras un listado de resultados cercanos a tu posicion ordenado por distancia. Ademas, podras llamar directamente, anadir el contacto a la agenda, enviar el resultado, anadirlo a tus favoritos o consultar el historial de busqueda. Y si quieres buscar en otro lugar, con la busqueda avanzada, solo tienes que escribir el nombre y donde quieres buscarlo. Ademas, en servicios, podras ver la lista de cines y peliculas mas cercanas, consultar la cartelera de cualquier cine o teatro, el tiempo, estaciones de esqui o las camaras de trafico de tu ciudad. Ya no importa donde estes, si necesitas un telefono o una direccion, un abogado, una farmacia, un bar ... en cualquier momento y en cualquier lugar, cerca de ti o donde tu quieras. Atencion: La busqueda simple emplea la posicion del movil y necesita que el usuario este localizado en Espana y ofrece resultados en un radio de 5 kilometros. Si estas situado fuera de Espana o no existe ningun resultado en el radio de 5 kilometros, puedes emplear la busqueda avanzada e indicar la ciudad o direccion cerca de la que deseas busca.",
+"pubDate": "2009-10-16 00:07:16",
+"guid": "414.656",
+"packageid": "com.yellpublicidad.paginasamarillaspalm",
+"version": "1.0.1",
+"installed_size": "1163182",
+"rating": "2.5",
+"total_downloads": "1218",
+"total_comments": "8",
+"min_os": "webOS 1.1.0",
+"devices": "Palm Pre",
+"language": "en",
+"country": "ES",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/184/icon/48x48_paginasamarillas_palm-pre.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/184/icon/S/48x48_paginasamarillas_palm-pre.png"
+}
+],
+"localizations": []
+}, {
 "title": "Freudian Therapist",
 "description": "Freudian Therapist turns your Palm Pre into your very own mobile therapy session.\000a\000aWhether you need to chat about your dreams, discuss the role your parents played in your choice of bathroom tiles, or you just can't figure out when a cigar is just a cigar, Freudian Therapist is for you!",
 "pubDate": "2009-10-21 17:10:21",
@@ -6035,7 +6631,42 @@
 }
 ]
 }, {
+"title": "Word Ace",
+"description": "Word Ace combines the betting and strategy of Texas Hold 'Em Poker and the mental challenge of a word game. Combine your cards with the community cards to form the highest-scoring word, or bluff your way to victory! Includes: * An interface that adapts to suit you - click or type your cards in. * Use your Friend List to find your friends and join their games or invite them to yours. * Every day you play, you earn a free chip bonus! Come back every day to maximize your free chips! New in this release: * Turn notifications - your phone will vibrate when it's your turn * Streamlined chip purchasing * Many stability improvements * Bets and raises now follow standard poker conventions",
+"pubDate": "2009-11-04 17:35:04",
+"guid": "232.669",
+"packageid": "com.selfawaregames.wordace",
+"version": "1.0.2",
+"installed_size": "6586289",
+"rating": "3.8",
+"total_downloads": "213605",
+"total_comments": "643",
+"min_os": "webOS 1.1.0",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/49/icon/icon_3731F.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/49/icon/S/icon_3731F.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Self Aware Games",
+"developer_url": "http://selfawaregames.com",
+"support_url": "http://forum.selfawaregames.com",
+"categories": ["Games", "Games!Classics", "Games!Cards", "Games!Puzzles / Word Games"],
+"images": ["http://cdn.downloads.palm.com/public/49/en/images/1/L/wordace_2009-18-08_150652_1C526F.png", "http://cdn.downloads.palm.com/public/49/en/images/2/L/wordace_2009-18-08_151121_1BB2D6.png", "http://cdn.downloads.palm.com/public/49/en/images/3/L/wordace_2009-18-08_153148_1C25DC.jpg"],
+
+}
+]
+}, {
 "title": "Photo Fun: Spot The Difference Pro",
 "description": "***NEW VERSION*** Fixed the lag issue after you updated to Webos 1.3.1. \000a\000aThis version works on both Palm Pre & Pixi\000a\000aCan you spot what's different? Analyze two similar images and spot 5 differences before time's up. This is a popular family classic pencil and paper Spot the Difference - Photo hunt game that basically test and push the powers of your observation to the limits.\000a\000aFeatures:\000a\000a- Over 150 sets of images from 3 categories (150+ levels)\000a- Global Leader Board\000a- 3 Hints are provided per game to help you find a difference. Try to save Hints for as long as possible because extra Hint Bonus points are awarded for each unused Hint everytime you go to the next level.\000a- Timer gets faster for each wrong spots made, or on completion of each level\000a- You will have more points if you play fast and keep 3 hints alive as long as you can.\000a- Interesting sound effect\000a- You can use your own song to play as a game music background.\000a- Beautiful design and easy to use",
 "pubDate": "2009-10-21 17:09:21",
@@ -6540,7 +7171,31 @@
 }
 ]
 }, {
+"title": "Trapster",
+"description": "Trapster (R) es una aplicación gratuita que le avisa al acercarse a las trampas de velocidad de la policía, cámaras de luz roja, las cámaras de velocidad, y los riesgos de la cartera de otros calzada. Se da un aviso hablado medida que se aproxima, como \"policía de vivir\" o \"cámaras de luz roja\". \000a\000a* App CNET # 1 del automóvil \000a\000aWired Magazine # 1 de aplicaciones que hacen que la mayoría de la ubicación \000a\000a* A la revista Time Magazine Top 10 App para los papás \000a\000a\"Mapas de Trapster a cabo en las trampas de velocidad en tiempo real, una bendición para mi forma de conducir de vez en cuando de espíritu\". \000a- Roy Furchgott, The New York Times \000a\000a\"Trapster es una nueva determinación de la posición anti-tecnología basada billete a todos los entusiastas de conducción querrá conocer.\" \000a- Arthur St. Antoine, Motor Trend \000a\000aÚnete a 2 millones de usuarios móviles en todo el mundo!",
+"pubDate": "2009-10-20 19:25:20",
+"guid": "435.705",
+"packageid": "com.trapster.app.webos",
+"version": "0.9.26",
+"installed_size": "1904915",
+"rating": "3.4",
+"total_downloads": "246606",
+"total_comments": "390",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/217/icon/48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/217/icon/S/48x48.png"
+}
+],
+"localizations": []
+}, {
 "title": "GoMoKu",
 "description": "This game on the 10?10 board is adapted from the paper \"Go-Moku and Threat-Space Search\"\000aYou play first and the computer will place a piece after you have placed your stone on the board. The winner is the first player to get an unbroken row of five stones horizontally, vertically, or diagonally. The game will show the winning line and block any further actions. Press the \"new game\" to restart the game. When the gameboard if completely filled the game ends in draw if there is no winning line shown.\000aAdvice, once the computer has an open row of three (one that is not blocked by an opponent's stone at either end) it has to be blocked immediately, or countered with a threat elsewhere on the board. If not blocked or countered, the open row of three will be extended to an open row of four, which threatens to win in two ways.",
 "pubDate": "2009-10-21 17:06:21",
@@ -6901,7 +7556,31 @@
 }
 ]
 }, {
+"title": "The Tip Calculator (Global)",
+"description": "The Tip Calculator is a simple calculator that will help you figure out a tip in a couple of taps of your screen. If you are visiting a restaurant, getting a haircut, or on a taxi ride, all you have to do is start up this application, enter the initial charge, select your percentage (10% - 25%), and hit \"Calcuate\" button, and presto, your tip amount and the grand total will show for you. This application is precise and simple.",
+"pubDate": "2009-11-04 17:57:04",
+"guid": "451.743",
+"packageid": "com.speedyrob.tipcalcglobal",
+"version": "1.0.3",
+"installed_size": "2947932",
+"rating": "3",
+"total_downloads": "649",
+"total_comments": "1",
+"min_os": "webOS 1.2.0",
+"devices": "Palm Pre",
+"language": "en",
+"country": "CA",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/354/icon/icon23.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/354/icon/S/icon23.png"
+}
+],
+"localizations": []
+}, {
 "title": "DOF Calculator",
 "description": "* This update provides more sensor size choices and will also allow you to select DSLR cameras by name or directly select the Circle of Confusion that is used in the DOF calculation.*\000a\000a\000aA depth of field calculator can help photographers to figure out how much of their picture will be in focus.  Depth of Field is a measure of how far in front or behind the focus point an object can be and still be in focus in an image. Depth of Field is determined by camera sensor size, lens focal length, lens aperture and subject distance. If the focus distance is set to the hyperfocal distance, the image will have the largest depth of field possible for that sensor, focal length and aperture.  For example a landscape photographer may want to have the entire scene in focus, so they would choose to focus at the hyperfocal distance so that everything from the close foreground to the distant horizon would appear sharp in the final image.  On the other hand a portrait photographer may want to use a very shallow depth of field so that distracting elements in the background will be blurred out of focus and not detract attention from the subject of the portrait.",
 "pubDate": "2009-10-29 05:17:29",
@@ -9782,7 +10461,42 @@
 }
 ]
 }, {
+"title": "Express News",
+"description": "Express News: Real Information. Real Time.\000a\000aExpress News is a FREE application giving you the best information on the mobile web without using a mobile browser. Simply open Express News, and you have up-to-the-minute news in over 250 categories, and providers such as: Associated Press, Canadian Press, Agence France-Presse, Press Association, STATS, uClick and more.  Content available in English, German, French, Spanish, Portuguese, Dutch.",
+"pubDate": "2009-12-11 00:41:29",
+"guid": "478.940",
+"packageid": "com.handmark.app.news",
+"version": "1.0.14",
+"installed_size": "1182774",
+"rating": "4.1",
+"total_downloads": "28720",
+"total_comments": "105",
+"min_os": "webOS 1.2.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/351/icon/icon_48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/351/icon/S/icon_48x48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Handmark Inc.",
+"developer_url": "http://www.pocketexpress.com",
+"support_url": "http://www.pocketexpress.com/temp/redirect.php?id=pre-news",
+"categories": ["News", "News!Entertainment", "News!Business / Stocks", "News!Sports"],
+"images": ["http://cdn.downloads.palm.com/public/351/en/images/1/L/favorites.png", "http://cdn.downloads.palm.com/public/351/en/images/2/L/headlines.png", "http://cdn.downloads.palm.com/public/351/en/images/3/L/story.png", "http://cdn.downloads.palm.com/public/351/en/images/4/L/allcat.png", "http://cdn.downloads.palm.com/public/351/en/images/5/L/manage.png"],
+
+}
+]
+}, {
 "title": "Consumption Calculator",
 "description": "Mileage calculator for use with your vehicle. Gives a detailed history of gas prizes, dates and locations of fill-ups.\000aTo ease the one-hand usage a unique on-screen numeric keypad is provided when entering a new fill-up.\000aA real must-have for your WebOS device.",
 "pubDate": "2009-12-01 00:00:58",
@@ -9819,7 +10533,42 @@
 }
 ]
 }, {
+"title": "Express Stocks",
+"description": "Thanks to the new Palm Pre technology, you can be constantly updated with the latest stock information important to you with the FREE Express Stocks app from Handmark®.  Receive the most detailed updates without having to look in multiple locations - you’re only a click away. Express Stocks delivers stock prices and details automatically to your handset. Upload your entire portfolio so that you are always in the know - and the black.",
+"pubDate": "2009-11-04 17:53:04",
+"guid": "188.944",
+"packageid": "com.handmark.app.stocks",
+"version": "1.0.24",
+"installed_size": "1290503",
+"rating": "3.6",
+"total_downloads": "111319",
+"total_comments": "176",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/11/icon/icon_175222.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/11/icon/S/icon_175222.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Handmark Inc.",
+"developer_url": "http://www.pocketexpress.com",
+"support_url": "http://www.pocketexpress.com/temp/redirect.php?id=pre-stocks",
+"categories": ["Finance", "Finance!Business", "Finance!Stocks", "Finance!news"],
+"images": ["http://cdn.downloads.palm.com/public/11/en/images/1/L/MyStocks_1745CE.png", "http://cdn.downloads.palm.com/public/11/en/images/2/L/MyStocks-detail_179EB0.png", "http://cdn.downloads.palm.com/public/11/en/images/3/L/News_17BF31.png"],
+
+}
+]
+}, {
 "title": "Perfect Bounce",
 "description": "Perfect Bounce is a simple and addicting Basketball shooting game. The rules are simple enough: use your finger to flick a basketball into a hoop, trying to swish as many as you can within a set time interval. Play over and over to improve your scores, change the time limit to challenge yourself and beat your friends' scores.",
 "pubDate": "2009-11-14 16:40:34",
@@ -11116,7 +11865,31 @@
 }
 ]
 }, {
+"title": "The Canadian Press Mobile",
+"description": "(Submitted for US only) 24/7 national and world news and photos from The Canadian Press, plus local news from CTV, The Globe and Mail, Toronto Star and many trusted sources all in one app, available in English or French on your Palm Pre. Search, save and share news – all displayed in a slick format, personalized to your choice of postal codes from your favourite cities across topics such as business, sports, showbiz and more. Launch the app before going on a plane or subway and it caches news for you to read offline!",
+"pubDate": "2009-11-14 16:56:43",
+"guid": "167.1044",
+"packageid": "com.cpnews.webos",
+"version": "0.9.23",
+"installed_size": "2695162",
+"rating": "2.6",
+"total_downloads": "7315",
+"total_comments": "18",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "en",
+"country": "CA",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/50/icon/CP-EN_PalmAppIcon_64x64_160F59.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/50/icon/S/CP-EN_PalmAppIcon_64x64_160F59.png"
+}
+],
+"localizations": []
+}, {
 "title": "MediPDA",
 "description": "A modular medical calculator comprising commonly used calculations and algorithms in medicine",
 "pubDate": "2009-11-14 16:33:05",
@@ -11729,8 +12502,56 @@
 }
 ]
 }, {
+"title": "Mileage Monitor",
+"description": "Curious how good your gas mileage is? Set up one or more vehicles, then just enter the numbers from the pump and your odometer each time you fill up. You'll get a quick summary of your fuel efficiency both over the last tank and since you started tracking, along with a table and graphical overview. Mileage Monitor will help you keep an eye on your engine, and make sure you know what you're getting from each tank. 1.0.0 Update: New graph/table summary, better mixed-unit handling, missed fillup support, improved help, and more! 1.0.2 Update: UK users, your gallons are here as well!",
+"pubDate": "2009-11-06 20:50:06",
+"guid": "179.1091",
+"packageid": "com.foxtailsoftware.app.mileagemonitor",
+"version": "1.0.0",
+"installed_size": "1315167",
+"rating": "3.9",
+"total_downloads": "175755",
+"total_comments": "246",
+"min_os": "webOS 1.2.1",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/48/icon/smalllogo.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/48/icon/S/smalllogo.png"
+}
+],
+"localizations": []
+}, {
+"title": "Simple Bible",
+"description": "Si te gusta llevar su Biblia con usted dondequiera que vaya, entonces su carga sólo se hizo más ligero. Simple Biblia es la Biblia en su teléfono webOS. Todos los libros del Antiguo y Nuevo Testamento están incluidos en el Autorizados King James Version. Todos los libros de la Biblia son almacenados en el teléfono, así que usted puede utilizar Simple Biblia en lugares no Internet de fácil manejo, tales como el metro, las zonas rurales y los aviones. Usted puede elegir entre uno de los 4 tamaños de texto para la lectura. Simple vista Biblia en modo retrato o paisaje. Por supuesto, una de las mejores características de la Biblia es simple es GRATIS. Nuevas características para la versión 0.12.10: traducciones adicionales, tales como American Standard Version, Biblia NET ®, World Inglés Biblia, Voxlbibel y Las Sagradas Escrituras están disponibles para su descarga. Más traducciones se encuentran en proceso de ser añadido. Se requiere un equipo. Simple Biblia recuerda dónde estaba leyendo cuando se cerró. Cuando volvió a abrir, el botón de reanudar lo llevará de regreso al mismo lugar en la misma traducción. Un marcador se ha añadido también, así que cuando salta de libro en libro, es fácil volver al lugar donde empezó. En la próxima actualización: traducciones Descarga directamente a tu teléfono sin una computadora.",
+"pubDate": "2009-11-06 20:48:06",
+"guid": "157.1094",
+"packageid": "com.bitsofgodsoftware.simplebible",
+"version": "0.12.9",
+"installed_size": "8329516",
+"rating": "4.3",
+"total_downloads": "163403",
+"total_comments": "585",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/69/icon/icon_sm.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/69/icon/S/icon_sm.png"
+}
+],
+"localizations": []
+}, {
 "title": "Enjoy Sudoku",
 "description": "Novices and experienced players alike will appreciate Enjoy Sudoku. Our wide range of difficulty levels, tutorial, extensive feature set, and advanced hint system offer something for every player.\000a\000aOur multi-stage hint system starts with a gentle reminder to get you back on track, and works up to an illustration of the exact technique to use and how it applies to the current board. Our hints ease those frustrating moments and teach you how to be a better player.\000a\000aFeatures include: unlimited play across fourteen difficulty levels, tutorial teaches you new techniques, large, high contrast digits are easy to read, enter games from the newspaper, solver helps you with games from the newspaper, advanced techniques at the higher levels, like X-Wings, sashimi fish, and XY-Chains, user interface optimized for fewer touches, never covers up the board while you are playing, automatic or manual pencil marks, save your game while you try alternatives, automatically saves your game when you get a phone call, switch applications, or lock the phone, highlighting helps you discover patterns, game clock; compares your time to other players, avoids graphic frills that distract from play. Note: hints require an Internet connection.\000a\000aIf you Enjoy Sudoku, this is the app for you!",
 "pubDate": "2009-11-26 00:56:07",
@@ -13171,8 +13992,67 @@
 }
 ]
 }, {
+"title": "Calculadora IMC",
+"description": "Calcula tu IMC desde cualquier sitio, estés donde estés.\000aEl cálculo del IMC (índice de masa corporal) se basa en la altura y el peso.\000aPara calcularlo, solo hace falta insertar tu altura y tu peso.",
+"pubDate": "2009-11-22 03:47:31",
+"guid": "601.1240",
+"packageid": "de.verticalshots.bmicalc",
+"version": "1.1.1",
+"installed_size": "936334",
+"rating": "3.1",
+"total_downloads": "20166",
+"total_comments": "32",
+"min_os": "webOS 1.0.3",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/453/icon/bmiicon-48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/453/icon/S/bmiicon-48.png"
+}
+],
+"localizations": []
+}, {
+"title": "Backgrounds",
+"description": "*Busque más de 10.000 fondos de imágenes / Backgrounds\000a\000a*Nuevo fondo agregado diariamente\000a\000a*Los Fondos extraordinarios creados por nuestro equipo de diseñadores que usted no encontrará dondequiera más\000a\000a*Escoja más de 30 categorías como: Las películas,  Coches, Gracioso,  Animales, Navidad, Año\000aNuevo,  Modelos, Para chicos, Espacio, lindo,  Deportes,  Juegos, las Playas, Agua, Para chicas, la\000aNoche, Corazones, los Remolinos, Explosiones,  Edificios,  Ciudades, Fantasía, Puesta del sol, Tecnología, Flores y muchos más.",
+"pubDate": "2009-12-04 20:22:22",
+"guid": "547.1245",
+"packageid": "com.stylem.backgrounds",
+"version": "2.0.0",
+"installed_size": "540940",
+"rating": "3.8",
+"total_downloads": "183387",
+"total_comments": "892",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/437/icon/icon48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/437/icon/S/icon48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Stylem Media",
+"developer_url": "http://stylem.com",
+"support_url": "http://stylem.com",
+"categories": ["Entertainment", "Entertainment!Animals", "Entertainment!Movies / TV"],
+"images": ["http://cdn.downloads.palm.com/public/437/en/images/1/L/bss1.png"],
+
+}
+]
+}, {
 "title": "Translator",
 "description": "Translate super fast between 45 languages with the tap of a button, using the Google translation services. After you have translated the text you can send it directly to your contacts via email or message.",
 "pubDate": "2009-11-24 18:39:51",
@@ -13209,7 +14089,42 @@
 }
 ]
 }, {
+"title": "Snake",
+"description": "El clásico juego de La Serpiente para webOS. Controla la serpiente con el teclado o con tus dedos para conseguir tantos objetos como puedas sin chocar con los muros. Consigue Bonus y vidas extra pero evita las bombas. Este juego contiene 6 niveles con 5 velocidades diferentes cada uno para conseguir tus mejores puntuaciones.",
+"pubDate": "2009-11-18 18:12:11",
+"guid": "279.1250",
+"packageid": "com.mojojungle.snake",
+"version": "0.9.3",
+"installed_size": "1202722",
+"rating": "3.3",
+"total_downloads": "158460",
+"total_comments": "148",
+"min_os": "webOS 1.1.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/100/icon/icon_2936DB.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/100/icon/S/icon_2936DB.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Janni Kovacs",
+"developer_url": "http://www.mojojungle.com",
+"support_url": "http://www.mojojungle.com/apps/snake",
+"categories": ["Games", "Games!Arcade", "Games!Classics"],
+"images": ["http://cdn.downloads.palm.com/public/100/en/images/1/L/snake_1.png", "http://cdn.downloads.palm.com/public/100/en/images/2/L/snake_2.png"],
+
+}
+]
+}, {
 "title": "jPyramid",
 "description": "The classic Pyramid Solitaire card game. This very addicting game requires you to match up two cards that totals to 13 in the pyramid. Only the uncovered cards can be selected, and you have a discard pile stack which is also in play. You have the option of two different background colors and three difficulty level settings. Once you start playing, you just can't stop!",
 "pubDate": "2009-11-20 23:49:29",
@@ -13894,7 +14809,31 @@
 }
 ]
 }, {
+"title": "Facebook® for Palm®",
+"description": "**Nota: La aplicación Facebook® for Palm® está diseñada para funcionar con las versiones 1.3.1 o posteriores de webOS solamente. \000aFacebook® for Palm® hace que sea aún más fácil mantenerse conectado con los amigos en todo momento. Facebook for Palm te permite actualizar fácilmente tu estado. También puedes ver directamente tus Noticias, indicar si te gustan o hacer comentarios al respecto. Incluso se integra con otros aspectos de Palm webOS y Synergy, de manera que puedes ver información de Facebook de inmediato en tus Contactos o usar la aplicación Fotos para examinar álbumes en tus Noticias.",
+"pubDate": "2009-11-14 17:35:57",
+"guid": "368.1353",
+"packageid": "com.palm.app.facebook",
+"version": "1.0.0",
+"installed_size": "3644132",
+"rating": "2.3",
+"total_downloads": "143461",
+"total_comments": "1508",
+"min_os": "webOS 1.1.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/412/icon/icon-48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/412/icon/S/icon-48.png"
+}
+],
+"localizations": []
+}, {
 "title": "jBalls",
 "description": "This is a classic Russian game of ball alignment available for the Palm Pre or Pixi smartphones.\000a\000aThe game starts out with 3 randomly colored balls placed in 3 random locations on the main board. The user then takes a turn to move a single ball either horizontally or vertically (given there is a clear path to a chosen spot on the board) to try and align the same colored balls either horizontally, vertically, or diagonally.\000a\000aWhen a specified number of balls are aligned, they are removed from the game and points are awarded to the player. For each turn where no balls are aligned, 3 new randomly colored balls will appear on the board.\000a\000aThe user has the option to adjust the board size so that the game is easier to play on the smaller Palm Pixi screen.",
 "pubDate": "2009-11-17 17:10:34",
@@ -14255,7 +15194,31 @@
 }
 ]
 }, {
+"title": "My o2",
+"description": "(Submitted for [Germany] only). \"My o2\" bietet Ihnen mit einem Klick Zugriff auf viele nützliche Links für Ihren mobilen Alltag. Egal ob Sie Ihre Tarifoptionen ändern, unterwegs eine Auktion verfolgen oder einfach nur beim Warten Ihre Zeit vertreiben möchten, \"My o2\" hilft Ihnen weiter. Simple & clever.",
+"pubDate": "2009-11-16 21:49:18",
+"guid": "532.1382",
+"packageid": "de.o2online.myo2",
+"version": "1.2.1",
+"installed_size": "1028240",
+"rating": "2.1",
+"total_downloads": "2154",
+"total_comments": "52",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "de",
+"country": "DE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/413/icon/myo2_icon_48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/413/icon/S/myo2_icon_48x48.png"
+}
+],
+"localizations": []
+}, {
 "title": "Match 'Em - Christmas Edition",
 "description": "Ho! Ho! Ho! Match 'Em - Christmas Edition is a not-at-all naughty version of the classic game of concentration.  The game features a delightful holiday theme and three classic Christmas songs sure to delight children of all ages.  The game features two levels of difficulty, high score tables and an optional kid-friendly full screen mode.  Enjoy a bit of Christmas at any time.",
 "pubDate": "2009-11-20 23:50:33",
@@ -14544,7 +15507,31 @@
 }
 ]
 }, {
+"title": "Losungen",
+"description": "(Submitted for Germany only) Die Losungen der Herrnhuter Brüdergemeine sind eine Sammlung von Bibelversen für jeden Tag aus dem Alten und Neuen Testament. Mit \"Losungen\" haben Sie die Möglichkeit jeden Tag die entsprechenden Bibelverse auf ihrem webOS Gerät zu lesen und darüber hinaus die eines anderen Tages des Jahres 2009 und 2010 anzeigen zu lassen.",
+"pubDate": "2009-11-26 01:04:27",
+"guid": "662.1439",
+"packageid": "de.zefanjas.losungen",
+"version": "1.1.0",
+"installed_size": "667561",
+"rating": "4.2",
+"total_downloads": "1744",
+"total_comments": "15",
+"min_os": "webOS 1.1.3",
+"devices": "Palm Pre, Palm Pixi",
+"language": "de",
+"country": "DE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/494/icon/icon_small.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/494/icon/S/icon_small.png"
+}
+],
+"localizations": []
+}, {
 "title": "TaskAdder",
 "description": "TaskAdder is the easy way for Toodledo users to add tasks to your Toodledo account while on the go from your webOS device. It does NOT sync tasks. It provides a simple way to add tasks without having to remember the complicated Toodledo syntax used to enter tasks by email, SMS, etc.\000a\000aOn initial launch, you'll enter your Toodledo login info (email and password). TaskAdder will then login to Toodledo and grab your Folders and Contexts. You can then easily enter a new Task and select Folder, Priority, Due Date, Context, Status and Repeat.\000a\000aTaskAdder will also allow you to view your Toodledo hotlist to see quickly see which tasks are important today.\000a\000a***A free account from http://www.toodledo.com is required for this app.***",
 "pubDate": "2009-11-20 23:49:04",
@@ -14905,7 +15892,31 @@
 }
 ]
 }, {
+"title": "Solitario Klondike Gratuito",
+"description": "Este es el clásico juego del Solitario para Palm Pre. Solitario Klondike es el solitario más popular del mundo.\000a\000aFuncionalidades destacadas:\000a- Sacar 1 o 3 cartas. \000a- 20 reversos de carta diferentes. \000a- 4 colores de tapete. \000a- Deshacer. \000a- Autocompletar. \000a- Puntuación Standard y Las Vegas. \000a- Autoguardado al salir. \000a\000aDisfruta del juego!",
+"pubDate": "2009-12-04 20:38:23",
+"guid": "632.1463",
+"packageid": "es.no2.solitaire",
+"version": "1.0.2",
+"installed_size": "1104086",
+"rating": "4.3",
+"total_downloads": "101977",
+"total_comments": "180",
+"min_os": "webOS 1.1.0",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/452/icon/icon_small.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/452/icon/S/icon_small.png"
+}
+],
+"localizations": []
+}, {
 "title": "Yahtzee",
 "description": "Play the treasured dice game! Travel the globe, meet new characters and challenge them to a game, roll the dice and be the first to score a Yahtzee! Try your hand at the ultimate Yahtzee single-player adventure, Pass n Play with your friends or challenge them online. Dynamic, exciting gameplay, easy controls automatic scorekeeping deliver terrific mobile entertainment for you, your friends and family.",
 "pubDate": "2009-11-26 00:56:46",
@@ -15230,7 +16241,42 @@
 }
 ]
 }, {
+"title": "The Missing Sync",
+"description": "Esta aplicación funciona conjuntamente con Missing Sync para Palm Pr? (Mac o PC) para sincronizar contactos, calendarios, música, vídeos, etc.\000a\000aThe Missing Sync para Palm OS reemplaza el antiguo programa de sincronización para MacOS e Microsoft Windows. The Missing Sync simplifica las sincronizaciones con aplicaciones para Mac OS X e Microsoft Windows como la agenda de direcciones, iCal y Microsoft Outlook.\000a\000aGracias al soporte del Sync-Services Technologie en Mac OS X 10.6 Snow Leopard se ha mejorado notablemente la sincronización con la agenda de contactos y el calendario. Desde ahora se sincronizan categorías de la agenda, más de una dirección por contacto, cumpleaños, contactos IM y otros campos. Además transfiere listas de reproducción iTunes y álbumes de fotos de iPhoto.",
+"pubDate": "2009-12-10 02:17:58",
+"guid": "196.1490",
+"packageid": "com.markspace.missingsync",
+"version": "0.9.29",
+"installed_size": "2588752",
+"rating": "2.9",
+"total_downloads": "70609",
+"total_comments": "162",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/34/icon/palm-pre-icon-64x64_3E34E.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/34/icon/S/palm-pre-icon-64x64_3E34E.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Mark/Space",
+"developer_url": "http://www.markspace.com/",
+"support_url": "http://support.markspace.com",
+"categories": ["Productivity & Utilities", "Productivity & Utilities!Tools", "Productivity & Utilities!productivity", "Productivity & Utilities!sync"],
+"images": ["http://cdn.downloads.palm.com/public/34/en/images/1/L/1-MSSyncNotificationBar_31A35.png", "http://cdn.downloads.palm.com/public/34/en/images/2/L/2-BackgroundSyncContacts_34C0D.png", "http://cdn.downloads.palm.com/public/34/en/images/3/L/4-MSFirstLaunch_378E6.png"],
+
+}
+]
+}, {
 "title": "Forbes Intelligent Investing",
 "description": "Forbes presents the Intelligent Investing Palm Pre Application, a series of feature stories and video conversations with the business and investment world's most respected minds. Watch Intelligent Investing with Steve Forbes, a video series of rare one-on-one interviews with financial luminaries at the famed Forbes Townhouse in New York City. Read Intelligent Investing articles and panel discussions as they focus on current investment topics and present exclusive editorial from investment strategists and forecasters that influence your financial climate. Take a chance and use your shake function to pick from a lottery of quotes and video clips of Steve Forbes himself. From investment philosophies to the state of the global economy, Intelligent Investing is your mobile access to the best minds in the business.",
 "pubDate": "2009-11-22 03:53:45",
@@ -16239,7 +17285,31 @@
 }
 ]
 }, {
+"title": "demConvert Pro",
+"description": "demConvert es una simple y abarcadora herramienta de conversión de unidades de medida. Permite convertir entre 200+ unidades en 12 categorías:\000a    * Longitud\000a    * Masa - Peso\000a    * Volumen\000a    * Temperatura\000a    * Cocina\000a    * Aceleración\000a    * Fuerza\000a    * Presión\000a    * Energía\000a    * Torque\000a    * Viscosidad\000a    * Flujo/min",
+"pubDate": "2009-12-07 22:34:48",
+"guid": "618.1599",
+"packageid": "com.deusexmachina.demconvertpro",
+"version": "1.2.1",
+"installed_size": "526717",
+"rating": "4",
+"total_downloads": "208",
+"total_comments": "5",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/540/icon/demConvert-icoPro48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/540/icon/S/demConvert-icoPro48x48.png"
+}
+],
+"localizations": []
+}, {
 "title": "MemoryUpgrade",
 "description": "This is a memory upgrade for YOU. Your WebOS device has plenty of memory, so let your phone remember everything for you! Provide the details of what you want to remember (keywords, text, lists, images), and instantly recall them later. When you want to recall a memory, just start typing in the search field, and matching results will automatically appear as you type.\000a\000aYou can store individual pieces of information (e.g. what size are my air filters?), shopping lists, and even images. Want to make sure you don't forget where you parked? Take a picture! Assign it a keyword of \"park\", and you'll easily locate it later.\000a\000aMemoryUpgrade is fast! Your memories are stored in a database for fast performance and reliability. With MemoryUpgrade, you can have thousands of memories and recall any one of them in a split second!\000a\000aWhat if you want to use the same keywords for more than one thing? Not a problem! You can use the same keywords for as many memories as you like, and when you type in the keywords later, all of the matching memories will be displayed in a list. Just select the memory from the list to view/edit it, or press the Copy icon to copy the data to the clipboard. \000a\000aWhat if you want to remember sensitive information, such as passwords? You can set the secret flag, which will mask the data in the results list with asterisks, yet you will still be able to copy the actual data to the clipboard by pressing the Copy icon. This allows you to use your sensitive data without worrying about that person looking over your shoulder.\000a\000aDo you already have some data in a text file or spreadsheet? Do you want to enter your data more quickly using your computer? MemoryUpgrade can import tab-delimited text files.\000a\000aVisit http://xybyresoft.com/webos for more details and a video demonstration.",
 "pubDate": "2009-11-26 01:08:28",
@@ -16456,7 +17526,31 @@
 }
 ]
 }, {
+"title": "BHoliday",
+"description": "(Submitted for Germany only).\000aBHoliday errechnet für das angegebene Jahr die im gewählten Gebiet vorkommenden Feiertage.\000aDie errechneten Tage können dann im Kalender eingetragen werden. \000aZur Zeit ist Deutschland mit den jeweiligen Bundesländer verfügbar. Weitere Länder sind bereits in der Entwicklung.",
+"pubDate": "2009-11-26 00:58:30",
+"guid": "725.1617",
+"packageid": "de.bluestarsoftware.bholiday",
+"version": "0.1.1",
+"installed_size": "494028",
+"rating": "4.5",
+"total_downloads": "6699",
+"total_comments": "68",
+"min_os": "webOS 1.1.3",
+"devices": "Palm Pre, Palm Pixi",
+"language": "de",
+"country": "DE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/489/icon/bholiday.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/489/icon/S/bholiday.png"
+}
+],
+"localizations": []
+}, {
 "title": "RIPTA",
 "description": "(Submitted for US only).\000a\000aRhode Island Public Transit Authority schedules now on your WebOS device! Take route information, time tables, and maps with you on the go.\000aFlick through the stops of each route to see their schedules, view their maps, and even see the map of Downtown Providence!",
 "pubDate": "2010-01-01 04:06:57",
@@ -16709,7 +17803,31 @@
 }
 ]
 }, {
+"title": "Seismograph",
+"description": "Seismograph uses the device's built-in accelerometer to record movement impacts in three axes. You can select the axis whose data is drawn on the rolling scale and set the number of displayed records.\000aAdditionally you can change the amplitude (sensitivity) and enabled a high-pass filter to filter sensor noise.\000aIn Version 0.1.1 axis labels and recording of the maximum shake magnitude were added.\000aPlease note that Seismograph stops recording data when the screen dims. This issue is caused by webOS 1.3.1 and will most likely be fixed with future system updates.",
+"pubDate": "2009-12-01 04:11:49",
+"guid": "732.1630",
+"packageid": "me.fabi.seismograph",
+"version": "0.1.0",
+"installed_size": "297357",
+"rating": "4.3",
+"total_downloads": "34448",
+"total_comments": "196",
+"min_os": "webOS 1.2.1",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/543/icon/icon48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/543/icon/S/icon48.png"
+}
+],
+"localizations": []
+}, {
 "title": "Periodic Table",
 "description": "(Submitted for United States only).\000aThe Periodic Table application is your premier reference for the Periodic Table of Elements. Whether you are a physicist, chemist or just a student this is the reference for you. \000a\000aThe main purpose of the Periodic Table application is to provide a meaningful way to access and traverse the Periodic Table of Elements in a natural WebOS fashion. You can use this application in either Standard or Landscape mode. Using simple gestures to navigate the table, you can click on any element to see detailed information.  The information provided includes Atomic Number, Name, Abbreviation, Atomic Weight, Category of Element, Valence, Melting and Boiling Points, Density, Atomic Radius, Covalent Radius and Electronegativity. \000a\000aAdditionally you can select several options to change the display of the table and select differing table coloring based on Melting Points, Density, Valence, Covalent Radius, Atomic Radius, JMOL and Electronegativity.\000a\000aIf this is not enough information, each element also contains a link to its current Wikipedia page. \000a\000aPeriodic Table stores its information locally for fast access, but when information is updated we will be providing it as updates when necessary.  \000a\000aKeep an eye out for up and coming additions to Periodic Table on our homepage.",
 "pubDate": "2009-11-30 22:46:31",
@@ -17214,7 +18332,42 @@
 }
 ]
 }, {
+"title": "Friendsbook",
+"description": "Friendsbook is a free facebook client, that allows you to view your news feed and your friends facebook account. You can create posts, likes and comments. Upload and view images with caption. Enjoy!",
+"pubDate": "2009-11-30 22:49:16",
+"guid": "747.1663",
+"packageid": "com.sic-software.friendsbook",
+"version": "1.1.1",
+"installed_size": "593473",
+"rating": "4",
+"total_downloads": "62086",
+"total_comments": "422",
+"min_os": "webOS 1.1.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/525/icon/icon_small.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/525/icon/S/icon_small.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "SIC! Software GmbH",
+"developer_url": "http://www.sic-software.com",
+"support_url": "http://forums.precentral.net/showthread.php?p=2017152",
+"categories": ["Social Networking", "Social Networking!General", "Social Networking!Facebook", "Social Networking!imageupload"],
+"images": ["http://cdn.downloads.palm.com/public/525/en/images/1/L/screen1.jpg", "http://cdn.downloads.palm.com/public/525/en/images/2/L/screen2.jpg", "http://cdn.downloads.palm.com/public/525/en/images/3/L/screen3.jpg", "http://cdn.downloads.palm.com/public/525/en/images/4/L/screen4.jpg", "http://cdn.downloads.palm.com/public/525/en/images/5/L/screen5.jpg"],
+
+}
+]
+}, {
 "title": "TicTacToe",
 "description": "The classic game of TicTacToe.  Play a friend or the computer. The object of the game is to get 3 game pieces in a row and prevent your opponent from doing the same.",
 "pubDate": "2009-11-30 22:47:37",
@@ -18547,7 +19700,31 @@
 }
 ]
 }, {
+"title": "Bahnfahren",
+"description": "(Submitted for Germany only)\000aUpdate: Fix fuer die Stationssuche.\000a\000aMit Bahnfahren koennen Sie sehr einfach aktuelle Zug- und Busverbindungen zwischen beliebigen Haltestellen und Bahnhoefen abrufen. Funktioniert fu?r deutsche und die meisten europaeischen Bahnhoefe. Sie koennen mit wenigen Beruehrungen des Bildschirms Ihre Verbindung suchen, Details zur Verbindung und Verspaetungen anzeigen und die Abfahrzeit anpassen. Darueber hinaus koennen haeufig genutzte Stationen und Verbindungen einfach durch Antippen des Stern-Symbols als Favoriten gespeichert werden. Eine detaillierte Anleitung finden Sie auf der Webseite.",
+"pubDate": "2009-12-03 19:47:03",
+"guid": "791.1757",
+"packageid": "com.preciouscoders.pre.bahnfahren",
+"version": "1.0.2",
+"installed_size": "517500",
+"rating": "4.8",
+"total_downloads": "14944",
+"total_comments": "452",
+"min_os": "webOS 1.1.3",
+"devices": "Palm Pre, Palm Pixi",
+"language": "de",
+"country": "DE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/564/icon/icon_small.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/564/icon/S/icon_small.png"
+}
+],
+"localizations": []
+}, {
 "title": "Mancala",
 "description": "Think Checkers, but FAST! This is digital version of the classic board game, the fast-paced and strategic Mancala.  Play with a friend, or alone against two levels of computer difficulty.  Beautiful graphics and a plethora of customization options make this one of the most exciting versions of Mancala for any device.",
 "pubDate": "2009-12-03 00:11:44",
@@ -18620,7 +19797,31 @@
 }
 ]
 }, {
+"title": "Tic Tac Toe Free",
+"description": "Este es un juego simple y gratuito tictactoe",
+"pubDate": "2009-12-03 02:34:07",
+"guid": "793.1763",
+"packageid": "com.doin.tictactoefree",
+"version": "1.0.0",
+"installed_size": "334449",
+"rating": "2.1",
+"total_downloads": "13530",
+"total_comments": "38",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/565/icon/iconTicTacToy48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/565/icon/S/iconTicTacToy48x48.png"
+}
+],
+"localizations": []
+}, {
 "title": "Tic Tac Toe",
 "description": "This is a classic tic tac toe game with a simple UI, and it's free",
 "pubDate": "2009-12-03 02:34:38",
@@ -20349,7 +21550,31 @@
 }
 ]
 }, {
+"title": "Meishi",
+"description": "Welcome to Meishi – the favorite and speed dialer for Palm Pixi & Pre. Favorite and speed dial your best Contacts with this visually rich app. Meishi adds a personal touch to viewing and interacting with your contacts. Favorite up to 24 cards and simply tap a friend's card on your table to connect!",
+"pubDate": "2009-12-07 22:36:19",
+"guid": "852.1878",
+"packageid": "com.lemonsanver.meishi",
+"version": "1.0.0",
+"installed_size": "1054742",
+"rating": "1.7",
+"total_downloads": "41",
+"total_comments": "2",
+"min_os": "webOS 1.3.1",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/606/icon/meishi_icon_48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/606/icon/S/meishi_icon_48x48.png"
+}
+],
+"localizations": []
+}, {
 "title": "Fuel",
 "description": "Fuel is aimed at making life, as it relates to your vehicle(s), a little easier... while helping you stay organized, wherever you live/travel. The most common thing people do with their vehicles, aside from drive them, is put fuel in them. What better time to get a glimpse of what is going on with your vehicle(s) than at the pump? Fuel allows you to track as many vehicles as you have, in your preferred unit of measure (Miles/Kilometers, Gallons/Imperial Gallons/Litres). It will also help you when you're traveling by converting the values you see on the pump to the ones you are used to seeing, whether its distance, volume or currency (via Google Finance - Currency Converter). It'll even allow you to record your current location (via Location Services) and show you the nearby gas stations (via Google Maps). You can set up odometer/date based service reminders (i.e. oil change, tune-up, tire rotation, etc), and even create your own reminder presets. Fuel allows you to manage your data via import/export with a Google Docs account... so your data is accessible in the formats that you decide.",
 "pubDate": "2009-12-07 22:50:33",
@@ -21646,7 +22871,42 @@
 }
 ]
 }, {
+"title": "Sunrise Sunset! Free",
+"description": "Displays Dawn, Sunrise, Solar Noon, Sunset, Dusk times for the current location according to NOAA (National Oceanic and Atmospheric Administration). \000a\000aGreat for photographers, golfers, hikers, and anyone who spends time outdoors or enjoys the beauty of sunrises and sunsets! Also, regardless of the selected date, it will show the hours/minutes till the next occurance of these events at your particular location. \000a\000aMore features coming soon!",
+"pubDate": "2009-12-15 22:15:38",
+"guid": "890.1950",
+"packageid": "com.bcato.solar.free",
+"version": "1.0.0",
+"installed_size": "684466",
+"rating": "3.8",
+"total_downloads": "9069",
+"total_comments": "16",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/810/icon/sunrise_icon_48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/810/icon/S/sunrise_icon_48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Brett Cato",
+"developer_url": "http://www.bcato.com",
+"support_url": "http://www.bcato.com",
+"categories": ["Weather", "Weather!By Location", "Weather!Sunrise", "Weather!Sunset"],
+"images": ["http://cdn.downloads.palm.com/public/810/en/images/1/L/Picture15.png", "http://cdn.downloads.palm.com/public/810/en/images/2/L/Picture14.png"],
+
+}
+]
+}, {
 "title": "Learn That Name",
 "description": "Learn that name is an entertaining way to remember who your linked in contacts are.  The game is played as a series of questions that quiz you about your contacts names, where they work and what they do.",
 "pubDate": "2009-12-09 02:22:19",
@@ -22475,9 +23735,81 @@
 }
 ]
 }, {
+"title": "BANK-O-MAT",
+"description": "Diese App findet zu Ihrem Standort die nächstgelegenen Bankautomaten.",
+"pubDate": "2009-12-09 01:38:20",
+"guid": "920.2001",
+"packageid": "com.7p-group.bank-o-mat",
+"version": "1.0.3",
+"installed_size": "444885",
+"rating": "4.2",
+"total_downloads": "9621",
+"total_comments": "70",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "de",
+"country": "DE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/655/icon/gaf_48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/655/icon/S/gaf_48x48.png"
+}
+],
+"localizations": []
+}, {
+"title": "CarFinder",
+"description": "Finden Sie stets Ihr Auto wieder, wo Sie es auch auch immer abgestellt haben.",
+"pubDate": "2009-12-09 01:42:25",
+"guid": "923.2004",
+"packageid": "com.7p-group.carfinder",
+"version": "1.0.0",
+"installed_size": "576757",
+"rating": "4",
+"total_downloads": "5836",
+"total_comments": "25",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "de",
+"country": "DE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/657/icon/icon_48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/657/icon/S/icon_48x48.png"
+}
+],
+"localizations": []
+}, {
+"title": "KennzeichenFinder",
+"description": "Erfahren Sie, was die Orts- oder Kreiskennzeichen bedeuten und wo sie herkommen.",
+"pubDate": "2009-12-09 01:39:03",
+"guid": "924.2005",
+"packageid": "com.7p-group.kennzeichenfinder",
+"version": "1.1.1",
+"installed_size": "512170",
+"rating": "4.5",
+"total_downloads": "7361",
+"total_comments": "71",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "de",
+"country": "DE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/656/icon/kfz_48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/656/icon/S/kfz_48x48.png"
+}
+],
+"localizations": []
+}, {
 "title": "SoundCannon Soundboard",
 "description": "SoundCannon Soundboard is the premier soundboard application for WebOS. This soundboard currently includes sounds like rim shot, drum roll, crickets, computers, cows, squeaky gears, gongs, guns and glory. SoundCannon has 25 different awesome sound effects that you can use to help lower tension and mainly to have fun. A random button allows you to play a random sound, also we have included a timer for you to setup a sneak attack on all of your friends, family and coworkers. We have a major sound update planned for after the memory limit is fixed, also price might increase on next update so get it now!",
 "pubDate": "2009-12-10 00:54:34",
@@ -22910,7 +24242,31 @@
 }
 ]
 }, {
+"title": "DB Navigator",
+"description": "Mit dem DB Navigator der Deutschen Bahn finden Sie nicht nur Ihre nächste Verbindung zu gespeicherten Standardrouten sondern beispielsweise auch sämtliche Verbindungen einer bestimmten Haltestelle.",
+"pubDate": "2009-12-10 23:01:22",
+"guid": "950.2044",
+"packageid": "com.7p-group.db-navigator",
+"version": "1.0.0",
+"installed_size": "340964",
+"rating": "2.7",
+"total_downloads": "6880",
+"total_comments": "43",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "de",
+"country": "DE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/696/icon/db_48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/696/icon/S/db_48x48.png"
+}
+],
+"localizations": []
+}, {
 "title": "Cell Stalker",
 "description": "Track a phone online. Share your public pass-key with friends or keep it to yourself.  Tracks any Palm WebOS phone. Variable updates.  Optional password protection.  As precise as your phone allows.  Email your link to friends.  Optional subscription to view past locations and travel trails.",
 "pubDate": "2009-12-11 00:08:34",
@@ -24855,7 +26211,31 @@
 }
 ]
 }, {
+"title": "CelText",
+"description": "CelText gives users O2, Meteor and Vodafone in Ireland the ability to send up to 250 free text messages every month. This more than trebles the number of text messages available on some O2 plans from 100 to 350 per month.",
+"pubDate": "2009-12-23 16:40:03",
+"guid": "511.2104",
+"packageid": "com.chofter.celtext",
+"version": "0.1.7",
+"installed_size": "444462",
+"rating": "4.2",
+"total_downloads": "496",
+"total_comments": "13",
+"min_os": "webOS 1.1.2",
+"devices": "Palm Pre, Palm Pixi",
+"language": "en",
+"country": "IE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/928/icon/icon.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/928/icon/S/icon.png"
+}
+],
+"localizations": []
+}, {
 "title": "Pittsburgh Football Fans",
 "description": "If you're a huge Pittsburgh fan, this is the app for you!  Pittsburgh Football Fans provides you with access to the latest news, videos, stats, schedule, standings and scores. You'll always know what's happening with the team! \000a\000aYou can also discuss the latest news and highlights with other Pittsburgh fans using the built in chat feature. Make sure your voice is heard! \000a\000aThere is no better or more comprehensive tool to stay up to date with Pittsburgh. If you are a true fan, you owe it to yourself to download Pittsburgh Football Fans today! \000a\000a\000a** Brighthouse Labs, and the Pittsburgh Football Fans application are in no way associated with the NFL or the Pittsburgh Steelers. All trademarks are owned by their respective owners.",
 "pubDate": "2009-12-11 23:51:02",
@@ -26872,7 +28252,42 @@
 }
 ]
 }, {
+"title": "Classic Emulator",
+"description": "Classic is Palm OS emulator for Pre/Pixi.\000aIt complements webOS with all those thousands of Palm OS applications you can't do without.\000aWith Classic 2.0 you get the full HotSync compatibility and a pack of free and trial Palm OS apps and games to start with.\000aKeep using your favorite Palm OS apps that have been developed over the years and even run them two times faster with Classic on your new powerful Pre/Pixi.\000aWith Classic you can protect the investment you made in Palm OS professional applications and significantly reduce the cost of adopting new hardware. Is there a mission critical app that isn't available for webOS, but you need it to get your every day job done? With Classic you don't need to wait for that app - you can keep using all those fantastic medical, business, legal, productivity, reference and entertainment apps you've grown to love over the years. Or even discover new apps from the catalog of more than 30,000 software titles developed for Centro and Treo phones.\000aClassic 2.0 features the full HotSync support, networking, sound, virtual SD card and rich graphics.\000aClassic brings the ultimate gaming and entertainment experience to a new level by enabling famous Palm OS titles to run on webOS.\000a*This is a 7-days trial application available for purchase now. \000a**Application is available in English",
+"pubDate": "2009-12-31 16:02:11",
+"guid": "1075.2185",
+"packageid": "com.motionapps.app.classicw",
+"version": "2.1.2",
+"installed_size": "630095",
+"rating": "3.3",
+"total_downloads": "2115",
+"total_comments": "15",
+"min_os": "webOS 1.3.1",
+"devices": "Palm Pre, Palm Pixi",
+"language": "en",
+"country": "CA",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/1014/icon/ClassicSmall.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/1014/icon/S/ClassicSmall.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "MotionApps",
+"developer_url": "http://www.motionapps.com/classic/",
+"support_url": "http://www.motionapps.com/support/",
+"categories": ["Productivity & Utilities", "Productivity & Utilities!Tools", "Productivity & Utilities!Gadgets", "Productivity & Utilities!emulator"],
+"images": ["http://cdn.downloads.palm.com/public/1014/en/images/1/L/classic1.png", "http://cdn.downloads.palm.com/public/1014/en/images/2/L/classic2.png", "http://cdn.downloads.palm.com/public/1014/en/images/3/L/classic3.png", "http://cdn.downloads.palm.com/public/1014/en/images/4/L/classic4.png", "http://cdn.downloads.palm.com/public/1014/en/images/5/L/classic5.png"],
+
+}
+]
+}, {
 "title": "SpeedyMarks Apps",
 "description": "Quick access to all SpeedyMarks mobile web applications. Save space on your home screen and don't miss new releases.",
 "pubDate": "2009-12-19 00:46:12",
@@ -27809,8 +29224,67 @@
 }
 ]
 }, {
+"title": "MetalFan Testversion",
+"description": "MetalFan - der absolute *MUSS* für \"the heavy metal brothers and sisters\". Egal ob nun Hard Rock, Heavy Metal, Death Metal, Folk Metal, Black Metal oder Power Metal - Diese App macht jeden Metaller glücklich...\000a\000aAlso, rock' los und probier' die Testversion...\000a\000a[INFO: Die Testversion enthält nur 4 Bands. MetaFan ist kein Nachschlagewerk für Banddaten, sondern soll den Benutzer kurz die Bands vorstellen. Wer dann eine Band interessant findet kann sich z.B. die Videos anschauen oder sich auf den Bandhomepages näher erkundigen.]",
+"pubDate": "2009-12-12 03:31:08",
+"guid": "1157.2292",
+"packageid": "com.tamoggemon.metalfan-trial-german",
+"version": "1.0.59",
+"installed_size": "4303991",
+"rating": "3.8",
+"total_downloads": "1658",
+"total_comments": "3",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "de",
+"country": "DE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/773/icon/icon.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/773/icon/S/icon.png"
+}
+],
+"localizations": []
+}, {
+"title": "MetalFan Trail Version",
+"description": "MetalFan is the right app for people who like it to hear hard and loud music. Try this app if you're like heavy metal...",
+"pubDate": "2009-12-12 02:24:02",
+"guid": "1158.2293",
+"packageid": "com.tamoggemon.metalfan-trial-version",
+"version": "1.0.61",
+"installed_size": "4303992",
+"rating": "1.4",
+"total_downloads": "1945",
+"total_comments": "12",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/771/icon/icon.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/771/icon/S/icon.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Tamoggemon Ltd",
+"developer_url": "http://metal.tamoggemon.com/metalfan.html",
+"support_url": "http://metal.tamoggemon.com/metalfan.html",
+"categories": ["Music", "Music"],
+"images": ["http://cdn.downloads.palm.com/public/771/en/images/1/L/Sceenshot.png"],
+
+}
+]
+}, {
 "title": "Dog Years",
 "description": "How does your dog's age compare to how people age?  No longer is a dog year seven people years, it's a complex formula.  Dogs grow up quick and age differently.  Dog Years will perform this complex calculation for you.",
 "pubDate": "2009-12-16 23:44:08",
@@ -28567,7 +30041,31 @@
 }
 ]
 }, {
+"title": "Christmas Contacts",
+"description": "Add some Christmas magic to your Palm Pixi or Pre with Christmas Contacts! Favorite and speed dial your Christmas Contacts with this visually rich app. Christmas Contacts adds a personal touch to viewing and interacting with your contacts. Favorite up to 24 cards and simply tap a friend's card on your table to connect!",
+"pubDate": "2009-12-16 21:58:11",
+"guid": "1250.2405",
+"packageid": "com.lemonsanver.christmascontacts",
+"version": "1.0.0",
+"installed_size": "356664",
+"rating": "0",
+"total_downloads": "6",
+"total_comments": "0",
+"min_os": "webOS 1.3.1",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/840/icon/icon_48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/840/icon/S/icon_48.png"
+}
+],
+"localizations": []
+}, {
 "title": "Compound Interest Calculator",
 "description": "Calculate the growth of an investment based on compound interest. Adjust your initial investment, monthly contribution and interest rate. Then play with the graph and watch your investment grow over time.",
 "pubDate": "2009-12-16 04:03:48",
@@ -28712,7 +30210,42 @@
 }
 ]
 }, {
+"title": "iFart Free",
+"description": "iFart es una aplicación que se puede escuchar sonidos de pedo, está hecho para hacer bromas con tus amigos y familia. Hay temporizador AA en ella para que pueda estar lejos del ruido pedo y hacer que alguien avergonzado. Disfrutar",
+"pubDate": "2009-12-18 04:52:24",
+"guid": "1253.2418",
+"packageid": "com.doin.ifartfree",
+"version": "1.0.0",
+"installed_size": "172935",
+"rating": "0.5",
+"total_downloads": "32228",
+"total_comments": "185",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/879/icon/Icon-48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/879/icon/S/Icon-48x48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Doin",
+"developer_url": "http://doinapps.com",
+"support_url": "http://doinapps.com/ifartfree",
+"categories": ["Entertainment", "Entertainment!Pranks", "Entertainment!Fart", "Entertainment!sound"],
+"images": ["http://cdn.downloads.palm.com/public/879/en/images/1/L/Screenshot.png", "http://cdn.downloads.palm.com/public/879/en/images/2/L/Screenshto2.png"],
+
+}
+]
+}, {
 "title": "Bikini Cocktails: Andrea Lowell",
 "description": "This app is for ADULTS ONLY.\000a\000aBikini Cocktail combines two things people enjoy... Beautiful women and booze!\000a\000aThis application features images of sexy \000aAndrea Lowell that you can apply as wallpaper for your Palm Pre and Palm Pixi. The \000a\000aapp also includes videos of Andrea showing you her favorite drink recipes.",
 "pubDate": "2009-12-19 04:35:52",
@@ -28749,7 +30282,31 @@
 }
 ]
 }, {
+"title": "TEXT2C",
+"description": "TEXT2C es una aplicación para el teléfono móvil que permite a los usuarios interactuar de la manera más sencilla posible con cualquier medio, ya sea impreso, on-line, radio o televisión.\000a\000aSolamente es necesario iniciar TEXT2C en su Palm, introducir la palabra clave asignada a la acción y pulsar “Enviar” para acceder al contenido deseado.",
+"pubDate": "2009-12-18 20:18:48",
+"guid": "1260.2431",
+"packageid": "com.aquamobile.text2c",
+"version": "1.0.0",
+"installed_size": "72178",
+"rating": "0",
+"total_downloads": "311",
+"total_comments": "0",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "MX",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/888/icon/icon.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/888/icon/S/icon.png"
+}
+],
+"localizations": []
+}, {
 "title": "Chronic Attack",
 "description": "THIS IS YOUR LAST STAND! Swivel your turrent left and right and defend yourself from the waves of endless attackers coming from all directions who want to blow you away. Are you ready to defend yourself in this highly addicting arcade shooter? Will you set the high kill score before getting blown away?",
 "pubDate": "2009-12-18 20:40:34",
@@ -28930,7 +30487,42 @@
 }
 ]
 }, {
+"title": "Gonna Rain? Free",
+"description": "Esta es una aplicación que le diga si va a llover o no en su sitio web El propósito de esta aplicación es que sea sencillo. No hay necesidad de seguir buscando los lotes a través de la información solo para descubrir que lo que va a llover. Esta aplicación te dice sin complicaciones.",
+"pubDate": "2009-12-19 00:55:21",
+"guid": "1294.2470",
+"packageid": "com.doin.gonnarainfree",
+"version": "1.0.0",
+"installed_size": "123776",
+"rating": "3.1",
+"total_downloads": "6625",
+"total_comments": "30",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/896/icon/icon48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/896/icon/S/icon48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Doin",
+"developer_url": "http://doinapps.com",
+"support_url": "http://doinapps.com/gonnarain",
+"categories": ["Productivity & Utilities", "Productivity & Utilities!Reminder", "Productivity & Utilities!weather", "Productivity & Utilities!rain"],
+"images": ["http://cdn.downloads.palm.com/public/896/en/images/1/L/Screenshot.png", "http://cdn.downloads.palm.com/public/896/en/images/2/L/Screenshot2.png"],
+
+}
+]
+}, {
 "title": "1001 Bible Verses",
 "description": "This application offers a collection of over 1000 essential Bible verses on many important topics such as Faith, Relationships, Money & Possessions, Attitudes & Emotions, Sin & Temptation and much more. It comes with great graphics and features: Search, Favorites, Verse of the Day and you can also Email a Verse to your Friends!",
 "pubDate": "2009-12-18 19:40:19",
@@ -29075,7 +30667,42 @@
 }
 ]
 }, {
+"title": "Mirror Mirror!",
+"description": "Mirror for users! Sometimes you just want to see and validate that: dang you're looking good! Don't you ever die! \000a\000aAllows the user to tap the screen and change the mirror frame to a multitude of various frames. Uses the phone's screen for reflection. \000a\000aClick to change the frames... see if you can find the hidden features!",
+"pubDate": "2009-12-16 23:14:31",
+"guid": "1356.2536",
+"packageid": "com.bcato.mirror",
+"version": "1.0.0",
+"installed_size": "615745",
+"rating": "3.5",
+"total_downloads": "23868",
+"total_comments": "206",
+"min_os": "webOS 1.3.1",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/851/icon/mirror_mirror_icon_48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/851/icon/S/mirror_mirror_icon_48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Brett Cato",
+"developer_url": "http://www.bcato.com",
+"support_url": "http://www.bcato.com",
+"categories": ["Entertainment", "Entertainment!Humor", "Entertainment!Pranks", "Entertainment!Mirror"],
+"images": ["http://cdn.downloads.palm.com/public/851/en/images/1/L/WebOS_Mirror_Mirror_Screenshot.png"],
+
+}
+]
+}, {
 "title": "Black Box",
 "description": "Black Box is based on the classic black box puzzle game created by Eric Solomon in the early 1970’s. \000a\000aIn Black Box you have control of a radioactive black box that you are running experiments on. You must find the atoms hidden inside the black box using laser rays. It is simply too dangerous to peer in yourself and in any case it is too small to see the atoms. The locations of the atoms can be deduced by seeing the outcome of the rays. \000a\000aBlack Box is a simply puzzle game you can play while in a meeting (not that we advocate that mind you), waiting in the airport or any other place where you need a mindless distraction. It is simple but at the higher levels the strategy can be deep and take some time. \000a\000aWe hope you enjoy taking a look at this timeless classic from the beginning of gaming on the modern WebOS platform.",
 "pubDate": "2009-12-16 21:50:41",
@@ -29508,7 +31135,31 @@
 }
 ]
 }, {
+"title": "Juego de los Sabios",
+"description": "Compruebe y amplíe sus conocimientos de una manera maravillosamente divertida, con el ¡“El juego de los sabios“!\000aUn conjunto de 2.700 preguntas, distribuidas en 9 categorías, relativas a la realidad cultural mundial, desde la perspectiva cultural de Latinoamérica, le abrirán, gráficamente atractivo, el camino del saber.\000aLas preguntas se han formulado de acuerdo con el principio de múltiple escogencia, de modo que usted tiene tres opciones para escoger su respuesta.\000a¡Atención! ¡El tiempo corre!\000aDependiendo de su rapidez en contestar, se le acreditarán puntos, de manera que usted puede comparar su posición en el ranking mundial con el de otros jugadores.\000aUn juego, transgeneracional, que ofrece diversión y enseñanza interdisciplinarias a los participantes, sean adolescentes o profesores universitarios, a partir de la apasionante realidad geográfica, económica y cultural de los 85 millones de habitantes de América Latina.\000aPuesto que el juego incluye en cada ronda una pregunta de cada categoría, se le exigirá un amplio espectro de conocimientos sobre historia, geografía, música, biología, literatura, artes, ciencias y otros.\000aLas preguntas contestadas incorrectamente, no se repetirán aquí; pero gracias a su nueva oportunidad, usted podrá contestarlas correctamente. De esta manera obtendrá el conocimiento correcto, que enriquecerá su bagaje cultural.\000aAmplias estadísticas le informarán permanentemente sobre los puntos que ha ganado hasta el momento, su “progreso y “nivel de conocimiento”.\000aMediante un “touch” a estos valores, usted recibirá también informaciones complementarias, sobre el nivel positivo que ha logrado.\000a!Mucho éxito con “El juego de los sabios” ¡\000a\000aBreve descripción :\000a\000a    * 2,700 preguntas\000a    * 9 áreas de prueba para su conocimiento\000a    * Estadísticas dinámicas sobre el desarrollo del juego y ranking mundial de los jugadores.\000a    * Cuentas de usuarios (hasta tres cuentas en un “device”)",
+"pubDate": "2009-12-22 20:19:35",
+"guid": "1379.2573",
+"packageid": "com.cubolibo.sdwes",
+"version": "1.0.0",
+"installed_size": "6591854",
+"rating": "0",
+"total_downloads": "6",
+"total_comments": "0",
+"min_os": "webOS 1.3.1",
+"devices": "Palm Pre",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/921/icon/sdw-es-48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/921/icon/S/sdw-es-48.png"
+}
+],
+"localizations": []
+}, {
 "title": "Brainbuster",
 "description": "Test your general knowledge and broaden your horizons in a fun way with Brainbuster!\000aWith 27 questions in nine categories, this game with attractive graphics, guides you along the path of knowledge until you finally reach the well of eternal wisdom.\000aQuestions are in multiple choice format, and you are offered three alternative answers – but better be quick, the clock’s running!\000aDepending on the time you need to answer correctly, you are awarded credits, which you can then compare in a worldwide highscore list. In consideration to iphone users with limited contracts, the option „network connection with WiFi access only“ is offered in system settings.\000aBrainbuster really challenges you - within each round you will have to answer one question from each category: Geography, history, arts, literature, music, science, sports, movies and, finally, miscellaneous. Correct answers are never repeated, and for each wrong answer, there is a chance to redeem yourself later via the Bonus-chance feature. If you get them right this time, you have learned something new, and thus will increase your individual level of knowledge.\000aExtensive statistics constantly keep you updated about your personal score, your current level of knowledge, and your performance in each of the categories.\000aHave fun with Brainbuster!\000a\000aContent editors: Dylan Dryden & Jennifer Clarke\000a\000aShort description:\000a\000a* Lite version 27 questions, full version 2700 questions.\000a* Nine subject areas to test your knowledge (geography, history, arts, literature, music, science, sports, movies and miscellaneous)\000a* Extensive in-game statistics and worldwide highscore ranking\000a* User accounts (up to three accounts on one device)",
 "pubDate": "2009-12-18 20:10:55",
@@ -30337,7 +31988,42 @@
 }
 ]
 }, {
+"title": "Spin The Bottle Free",
+"description": "Esta aplicación se realiza de manera que usted puede jugar todo tipo de juegos que requieren una botella de spinning. Ya no se sienten frustrados por no haber en torno a una botella por el que se",
+"pubDate": "2009-12-22 02:13:23",
+"guid": "1506.2713",
+"packageid": "com.doin.spinthebottlefree",
+"version": "1.0.0",
+"installed_size": "138694",
+"rating": "2.6",
+"total_downloads": "17955",
+"total_comments": "46",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/920/icon/icon48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/920/icon/S/icon48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Doin",
+"developer_url": "http://doinapps.com",
+"support_url": "http://doinapps.com/spinthebottle",
+"categories": ["Entertainment", "Entertainment!truth", "Entertainment!dare", "Entertainment!bottle"],
+"images": ["http://cdn.downloads.palm.com/public/920/en/images/1/L/Screenshot.png", "http://cdn.downloads.palm.com/public/920/en/images/2/L/Screenshot2.png"],
+
+}
+]
+}, {
 "title": "London's Burning by John Burke",
 "description": "“John Burke is a Scottish author, known for his various novels and short stories, many of them written under other aliases. Some of the novels he wrote were based on a wide range of film and television scripts, including “Chitty Chitty Bang Bang” and “London’s Burning”. This application features John Burke’s novelized version of the television drama “London’s Burning”, read by Richard Walsh.\000a\000aIf you like the television series “London’s Burning” and firefighters, you will love hearing the story on this great application.”",
 "pubDate": "2009-12-21 23:30:32",
@@ -30590,7 +32276,42 @@
 }
 ]
 }, {
+"title": "iWorld Atlas Lite",
+"description": "iWorld Atlas Lite features the most complete socio-economic facts (Geography,Demography,Economy,Government) of the most 40 known countries of the world ,11 continents.\000aMore than 1350 key facts and 100 large and high detailed maps with Googlemap plugin.\000aFlag description, Coat of Arms, national motto, Conversion tables, ... All you want to know about the World.\000aFor more informations, screenshots, ... visit www.ze-palm.com\000a\000aGo ahead to iWorld Atlas, the most complete atlas of 224 countries.\000awww.ze-palm.com\000a\000aList of the 40 countries :\000aAFRICA : South Africa, Gabon, Kenya, Morocco, Seychelles, Chad, Tunisia\000aASIA : Hong Kong, India, Indonesia, Japan,  Thailand\000aEUROPE : Austria, Belgium, France, Germany, Holy See, Ireland, Italy, Monaco, Portugal, Spain, Switzerland, United Kingdom\000aMIDDLE EAST : Afghanistan, Iran, Saudi Arabia\000aNORTH AMERICA: Canada, Cuba, Guadeloupe, Martinique, Mexico, United States\000aOCEANIA : Fiji, New Caledonia, New Zealand, Papua New Guinea\000aSOUTH AMERICA:  Argentina, Brazil, French Guiana",
+"pubDate": "2009-12-21 23:47:08",
+"guid": "1525.2742",
+"packageid": "com.zepalm.iworldatlaslite",
+"version": "1.2.0",
+"installed_size": "6790403",
+"rating": "2.5",
+"total_downloads": "3660",
+"total_comments": "15",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "en",
+"country": "IE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/916/icon/iconS.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/916/icon/S/iconS.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Ze-Palm",
+"developer_url": "http://www.ze-palm.com/en/iWorld%20Atlas.htm",
+"support_url": "http://www.ze-palm.com",
+"categories": ["Travel", "Travel!Guides", "Travel!Transportation", "Travel!Maps"],
+"images": ["http://cdn.downloads.palm.com/public/916/en/images/1/L/Intro.jpg", "http://cdn.downloads.palm.com/public/916/en/images/2/L/Countries.jpg", "http://cdn.downloads.palm.com/public/916/en/images/3/L/Europe.jpg", "http://cdn.downloads.palm.com/public/916/en/images/4/L/Germany.jpg", "http://cdn.downloads.palm.com/public/916/en/images/5/L/GovUK.jpg"],
+
+}
+]
+}, {
 "title": "Capital Quiz",
 "description": "Test your knowledge and name all state capitals of the USA.",
 "pubDate": "2009-12-21 23:21:20",
@@ -31203,7 +32924,42 @@
 }
 ]
 }, {
+"title": "Temperature Converter Free",
+"description": "Conversión de temperatura de grados Celsius, Fahrenheit, Kelvin y",
+"pubDate": "2009-12-25 11:30:03",
+"guid": "1242.2867",
+"packageid": "com.doin.temperatureconverterfree",
+"version": "1.0.1",
+"installed_size": "136487",
+"rating": "2.8",
+"total_downloads": "6145",
+"total_comments": "11",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/955/icon/icon48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/955/icon/S/icon48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Doin",
+"developer_url": "http://doinapps.com",
+"support_url": "http://doinapps.com/temperatureconverter",
+"categories": ["Education", "Education!Temp", "Education!Temperature", "Education!converter"],
+"images": ["http://cdn.downloads.palm.com/public/955/en/images/1/L/Screenshot.png", "http://cdn.downloads.palm.com/public/955/en/images/2/L/Screenshot2.png"],
+
+}
+]
+}, {
 "title": "Temperature Converter Pro",
 "description": "Temperature Conversion between Celsius, Fahrenheit, and kelvin.\000a\000aThis is an ad-less app",
 "pubDate": "2009-12-23 00:51:19",
@@ -31240,7 +32996,42 @@
 }
 ]
 }, {
+"title": "iBeer Free",
+"description": "Cumplir con lo necesario para la cerveza con esta aplicación",
+"pubDate": "2009-12-25 09:25:46",
+"guid": "1642.2869",
+"packageid": "com.doin.ibeerfree",
+"version": "1.0.1",
+"installed_size": "139475",
+"rating": "0.5",
+"total_downloads": "12052",
+"total_comments": "183",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/950/icon/icon48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/950/icon/S/icon48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Doin",
+"developer_url": "http://doinapps.com",
+"support_url": "http://doinapps.com/iBeer",
+"categories": ["Entertainment", "Entertainment!Beer", "Entertainment!drink", "Entertainment!alcohol"],
+"images": ["http://cdn.downloads.palm.com/public/950/en/images/1/L/Screenshot.png"],
+
+}
+]
+}, {
 "title": "DietTrac",
 "description": "This is a simple app that keeps a weight log and can calculate dietary values based on calories, fat and fiber.  You can export values to a separate DietTrac calendar at a set time during the day in addition to a foodsearch.",
 "pubDate": "2009-12-25 09:26:07",
@@ -31385,7 +33176,42 @@
 }
 ]
 }, {
+"title": "Paratrooper Mini",
+"description": "Parachute your troopers to safety with this Mini Free version of Paratrooper. Lean your device from side to side to adjust your troopers fall, but it's not quite as easy as it sounds to get a perfect 100 point landing. This fully playable Mini version comes with the first 5 levels from the commercial release. Track your personal best scores and compete against your friends with the online global high score system. Paratrooper takes full advantage of the power of the Pre and the Pixi--the action game you've been waiting for.",
+"pubDate": "2009-12-26 10:42:42",
+"guid": "1648.2878",
+"packageid": "com.185vfx.paratroopermini",
+"version": "1.1.0",
+"installed_size": "689289",
+"rating": "4",
+"total_downloads": "42379",
+"total_comments": "134",
+"min_os": "webOS 1.3.1",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/975/icon/icon48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/975/icon/S/icon48x48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "185vfx.com",
+"developer_url": "http://www.185vfx.com/webos/",
+"support_url": "http://www.185vfx.com/webos/paratrooper/",
+"categories": ["Games", "Games!Arcade", "Games!Action / Adventure", "Games!Tilt"],
+"images": ["http://cdn.downloads.palm.com/public/975/en/images/1/L/paratroopermini_2009-17-12_224351.png", "http://cdn.downloads.palm.com/public/975/en/images/2/L/paratroopermini_2009-17-12_224549.png", "http://cdn.downloads.palm.com/public/975/en/images/3/L/paratroopermini_2009-17-12_224650.png"],
+
+}
+]
+}, {
 "title": "Rukus Girls of 2009",
 "description": "FOR ADULTS ONLY:\000a\000aThe Rukus App features some of the hottest girls posing in bikinis and lingerie. From the beach to the streets, these girls are just a click away, 24/7/365. Find out why Rukus Magazine is one of the fastest growing men's magazines around.\000a\000a- Browse through different images of girls.\000a\000a- Videos - Watch interviews with Rukus Magazine's top girls.",
 "pubDate": "2009-12-26 10:45:51",
@@ -31674,7 +33500,31 @@
 }
 ]
 }, {
+"title": "Varta-Führer",
+"description": "Finden Sie Hotels aller Kategorien und ganz nach Ihrem Geschmack mit der neuen App vom Varta-Führer.",
+"pubDate": "2009-12-21 23:44:14",
+"guid": "1660.2902",
+"packageid": "com.7p-group.vartaguide",
+"version": "1.0.0",
+"installed_size": "243866",
+"rating": "3.5",
+"total_downloads": "2513",
+"total_comments": "7",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre",
+"language": "de",
+"country": "DE",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/915/icon/varta_48x48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/915/icon/S/varta_48x48.png"
+}
+],
+"localizations": []
+}, {
 "title": "Guerreros Del Arpa",
 "description": "Guerreros Del Arpa, which translates to Warriors of the Harp, is a great band with a truly unique style. Mario Madrigal – the harpist, Gerardo Peña – the drummer, Nelson Torres – the lead vocalist, Salvador Yslas – the bass guitarist, and Antonio Salas – the guitarist, collaborated in 2004 to form Guerreros Del Arpa. Their upbeat music and exceptional style is a definite crowd pleaser.\000a\000a--This application features Guerreros Del Arpa’s album \"Raza Manoza\" in its entirety.",
 "pubDate": "2009-12-25 11:30:45",
@@ -32215,7 +34065,42 @@
 }
 ]
 }, {
+"title": "Aces Solitaire (Spanish)",
+"description": "Aces Solitaire is a collection of solitaire games which will provide hours of entertainment. Choose from\000a•Black Hole\000a•Golf\000a•Pyramid Golf\000a•Tri Peaks\000a•Tri Towers",
+"pubDate": "2009-12-25 11:35:00",
+"guid": "1697.2953",
+"packageid": "com.bytesequencing.pre.solitaire.free",
+"version": "1.0.0",
+"installed_size": "554966",
+"rating": "3.5",
+"total_downloads": "19601",
+"total_comments": "29",
+"min_os": "webOS 1.3.1",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/967/icon/icon48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/967/icon/S/icon48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "bytesequencing.com",
+"developer_url": "http://www.bytesequencing.com",
+"support_url": "http://www.bytesequencing.com/pre.html",
+"categories": ["Games", "Games!Classics", "Games!Cards"],
+"images": ["http://cdn.downloads.palm.com/public/967/en/images/1/L/solitaire.png", "http://cdn.downloads.palm.com/public/967/en/images/2/L/solitaire2.png", "http://cdn.downloads.palm.com/public/967/en/images/3/L/solitaire3.png", "http://cdn.downloads.palm.com/public/967/en/images/4/L/solitaire4.png", "http://cdn.downloads.palm.com/public/967/en/images/5/L/solitaire5.png"],
+
+}
+]
+}, {
 "title": "Cubix",
 "description": "The ultimate 80s puzzle is back!  Using your touchscreen, work your way through solving Cubix!  There are options to make it easy to solve (as few as 1 turn), shake your phone to start a new game, choose from 3 color themes (traditional, light and dark) and more!  When you solve the puzzle, your name, time and number of moves to complete are recorded.  Currently there are two views (to show all 6 sides), and a future update will include a 3D rotating cube for a more realistic look and feel.  A solver is also planned for a future update.  Twist, turn, and enjoy!  ***NOTE: please read the instructions, but in case you don't you can press 'c' to play with a non-timed, clean cube!***",
 "pubDate": "2009-12-25 11:35:40",
@@ -32864,7 +34749,31 @@
 }
 ]
 }, {
+"title": "Tip Time",
+"description": "A simple utility that allows you to calculate your total bill and split it equally between 2 and 20 people. Tip Time also allows you to vary the amount of your tip (0% - 20%) and round the totals to even dollar amounts.",
+"pubDate": "2009-12-26 10:44:16",
+"guid": "1380.3005",
+"packageid": "com.thoughtmatrix.tipcalculator",
+"version": "1.2.5",
+"installed_size": "688128",
+"rating": "4.2",
+"total_downloads": "33",
+"total_comments": "2",
+"min_os": "webOS 1.1.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/978/icon/tipcalc_icon_small.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/978/icon/S/tipcalc_icon_small.png"
+}
+],
+"localizations": []
+}, {
 "title": "Movie Times",
 "description": "Movie Times provides you with movie listings and showtimes for theatres near you, searchable by film or by theatre. Searching through the full list of films showing in your city, you’ll find detailed info for each film including synopsis, promotional image, reviews, runtime, age ratings and genre.  Plus you’ll see which cinemas are showing the movie near you.  If you search for a specific theater you’ll find its contact info along with all of its showtimes.   Listings are available for up to four days in advance. \000a\000aWith Movie Times you’ll never have troubles finding a place to watch the latest new release blockbuster again!  Download today so you’ll always know what’s playing!",
 "pubDate": "2009-12-29 10:42:07",
@@ -33009,7 +34918,42 @@
 }
 ]
 }, {
+"title": "Conversor de moneda",
+"description": "Haga la conversión de hasta 50 tipos de moneda mas habituales sólo pulsando un botón mediante las tasas de cambio de Yahoo Finance.",
+"pubDate": "2009-12-24 09:13:21",
+"guid": "200.3020",
+"packageid": "com.mojojungle.currency",
+"version": "0.9.4",
+"installed_size": "482354",
+"rating": "3.8",
+"total_downloads": "67422",
+"total_comments": "86",
+"min_os": "webOS 1.2.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/72/icon/currency_29605B.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/72/icon/S/currency_29605B.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "MojoJungle",
+"developer_url": "http://www.mojojungle.com",
+"support_url": "http://www.mojojungle.com/apps/currency",
+"categories": ["Travel", "Travel!Currency"],
+"images": ["http://cdn.downloads.palm.com/public/72/en/images/1/L/currency_1.png"],
+
+}
+]
+}, {
 "title": "Santa Button free",
 "description": "Santa Button for WebOS is a free ad supported santa button that says HO HO HO, and plays our rendition of Jingle Bells. \000a\000aNote: There is a slight delay when playing jingle bells before the sound starts.",
 "pubDate": "2009-12-24 05:55:17",
@@ -33766,7 +35710,42 @@
 }
 ]
 }, {
+"title": "Translate! Free",
+"description": "Translate between 45+ languages using Google Translation services!  \000a\000aDistinguishing features:\000a- 45+ languages\000a- Quickly swap languages\000a- Easy identification of language via country flag\000a- Share translations via E-Mail\000a- Google Translations\000a\000aSupported languages are:\000a\000aAFRIKAANS\000aALBANIAN\000aBELARUSIAN\000aBULGARIAN\000aCHINESE SIMPLIFIED\000aCHINESE TRADITIONAL\000aCROATIAN\000aCZECH\000aDANISH\000aDUTCH\000aENGLISH\000aESTONIAN\000aFILIPINO\000aFINNISH\000aFRENCH\000aGALICIAN\000aGERMAN\000aGREEK\000aHUNGARIAN\000aICELANDIC\000aINDONESIAN\000aIRISH\000aITALIAN\000aJAPANESE\000aKOREAN\000aLATVIAN\000aLITHUANIAN\000aMACEDONIAN\000aMALAY\000aMALTESE\000aNORWEGIAN\000aPOLISH\000aPORTUGUESE\000aROMANIAN\000aRUSSIAN\000aSERBIAN\000aSLOVAK\000aSLOVENIAN\000aSPANISH\000aSWAHILI\000aSWEDISH\000aTURKISH\000aUKRAINIAN\000aVIETNAMESE\000aWELSH\000a\000aNOTE: Thai, Arabic, Hindi, and Hebrew are unsupported due to no font support on the Palm WebOS.  Unfortunately, if you want to use these languages, you'll need to contact Palm to ask for support for these languages.",
+"pubDate": "2010-01-01 02:45:50",
+"guid": "1767.3074",
+"packageid": "com.bcato.translate.free",
+"version": "1.0.0",
+"installed_size": "694030",
+"rating": "4.5",
+"total_downloads": "3503",
+"total_comments": "8",
+"min_os": "webOS 1.3.1",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/1018/icon/translate_free_48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/1018/icon/S/translate_free_48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Brett Cato",
+"developer_url": "http://www.bcato.com",
+"support_url": "http://www.bcato.com",
+"categories": ["Travel", "Travel!Phrases / Translator", "Travel!Language", "Travel!Translate"],
+"images": ["http://cdn.downloads.palm.com/public/1018/en/images/1/L/translate_free_1.png", "http://cdn.downloads.palm.com/public/1018/en/images/2/L/translate_free_2.png", "http://cdn.downloads.palm.com/public/1018/en/images/3/L/translate_free_3.png"],
+
+}
+]
+}, {
 "title": "Brain Booster: An ultimate guide",
 "description": "1.  5 major steps to a healthy brain\000a   2. Some important facts about brain\000a   3. Food source of required nutritions\000a   4. Different types of fat, and how to recognize those\000a   5. Which fats are good for health\000a   6. Stress Management.\000a   7. Importance and timings of physical and mental exercise",
 "pubDate": "2010-01-01 02:48:20",
@@ -33911,7 +35890,42 @@
 }
 ]
 }, {
+"title": "Pong Free",
+"description": "Este es un juego clásico pong, exactamente igual que el buen juego y viejos todos sabemos y el amor.",
+"pubDate": "2010-01-01 03:09:48",
+"guid": "1258.3082",
+"packageid": "com.doin.pongfree",
+"version": "1.0.2",
+"installed_size": "174628",
+"rating": "1.3",
+"total_downloads": "13192",
+"total_comments": "68",
+"min_os": "webOS 1.0.0",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/1023/icon/icon48.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/1023/icon/S/icon48.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Doin",
+"developer_url": "http://doinapps.com",
+"support_url": "http://doinapps.com/pong",
+"categories": ["Games", "Games!Arcade", "Games!Classics", "Games!pong"],
+"images": ["http://cdn.downloads.palm.com/public/1023/en/images/1/L/Screenshot.jpg"],
+
+}
+]
+}, {
 "title": "Sara Haze",
 "description": "Sara Haze is a beautiful and talented pop singer-songwriter. Her music speaks from the heart, which is part of the magic that draws in listeners. Find out more about this next big star, she will definitely become a new favorite of yours.",
 "pubDate": "2010-01-01 03:25:15",
@@ -34344,7 +36358,42 @@
 }
 ]
 }, {
+"title": "TAN Total",
+"description": "Store your TAN-list (transaction number) secure*! Features: - Supports TAN and iTAN - Create multiple tan lists (profiles) - Clearly represented list - Search for TAN with index - ... (*) security All data are saved crypted in your database. The encryption algorithm is blowfish. Essential for the security is the length an complexity of your password. Your password will be cached when the list is opened. Please close the list as soon as possible.",
+"pubDate": "2010-01-01 04:08:32",
+"guid": "1786.3119",
+"packageid": "de.muetzner.tantotal",
+"version": "1.0.2",
+"installed_size": "438542",
+"rating": "3.3",
+"total_downloads": "423",
+"total_comments": "6",
+"min_os": "webOS 1.3.1",
+"devices": "Palm Pre, Palm Pixi",
+"language": "es",
+"country": "US",
+"icons": [{
+"type": "app", 
+"url": "http://cdn.downloads.palm.com/public/1042/icon/icon_small.png"
+}
 , {
+"type": "scaled", 
+"url": "http://cdn.downloads.palm.com/public/1042/icon/S/icon_small.png"
+}
+],
+"localizations": [{
+"country": "AC",
+"language": "en",
+"price": "0",
+"developer": "Robert Muetzner",
+"developer_url": "http://www.muetzner.com",
+"support_url": "http://www.muetzner.com",
+"categories": ["Finance", "Finance!Banking"],
+"images": ["http://cdn.downloads.palm.com/public/1042/en/images/1/L/tans.png", "http://cdn.downloads.palm.com/public/1042/en/images/2/L/profile.png", "http://cdn.downloads.palm.com/public/1042/en/images/3/L/tanliste_details.png"],
+
+}
+]
+}, {
 "title": "PictPicker",
 "description": "Take photo wherever you are or choose one from your gallery and upload instantaneously to many different publishing services. Nothing's more easy than that.",
 "pubDate": "2010-01-01 04:07:50",
