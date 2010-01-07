@@ -191,7 +191,7 @@
                   '<div class="module">' +
                     '<div class="app-card">' +
                       '<div class="card front">' +
-                        '<div class="module_crnr"><img src="images/crnr_cat.png" width="35" height="35" /></div>' +
+                        '<div class="module_crnr"><img src="images/crnr_' + getAppCorner(app) + '.png" width="35" height="35" /></div>' +
                         '<img class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
                         '<div class="module_hd"><img class="icon" src="' + app.icons[1].url + '" width="32" height="32" /> ' + getAppPrice(app) +
                             '<div class="clearing">&nbsp;</div>' +
@@ -218,6 +218,16 @@
         }
 
         appContainer.innerHTML = appsHTML;
+    }
+
+    function getAppCorner(app) {
+        if (app.channel == "web") {
+            return "web";
+        } else if (app.channel == "beta") {
+            return "beta";
+        } else {
+            return "cat";
+        }
     }
 
     function flipOver(element) {
