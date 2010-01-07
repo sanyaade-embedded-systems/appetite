@@ -3,7 +3,7 @@
 var sys = require("sys"),
    http = require("http"),
    posix = require("posix"),
-   apps = require("./data.all").apps,
+   apps = require("./apps").apps,
    client = require("./client");
 
 var a = new client.Appetite(apps);
