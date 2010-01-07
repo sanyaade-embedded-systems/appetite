@@ -199,58 +199,7 @@ Appetite.prototype = {
     // TODO: Ignore locale
     app: function(id, locale) {
         return this._byid[id];
-    },
-
-    // -- EXPLORE (LEGACY)
-
-    // /explore/top_rated?by_category=[true|false]&start=[1+]&size=[1+]&channel=[w][b][c]
-    explore_top_rated: function(opts) {
-        opts = opts || {};
-        opts.type = 'top_rated';
-
-        return this.find(opts);
-    },
-
-    // /explore/top_paid
-    explore_top_paid: function(opts) {
-        opts = opts || {};
-        opts.type = 'top_paid';
-
-        return this.find(opts);
-    },
-
-    explore_top_free: function(opts) {
-        opts = opts || {};
-        opts.type = 'top_free';
-
-        return this.find(opts);
-    },
-
-    explore_top_overall: function(opts) {
-        opts = opts || {};
-        opts.type = 'top_overall';
-
-        return this.find(opts);
-    },
-
-    explore_top_grossing: function(opts) {
-        opts = opts || {};
-        opts.type = 'top_grossing';
-
-        return this.find(opts);
-    },
-
-    explore_newest: function(opts) {
-        opts = opts || {};
-        opts.type = 'newest';
-
-        return this.find(opts);
-    },
-
-    explore_all: function(opts) { // all really means "by alpha" and this will go when I can tweak the browser front end code
-        return this.find(opts);
     }
-
 };
 
 // check to see if you are running inside of node.js and export if you are
