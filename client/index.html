@@ -428,6 +428,11 @@
     function installApp(packageid) {
         // to use Ajax instead of an iframe, uncomment this
         //loadSmsPopup(packageid);
+        
+        if (isWebOSDevice()) { // don't do an inline popup as you are on a webOS device, just go to the URL
+            window.open("http://developer.palm.com/appredirect/?packageid=" + packageid);
+            return;
+        }
 
         var size = getDimensions();
 
@@ -471,6 +476,10 @@
                 $("popup").innerHTML = popupHtml;
             }
         });
+    }
+
+    function isWebOSDevice() {
+        return (navigator.userAgent.indexOf('Pre/') > -1) || (navigator.userAgent.indexOf('Pixi/') > -1);
     }
 
     function getDimensions() {
