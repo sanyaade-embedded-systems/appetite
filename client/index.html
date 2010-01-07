@@ -128,6 +128,9 @@
                 hidePopup();
             } else if (event.keyCode == 70 && event.ctrlKey) {
                 fancyModeOverride = !fancyModeOverride;
+
+                // refresh the apps to use the new fancy mode setting
+                loadApps();
             }
         });
         selectTab($('top_rated'));
