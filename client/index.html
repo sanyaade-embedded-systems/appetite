@@ -119,6 +119,7 @@
             if (event.keyCode == Event.KEY_ESC) {
                 $("dimmer").className = "hidden";
                 $("popup").className = "hidden";
+                $("popup").innerHTML = "";
             }
         });
         selectTab($('top_rated'));
@@ -207,8 +208,6 @@
         var appsHTML = "";
         for (var i = 0; i < apps.length; i++) {
             var app = apps[i];
-
-            //console.log(app);
 
             var appHTML = getAppHTML(app);
             appsHTML += appHTML;
@@ -412,7 +411,7 @@
     }
 
     function installApp(packageid) {
-        //loadSmsPopup(packageid);
+        loadSmsPopup(packageid);
 
         var size = getDimensions();
 
@@ -424,10 +423,9 @@
         var popupSize = { width: 480, height: 120 };
 
         var popup = $("popup");
-        console.log(popup.className);
         popup.className = "shown-popup";
         popup.style.left = Math.round((size.width / 2) - (popupSize.width / 2)) + "px";
-        popup.style.top = Math.round((size.visibleHeight / 2) - (popupSize.height / 2)) + "px";
+        popup.style.top = size.top + Math.round((size.visibleHeight / 2) - (popupSize.height / 2)) + "px";
         popup.style.width = popupSize.width + "px";
         popup.style.height = popupSize.height + "px";
 
@@ -438,6 +436,8 @@
         new Ajax.Request("/sms/getPopup", {
             method: "get",
             onSuccess: function(xhr) {
+                if ($("popup").className == "hidden") return;
+                
                 //xhr.responseText.evalScripts();
 
                 // kill the border
@@ -458,7 +458,8 @@
         return {
             visibleHeight: self.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
             height: Math.max(Math.max(document.body.scrollHeight, document.documentElement.scrollHeight), Math.max(document.body.clientHeight, document.documentElement.clientHeight)),
-            width: Math.max(Math.max(document.body.scrollWidth, document.documentElement.scrollWidth), Math.max(document.body.clientWidth, document.documentElement.clientWidth))
+            width: Math.max(Math.max(document.body.scrollWidth, document.documentElement.scrollWidth), Math.max(document.body.clientWidth, document.documentElement.clientWidth)),
+            top: document.body.scrollTop || document.documentElement.scrollTop
         }
     }
 
