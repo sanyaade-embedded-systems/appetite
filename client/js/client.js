@@ -67,7 +67,7 @@ Appetite.prototype = {
         apps = apps.sort(this.sorts[opts.order]);
 
         // return a subset back
-        return apps.slice(opts.start, opts.size);
+        return apps.slice(opts.start, opts.count);
     },
 
     appIsInChannel: function(channels, appchannel) {
