@@ -46,16 +46,22 @@ var responders = {
     DEFAULT: function(params) {
         return {
             body: "<html><head><title>Project Appetite API</title></head><body><h1>Project Appetite API Sample</h1>Thanks for playing with the Project Appetite API page. There are the following endpoints that you can access to get JSON responses containing apps from the app catalog backend:<h3>Querying apps</h3> <code>/apps?type=top_rated|top_paid|top_free|top_overall|top_grossing|newest&start=1+&count=1+&channel=[b][c][w]&query=query</code><br><br> This API is used to query the backend and filter down to the apps that you with to see. The full options are:<br><ul><li>type: this orders the results based on the type that you are looking for (default: alphabetical on app title)<li>start: where to start in the data set (default: 1)<li>count: how many apps to return in the data set<li>channel: whether to filter on channel. b=beta, c=palm app catalog, and w=web distro (and NOT in the others) (default: 'bcw' ... all of them)<li>query: a simple substring filter on the title or description</ul><h3>Retrieving an app by id</h3> <code>/app?id=guid</code>: This API is used if you know the guid for a given application and you want to get its data (e.g. you are displaying a page for one app).<h3>Icons</h3> <code>/icons?count=#</code>: Return a set of icons (optional count for sizing)",
-            contentType: "text/html",
-            sendRaw: true
+            contentType: "text/html"
         }
     }
 };
 
 
 // -- Create the HTTP server binding
-var port = process.ENV['APPETITE_PORT'] || 8000;
 var host = process.ENV['APPETITE_HOST'] || 'localhost';
+var port = process.ENV['APPETITE_PORT'] || 8000;
+
+if (process.ARGV.length > 3) { // overwrite with command line args
+    port = process.ARGV[3];
+}
+if (process.ARGV.length > 2) {
+    host = process.ARGV[2];
+}
 
 http.createServer(function(request, response) {
     var path = request.uri.path.substring(1);
@@ -63,13 +69,15 @@ http.createServer(function(request, response) {
 
     var responder = (typeof responders[path] == "function") ? responders[path] : responders['DEFAULT'];
     output = responder(request.uri.params);
+    
+    var contentType = output.contentType || "text/javascript";
 
     if (output.error) {
-        response.sendHeader(output.error, {"Content-Type": output.contentType || "text/javascript"});
+        response.sendHeader(output.error, { "Content-Type": contentType });
         response.sendBody(output.body);
     } else {
-        var body = (output.sendRaw) ? output.body : JSON.stringify(output.body);
-        response.sendHeader(200, {"Content-Type": output.contentType || "text/javascript"});
+        var body = (contentType == "text/javascript") ? JSON.stringify(output.body) : output.body;
+        response.sendHeader(200, { "Content-Type": contentType });
         response.sendBody(body);
     }
     response.finish();
