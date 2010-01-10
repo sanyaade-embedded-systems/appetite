@@ -93,12 +93,11 @@
 </div>
 
 <script src="js/lib/prototype.js" type="text/javascript"></script>
-<script src="js/apps.js" type="text/javascript"></script>
+<script src="apps/alljs" type="text/javascript"></script>
 <script src="js/client.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-    // Now we got here the data is all loaded
-    $('loading').hide();
+    $("loading").hide();
 
     // current search entered by the user, if any; should always be a string
     var searchString = "";
@@ -121,6 +120,32 @@
     // if set to true, CSS Transforms will be used to flip the app card regardless of whether
     // Appetite thinks your browser supports them
     var fancyModeOverride = false;
+
+//    // load apps via Ajax
+//    loadAllApps();
+//
+//    function loadAllApps() {
+//        new Ajax.Request("apps/all", {
+//            method: 'get',
+//            onSuccess: function(transport) {
+//                try {
+//                    var appJson = transport.responseText;
+//                    var apps = eval(appJson);
+//                    appetite = new Appetite(apps);
+//                    loadApps();
+//                } catch (e) {
+//                    if (console && console.log) console.log(e);
+//                    $("loading").innerHTML = "Uh oh. Couldn't load apps."
+//                }
+//            },
+//            onFailure: function(transport) {
+//                $("loading").innerHTML = "Uh oh. Couldn't load apps."
+//            },
+//            onException: function(transport) {
+//                $("loading").innerHTML = "Uh oh. Couldn't load apps."
+//            }
+//        })
+//    }
 
     function setupAppetite() {
         document.observe('keydown', function(event) {
@@ -175,6 +200,12 @@
     // refreshes the displayed apps; relies on global state to determine which
     // apps should be displayed
     function loadApps() {
+        // we haven't loaded the apps yet, so bail
+        if (!appetite) return;
+
+        // make sure the loading indicator is gone
+        $('loading').hide();
+
         // sync the channels setting with the channels checkboxes
         var channels = "";
         if ($("chk_catalog").checked) { channels = channels + "c"; }
