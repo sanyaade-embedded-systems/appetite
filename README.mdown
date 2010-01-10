@@ -1,7 +1,7 @@
 Appetite
 =======
 
-AAppetite is a reference implementation of a Palm application catalog driven by Palm's app feeds.
+Appetite is a reference implementation of a Palm application catalog driven by Palm's app feeds.
 
 This open source sample can be used to create your app catalog or visualization and consists of a few pieces:
 
