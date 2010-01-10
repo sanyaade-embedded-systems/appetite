@@ -1,0 +1,8 @@
+# IDEA files
+*.iml
+*.ipr
+*.iws
+out/
+
+# the files containing palm-specific production metadata (e.g., passwords)
+web-production.xml
