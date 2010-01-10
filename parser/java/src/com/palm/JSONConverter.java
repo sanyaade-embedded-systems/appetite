@@ -212,7 +212,12 @@ public class JSONConverter {
 //        }
 
         raw = raw.replaceAll("\"", "\\\\\"");
-        raw = raw.replaceAll("\n", "\\\\000a");
+        raw = raw.replaceAll("\n", "<br/>");
+        raw = raw.replaceAll("\u2026", "...");
+        raw = raw.replaceAll("\u2013", "-"); // EN DASH
+        raw = raw.replaceAll("\u2019", "'"); // RIGHT SINGLE QUOTATION
+        raw = raw.replaceAll("\u201C", "\\\\\""); // LEFT DOUBLE QUOTATION
+        raw = raw.replaceAll("\u201D", "\\\\\""); // RIGHT DOUBLE QUOTATION
         return "\"" + raw + "\"";
     }
 

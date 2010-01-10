@@ -271,7 +271,7 @@
               '<div class="app-card">' +
                 '<div class="card front">' +
                   '<div class="module_crnr"><img src="images/crnr_' + getAppCorner(app) + '.png" width="35" height="35" /></div>' +
-                  '<img onError="badImage(this)" class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                  '<img onError="badImage(this)" class="screen" src="' + getFrontImage(app) + '" width="106" height="158" />' +
                   '<div class="module_hd"><img onError="badIcon(this)" class="icon" src="' + app.icons[1].url + '" width="32" height="32" /> ' + getAppPrice(app) +
                       '<div class="clearing">&nbsp;</div>' +
                   '</div>' +
@@ -284,7 +284,7 @@
                   getAppDownloads(app) + ' downloads' +
                   '<div class="module_foot"><img onclick="flipOver(this)" src="images/btn_moreinfo.png" alt="More Info" width="74" height="20" /><img onclick="installApp(\'' + app.packageid + '\')" src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
                 '</div>\n' +
-                '<div class="card back back2"><img onError="badImage(this)" class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                '<div class="card back back2"><img onError="badImage(this)" class="screen" src="' + getBackImage(app) + '" width="106" height="158" />' +
                   '<div class="description">' +
                     '<h1>' + app.title + '</h1>' +
                     app.description +
@@ -297,7 +297,7 @@
             return '<div class="simple-cards">' +
               '<div class="simple-module">' +
                   '<div class="module_crnr"><img src="images/crnr_' + getAppCorner(app) + '.png" width="35" height="35" /></div>' +
-                  '<img onError="badImage(this)" class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                  '<img onError="badImage(this)" class="screen" src="' + getFrontImage(app) + '" width="106" height="158" />' +
                   '<div class="module_hd"><img onError="badIcon(this)" class="icon" src="' + app.icons[1].url + '" width="32" height="32" /> ' + getAppPrice(app) +
                       '<div class="clearing">&nbsp;</div>' +
                   '</div>' +
@@ -310,7 +310,7 @@
                   getAppDownloads(app) + ' downloads' +
                   '<div class="module_foot"><img onclick="showBack(this)" src="images/btn_moreinfo.png" alt="More Info" width="74" height="20" /><img onclick="installApp(\'' + app.packageid + '\')" src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
               '</div>\n' +
-              '<div class="simple-module back hidden"><img onError="badImage(this)" class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+              '<div class="simple-module back hidden"><img onError="badImage(this)" class="screen" src="' + getBackImage(app) + '" width="106" height="158" />' +
                   '<div class="description">' +
                     '<h1>' + app.title + '</h1>' +
                     app.description +
@@ -327,6 +327,15 @@
 
     function badIcon(img) {
         img.src = 'images/missing_icon.png';
+    }
+
+    function getFrontImage(app) {
+        return $lo(app).images[0];
+    }
+
+    function getBackImage(app) {
+        var lo = $lo(app);
+        return (lo.images.length > 1) ? lo.images[1] : lo.images[0];
     }
 
     function showBack(node) {
