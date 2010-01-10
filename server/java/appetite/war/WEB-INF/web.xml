@@ -43,6 +43,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
             <param-name>b_backup_file</param-name>
             <param-value>/Users/bgalbs/source/vcs/appetite/samples/catalog.beta.xml</param-value>
         </init-param>
+        <init-param>
+            <param-name>useBackupFeedFirst</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet>

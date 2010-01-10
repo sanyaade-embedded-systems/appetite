@@ -34,7 +34,7 @@ import java.text.ParseException;
 public class FeedEater extends HttpServlet {
     public static final String KEY_MASTER_DOC = "masterFeed";
 
-    private AtomicBoolean updatingFeeds = new AtomicBoolean(false);
+    private final AtomicBoolean updatingFeeds = new AtomicBoolean(false);
 
     private static final Namespace NS = Namespace.getNamespace("ac", "http://palm.com/app.catalog.rss.extensions");
     private static final DateFormat CHANNEL_DATE_FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z");
@@ -46,7 +46,12 @@ public class FeedEater extends HttpServlet {
     private static final File[] backupFeeds = new File[FEED_TYPES.length];
     private static final int[] counts = new int[FEED_TYPES.length];
 
+    private boolean useBackupFeedFirst = false;
+
     public void init() throws ServletException {
+        String value = getServletConfig().getInitParameter("useBackupFeedFirst");
+        useBackupFeedFirst = (value != null && value.equals("true"));
+
         for (int i = 0; i < FEED_TYPES.length; i++) {
             feedUrls[i] = getServletConfig().getInitParameter(FEED_TYPES[i] + "_url");
             updateFeedUrls[i] = getServletConfig().getInitParameter(FEED_TYPES[i] + "_update_url");
@@ -111,8 +116,16 @@ public class FeedEater extends HttpServlet {
             Date updateDate = null;
             for (int i = 0; i < FEED_TYPES.length; i++) {
                 Document mainFeedDoc = null;
+
+                if (useBackupFeedFirst) {
+                    try {
+                        mainFeedDoc = new SAXBuilder().build(backupFeeds[i]);
+                        backupFeedUsed = true;
+                    } catch (Exception e) {}
+                }
+
                 try {
-                    mainFeedDoc = d(feedUrls[i]);
+                    if (mainFeedDoc == null) mainFeedDoc = d(feedUrls[i]);
                 } catch (Exception e) {
                     System.err.println("Couldn't retrieve '" + FEED_TYPES[i] + "' from URL '" + feedUrls[i] + "'; will try to load backup feed file");
                     if (backupFeeds[i] != null) {
@@ -149,8 +162,8 @@ public class FeedEater extends HttpServlet {
 
                         for (int j = 0; j < allItems.size(); j++) {
                             Element item = (Element) allItems.get(j);
-                            String guid = s(item, "guid");
-                            Element oldItem = e(mainFeedDoc, "/rss/channel/item[guid = '" + guid + "']");
+                            String guid = s(item, "ac:packageid");
+                            Element oldItem = e(mainFeedDoc, "/rss/channel/item[ac:packageid = '" + guid + "']");
                             if (oldItem != null) mainChannel.removeContent(oldItem);
 
                             item.getParentElement().removeContent(item);
@@ -164,7 +177,9 @@ public class FeedEater extends HttpServlet {
                 counts[i] = allItems.size();
                 for (int j = 0; j < allItems.size(); j++) {
                     Element item = (Element) allItems.get(j);
-                    item.setAttribute("channel", FEED_TYPES[i], NS);
+                    Element channel = new Element("channel", NS);
+                    item.addContent(channel);
+                    channel.setText(FEED_TYPES[i]);
                 }
 
                 // merge the items into the master feed doc

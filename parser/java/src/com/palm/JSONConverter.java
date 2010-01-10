@@ -10,7 +10,10 @@ import org.jdom.xpath.XPath;
 import java.io.File;
 import java.io.IOException;
 import java.io.FileOutputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.net.URL;
+import java.net.URLEncoder;
 
 /**
  * Converts an app XML file into a JSON format; sort-of cheats
@@ -26,14 +29,9 @@ public class JSONConverter {
         JSONConverter.convert(filename);
     }
 
-    public static void convert(String filename) throws JDOMException, IOException {
-        File file = new File(filename);
-
-        Document catalog = new SAXBuilder().build(file);
-
+    public static String convert(Document catalog) throws JDOMException {
         StringBuilder sb = new StringBuilder();
-
-        sb.append("var apps = [");
+        sb.append("[\n");
 
         List elements = XPath.selectNodes(catalog, "/rss/channel/item");
 
@@ -61,6 +59,7 @@ public class JSONConverter {
                     "description",
                     "pubDate",
                     "guid",
+                    "ac:channel",
                     "ac:packageid",
                     "ac:version",
                     "ac:installed_size",
@@ -84,16 +83,26 @@ public class JSONConverter {
 
         sb.append("\n]");
 
-        sb.append("\n// check to see if you are running inside of node.js and export if you are\n");
-        sb.append("if (typeof GLOBAL == \"object\" && typeof GLOBAL['node'] == \"object\") {\n");
-        sb.append("    exports.apps = apps;\n");
-        sb.append("}");
+        return sb.toString();
+    }
+
+    public static void convert(String filename) throws JDOMException, IOException {
+        File file = new File(filename);
+
+        Document catalog = new SAXBuilder().build(file);
+        String result = convert(catalog);
+        result = "var apps = " + result;
+
+        result += "\n// check to see if you are running inside of node.js and export if you are\n";
+        result += "if (typeof GLOBAL == \"object\" && typeof GLOBAL['node'] == \"object\") {\n";
+        result += "    exports.apps = apps;\n";
+        result += "}";
 
         File output = new File("catalog_us_en.json");
         output.delete();
 
         FileOutputStream out = new FileOutputStream(output);
-        out.write(sb.toString().getBytes());
+        out.write(result.getBytes());
         out.close();
     }
 
@@ -114,7 +123,7 @@ public class JSONConverter {
             json.append("\"" + icon.getAttributeValue("type", ns) + "\"");
             json.append(", \n");
             json.append("        \"url\": ");
-            json.append("\"" + icon.getTextTrim() + "\"");
+            json.append("\"" + escapeURL(icon.getTextTrim()) + "\"");
             json.append("\n    }");
         }
 
@@ -170,7 +179,7 @@ public class JSONConverter {
             for (int j = 0; j < imgs.size(); j++) {
                 if (j > 0) json.append(",\n");
                 Element img = (Element) imgs.get(j);
-                json.append("            \"" + img.getTextTrim() + "\"");
+                json.append("            \"" + escapeURL(img.getTextTrim()) + "\"");
             }
             json.append("\n        ]\n");
 
@@ -192,7 +201,16 @@ public class JSONConverter {
         }
     }
 
+    private static String escapeURL(String url) {
+        url = url.replaceAll("\\+", "%20");
+        return url;
+    }
+
     private static String escape(String raw) {
+//        if (raw.startsWith("http://") && raw.indexOf("+") != -1) {
+//            raw = raw.replaceAll("\\+", "%2B");
+//        }
+
         raw = raw.replaceAll("\"", "\\\\\"");
         raw = raw.replaceAll("\n", "\\\\000a");
         return "\"" + raw + "\"";
