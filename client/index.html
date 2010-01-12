@@ -93,7 +93,8 @@
 </div>
 
 <script src="js/lib/prototype.js" type="text/javascript"></script>
-<script src="js/apps.js" type="text/javascript"></script>
+<script src="apps/alljs" type="text/javascript"></script>
+<!-- for local testing: <script src="js/apps.js" type="text/javascript"></script> -->
 <script src="js/client.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -197,6 +198,12 @@
             opts.query = searchString;
         }
         var apps = appetite.find(opts);
+
+        // if we didn't get any, fire over to all... this happens with "top ratings"
+        if (apps.length < 1) {
+            selectTab($('all'));
+            return;
+        }
 
         // display the data
         displayApps(apps);
