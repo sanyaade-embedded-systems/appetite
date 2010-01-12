@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+    <servlet>
+        <servlet-name>FeedEater</servlet-name>
+        <servlet-class>com.palm.appetite.FeedEater</servlet-class>
+        <init-param>
+            <param-name>c_url</param-name>
+            <param-value>http://developer.palm.com/rss/D/appcatalog.rss.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>c_update_url</param-name>
+            <param-value>http://developer.palm.com/rss/D/appcatalog.update.rss.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>c_backup_file</param-name>
+            <param-value>/Users/bgalbs/source/vcs/appetite/samples/catalog.device.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>w_url</param-name>
+            <param-value>http://developer.palm.com/rss/W/appcatalog.rss.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>w_update_url</param-name>
+            <param-value>http://developer.palm.com/rss/W/appcatalog.update.rss.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>w_backup_file</param-name>
+            <param-value>/Users/bgalbs/source/vcs/appetite/samples/catalog.web.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>b_url</param-name>
+            <param-value>http://developer.palm.com/rss/B/appcatalog.rss.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>b_update_url</param-name>
+            <param-value>http://developer.palm.com/rss/B/appcatalog.update.rss.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>b_backup_file</param-name>
+            <param-value>/Users/bgalbs/source/vcs/appetite/samples/catalog.beta.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>useBackupFeedFirst</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>FeedServer</servlet-name>
+        <servlet-class>com.palm.appetite.FeedServer</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FeedEater</servlet-name>
+        <url-pattern>/refreshFeeds</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>FeedServer</servlet-name>
+        <url-pattern>/apps/*</url-pattern>
+    </servlet-mapping>
+</web-app>

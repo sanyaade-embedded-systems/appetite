@@ -12,7 +12,7 @@
         <div class="tag">A demonstration of Palm's open app ecosystem</div>
         <div class="search_wrapper">
             <div class="search_field">
-                <input onkeydown="doSearch(this)" type="text" id="search" value="Search"
+                <input onkeyup="doSearch(this)" type="text" id="search" value="Search"
                        onfocus="searchFocus(this)" onblur="searchBlur(this)">
             </div>
         </div>
@@ -98,8 +98,7 @@
 <script src="js/client.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-    // Now we got here the data is all loaded
-    $('loading').hide();
+    $("loading").hide();
 
     // current search entered by the user, if any; should always be a string
     var searchString = "";
@@ -122,6 +121,32 @@
     // if set to true, CSS Transforms will be used to flip the app card regardless of whether
     // Appetite thinks your browser supports them
     var fancyModeOverride = false;
+
+//    // load apps via Ajax
+//    loadAllApps();
+//
+//    function loadAllApps() {
+//        new Ajax.Request("apps/all", {
+//            method: 'get',
+//            onSuccess: function(transport) {
+//                try {
+//                    var appJson = transport.responseText;
+//                    var apps = eval(appJson);
+//                    appetite = new Appetite(apps);
+//                    loadApps();
+//                } catch (e) {
+//                    if (console && console.log) console.log(e);
+//                    $("loading").innerHTML = "Uh oh. Couldn't load apps."
+//                }
+//            },
+//            onFailure: function(transport) {
+//                $("loading").innerHTML = "Uh oh. Couldn't load apps."
+//            },
+//            onException: function(transport) {
+//                $("loading").innerHTML = "Uh oh. Couldn't load apps."
+//            }
+//        })
+//    }
 
     function setupAppetite() {
         document.observe('keydown', function(event) {
@@ -176,6 +201,12 @@
     // refreshes the displayed apps; relies on global state to determine which
     // apps should be displayed
     function loadApps() {
+        // we haven't loaded the apps yet, so bail
+        if (!appetite) return;
+
+        // make sure the loading indicator is gone
+        $('loading').hide();
+
         // sync the channels setting with the channels checkboxes
         var channels = "";
         if ($("chk_catalog").checked) { channels = channels + "c"; }
@@ -247,7 +278,7 @@
               '<div class="app-card">' +
                 '<div class="card front">' +
                   '<div class="module_crnr"><img src="images/crnr_' + getAppCorner(app) + '.png" width="35" height="35" /></div>' +
-                  '<img onError="badImage(this)" class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                  '<img onError="badImage(this)" class="screen" src="' + getFrontImage(app) + '" width="106" height="158" />' +
                   '<div class="module_hd"><img onError="badIcon(this)" class="icon" src="' + app.icons[1].url + '" width="32" height="32" /> ' + getAppPrice(app) +
                       '<div class="clearing">&nbsp;</div>' +
                   '</div>' +
@@ -260,7 +291,7 @@
                   getAppDownloads(app) + ' downloads' +
                   '<div class="module_foot"><img onclick="flipOver(this)" src="images/btn_moreinfo.png" alt="More Info" width="74" height="20" /><img onclick="installApp(\'' + app.packageid + '\')" src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
                 '</div>\n' +
-                '<div class="card back back2"><img onError="badImage(this)" class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                '<div class="card back back2"><img onError="badImage(this)" class="screen" src="' + getBackImage(app) + '" width="106" height="158" />' +
                   '<div class="description">' +
                     '<h1>' + app.title + '</h1>' +
                     app.description +
@@ -273,7 +304,7 @@
             return '<div class="simple-cards">' +
               '<div class="simple-module">' +
                   '<div class="module_crnr"><img src="images/crnr_' + getAppCorner(app) + '.png" width="35" height="35" /></div>' +
-                  '<img onError="badImage(this)" class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+                  '<img onError="badImage(this)" class="screen" src="' + getFrontImage(app) + '" width="106" height="158" />' +
                   '<div class="module_hd"><img onError="badIcon(this)" class="icon" src="' + app.icons[1].url + '" width="32" height="32" /> ' + getAppPrice(app) +
                       '<div class="clearing">&nbsp;</div>' +
                   '</div>' +
@@ -286,7 +317,7 @@
                   getAppDownloads(app) + ' downloads' +
                   '<div class="module_foot"><img onclick="showBack(this)" src="images/btn_moreinfo.png" alt="More Info" width="74" height="20" /><img onclick="installApp(\'' + app.packageid + '\')" src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
               '</div>\n' +
-              '<div class="simple-module back hidden"><img onError="badImage(this)" class="screen" src="' + $lo(app).images[0] + '" width="106" height="158" />' +
+              '<div class="simple-module back hidden"><img onError="badImage(this)" class="screen" src="' + getBackImage(app) + '" width="106" height="158" />' +
                   '<div class="description">' +
                     '<h1>' + app.title + '</h1>' +
                     app.description +
@@ -303,6 +334,15 @@
 
     function badIcon(img) {
         img.src = 'images/missing_icon.png';
+    }
+
+    function getFrontImage(app) {
+        return $lo(app).images[0];
+    }
+
+    function getBackImage(app) {
+        var lo = $lo(app);
+        return (lo.images.length > 1) ? lo.images[1] : lo.images[0];
     }
 
     function showBack(node) {

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+    <servlet>
+        <servlet-name>SMSServlet</servlet-name>
+        <servlet-class>com.palm.appetite.SMSServlet</servlet-class>
+        <init-param>
+            <param-name>smsEndpoint</param-name>
+            <param-value>https://developer.sbqa.palm.com/webChannel/api/smswidget.php?cid=[cid]</param-value>
+        </init-param>
+        <init-param>
+            <param-name>smsPostEndpoint</param-name>
+            <param-value>https://developer.sbqa.palm.com/webChannel/api/smssend.php</param-value>
+        </init-param>
+        <init-param>
+            <param-name>clientId</param-name>
+            <param-value>5897b5a206d5d51e96a13385391a8b92</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SMSServlet</servlet-name>
+        <url-pattern>/sms/*</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
