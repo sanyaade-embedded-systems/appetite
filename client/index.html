@@ -75,6 +75,10 @@
     <div id="loading" style="display:block">
         Loading App Data...
     </div>
+    <div id="noapps" style="display:none">
+        Unable to hunt down any apps that met this criteria.<br>
+        Click on another tab, checkbox, or search!
+    </div>
     <div id="app_container_container">
         <div id="app_container">
         </div>
@@ -94,7 +98,7 @@
 
 <script src="js/lib/prototype.js" type="text/javascript"></script>
 <script src="apps/alljs" type="text/javascript"></script>
-<!-- for local testing: <script src="js/apps.js" type="text/javascript"></script> -->
+<!-- <script src="js/apps.js" type="text/javascript"></script> -->
 <script src="js/client.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -230,12 +234,6 @@
         }
         var apps = appetite.find(opts);
 
-        // if we didn't get any, fire over to all... this happens with "top ratings"
-        if (apps.length < 1) {
-            selectTab($('all'));
-            return;
-        }
-
         // display the data
         displayApps(apps);
     }
@@ -256,18 +254,25 @@
 
     function displayApps(apps) {
         var appContainer = $("app_container");
-
-        // yeah, i'm doing it as a string; you got a problem with that?
         var appsHTML = "";
-        for (var i = 0; i < apps.length; i++) {
-            var app = apps[i];
 
-            var appHTML = getAppHTML(app);
-            appsHTML += appHTML;
+        // if we didn't get any, fire over to all... this happens with "top ratings"
+        if (apps.length < 1) {
+            $('noapps').show();
+        } else {
+            $('noapps').hide();
+            
+            // yeah, i'm doing it as a string; you got a problem with that?
+            for (var i = 0; i < apps.length; i++) {
+                var app = apps[i];
+
+                var appHTML = getAppHTML(app);
+                appsHTML += appHTML;
+            }
         }
 
         appContainer.innerHTML = appsHTML;
-        
+
         // decide to show or hide the more apps button
         showOrHideMoreAppsButton(apps);
     }

@@ -298,9 +298,9 @@ body {
 #more img {
     cursor: pointer;
 }
-#loading {
+#loading, #noapps {
     margin: 0 auto;
-    width: 246px;
+    width: 885px;
     text-align: center;
     vertical-align: middle;
     clear: both;
