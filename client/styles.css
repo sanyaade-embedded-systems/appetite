@@ -246,10 +246,14 @@ body {
 	margin-right: 10px;
 }
 .back div.description {
-	height: 155px;
+	height: 135px;
 	overflow-x: hidden;
 	overflow-y: auto;
 	padding-right: 5px;
+}
+.device {
+    margin-top: 8px;
+    font-style: italic;
 }
 .module img.icon, .simple-module img.icon {
 	float: left;

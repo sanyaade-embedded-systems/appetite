@@ -301,6 +301,7 @@
                     '<h1>' + app.title + '</h1>' +
                     app.description +
                   '</div>' +
+                   '<div class="device">Runs on ' + getDevices(app) + '</div>' +
                   '<div class="module_foot"><img onclick="flipBack(this)" src="images/btn_back.png" alt="More Info" width="74" height="20" /><img onclick="installApp(\'' + app.packageid + '\')" src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
                 '</div>\n' +
               '</div>\n' +
@@ -327,6 +328,7 @@
                     '<h1>' + app.title + '</h1>' +
                     app.description +
                   '</div>' +
+                  '<div class="device">Runs on ' + getDevices(app) + '</div>' +
                   '<div class="module_foot"><img onclick="showFront(this)" src="images/btn_back.png" alt="More Info" width="74" height="20" /><img onclick="installApp(\'' + app.packageid + '\')" src="images/btn_install.png" alt="Install" width="74" height="20" /></div>' +
               '</div>\n' +
             '</div>';
@@ -339,6 +341,16 @@
 
     function badIcon(img) {
         img.src = 'images/missing_icon.png';
+    }
+
+    function getDevices(app) {
+        var dstring = app.devices.sub("Palm ", "", 2);
+        if (dstring.indexOf(',') == -1) {
+            dstring += " only";
+        } else {
+            dstring = dstring.sub(", ", " and ");
+        }
+        return dstring;
     }
 
     function getFrontImage(app) {
